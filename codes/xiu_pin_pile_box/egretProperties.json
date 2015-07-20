@@ -9,6 +9,10 @@
 		},
 		{
 			"name": "res"
+		},
+		{
+			"name": "physics",
+			"path": "../libsrc/physics"
 		}
 	],
 	"native": {

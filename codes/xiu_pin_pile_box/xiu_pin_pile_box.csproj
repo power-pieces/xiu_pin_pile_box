@@ -209,6 +209,7 @@
     <TypeScriptCompile Include="libs\core\egret\context\native.d.ts" />
     <TypeScriptCompile Include="libs\core\extension\resource\res.d.ts" />
     <TypeScriptCompile Include="libs\core\extension\version\version.d.ts" />
+    <TypeScriptCompile Include="libs\physics\physics.d.ts" />
     <TypeScriptCompile Include="libs\_references.ts" />
     <TypeScriptCompile Include="src\LoadingUI.ts" />
     <TypeScriptCompile Include="src\Main.ts" />

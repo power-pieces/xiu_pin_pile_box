@@ -1,0 +1,6 @@
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\obj\Debug\xiu_pin_pile_box.csprojResolveAssemblyReference.cache
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xiu_pin_pile_box.dll.config
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xiu_pin_pile_box.dll
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xiu_pin_pile_box.pdb
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\obj\Debug\xiu_pin_pile_box.dll
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\obj\Debug\xiu_pin_pile_box.pdb

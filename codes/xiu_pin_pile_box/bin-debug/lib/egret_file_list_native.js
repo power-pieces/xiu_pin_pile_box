@@ -121,5 +121,6 @@ var egret_file_list = [
 	"core/extension/resource/analyzer/FontAnalyzer.js",
 	"core/extension/resource/analyzer/SoundAnalyzer.js",
 	"core/extension/resource/analyzer/XMLAnalyzer.js",
-	"core/extension/resource/Resource.js"
+	"core/extension/resource/Resource.js",
+	"physics/p2.min.js"
 ];
