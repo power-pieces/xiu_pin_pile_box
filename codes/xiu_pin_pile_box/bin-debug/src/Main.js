@@ -26,14 +26,19 @@
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
 var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
-    var __egretProto__ = Main.prototype;
-    __egretProto__.onAddToStage = function (event) {
+    Main.prototype.onAddToStage = function (event) {
         //设置加载进度界面
         //Config to load process interface
         this.loadingView = new LoadingUI();
@@ -47,7 +52,7 @@ var Main = (function (_super) {
      * 配置文件加载完成,开始预加载preload资源组。
      * configuration file loading is completed, start to pre-load the preload resource group
      */
-    __egretProto__.onConfigComplete = function (event) {
+    Main.prototype.onConfigComplete = function (event) {
         RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
@@ -58,7 +63,7 @@ var Main = (function (_super) {
      * preload资源组加载完成
      * Preload resource group is loaded
      */
-    __egretProto__.onResourceLoadComplete = function (event) {
+    Main.prototype.onResourceLoadComplete = function (event) {
         if (event.groupName == "preload") {
             this.stage.removeChild(this.loadingView);
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
@@ -71,7 +76,7 @@ var Main = (function (_super) {
      * 资源组加载出错
      *  The resource group loading failed
      */
-    __egretProto__.onResourceLoadError = function (event) {
+    Main.prototype.onResourceLoadError = function (event) {
         //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
         //忽略加载失败的项目
@@ -82,7 +87,7 @@ var Main = (function (_super) {
      * preload资源组加载进度
      * Loading process of preload resource group
      */
-    __egretProto__.onResourceProgress = function (event) {
+    Main.prototype.onResourceProgress = function (event) {
         if (event.groupName == "preload") {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
@@ -91,7 +96,7 @@ var Main = (function (_super) {
      * 创建游戏场景
      * Create a game scene
      */
-    __egretProto__.createGameScene = function () {
+    Main.prototype.createGameScene = function () {
         var sky = this.createBitmapByName("bgImage");
         this.addChild(sky);
         var stageW = this.stage.stageWidth;
@@ -136,7 +141,7 @@ var Main = (function (_super) {
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
      * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
      */
-    __egretProto__.createBitmapByName = function (name) {
+    Main.prototype.createBitmapByName = function (name) {
         var result = new egret.Bitmap();
         var texture = RES.getRes(name);
         result.texture = texture;
@@ -146,7 +151,7 @@ var Main = (function (_super) {
      * 描述文件加载成功，开始播放动画
      * Description file loading is successful, start to play the animation
      */
-    __egretProto__.startAnimation = function (result) {
+    Main.prototype.startAnimation = function (result) {
         var self = this;
         var parser = new egret.HtmlTextParser();
         var textflowArr = [];
@@ -174,10 +179,9 @@ var Main = (function (_super) {
      * 切换描述内容
      * Switch to described content
      */
-    __egretProto__.changeDescription = function (textfield, textFlow) {
+    Main.prototype.changeDescription = function (textfield, textFlow) {
         textfield.textFlow = textFlow;
     };
     return Main;
 })(egret.DisplayObjectContainer);
-Main.prototype.__class__ = "Main";
 //# sourceMappingURL=Main.js.map
