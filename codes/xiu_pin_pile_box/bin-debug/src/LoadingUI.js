@@ -42,7 +42,6 @@ var LoadingUI = (function (_super) {
         this.textField.textAlign = "center";
     };
     __egretProto__.setProgress = function (current, total) {
-        //显示进度
         this.textField.text = "Loading..." + current + "/" + total;
     };
     return LoadingUI;

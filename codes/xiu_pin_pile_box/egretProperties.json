@@ -11,6 +11,9 @@
 			"name": "res"
 		},
 		{
+			"name": "gui"
+		},
+		{
 			"name": "physics",
 			"path": "../libsrc/physics"
 		}

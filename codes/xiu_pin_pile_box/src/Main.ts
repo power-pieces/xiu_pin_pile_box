@@ -31,7 +31,7 @@ class Main extends egret.DisplayObjectContainer {
 
     /**
      * 加载进度界面
-     * Process interface loading
+     * loading process interface
      */
     private loadingView:LoadingUI;
 
@@ -40,22 +40,27 @@ class Main extends egret.DisplayObjectContainer {
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
 
-    private onAddToStage(event: egret.Event) {
-        
+    private onAddToStage(event: egret.Event)
+    {
+        //inject the custom material parser
+        //注入自定义的素材解析器
+        egret.Injector.mapClass("egret.gui.IAssetAdapter", AssetAdapter);
+        // load skin theme configuration file, you can manually modify the file. And replace the default skin.
+        //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
+        egret.gui.Theme.load("resource/theme.thm");
+        //Config loading process interface
         //设置加载进度界面
-        //Config to load process interface
         this.loadingView = new LoadingUI();
         this.stage.addChild(this.loadingView);
-
+        // initialize the Resource loading library
         //初始化Resource资源加载库
-        //initiate Resource loading library
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/resource.json", "resource/");
     }
 
     /**
      * 配置文件加载完成,开始预加载preload资源组。
-     * configuration file loading is completed, start to pre-load the preload resource group
+     * Loading of configuration file is complete, start to pre-load the preload resource group
      */
     private onConfigComplete(event:RES.ResourceEvent):void {
         RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
@@ -67,7 +72,7 @@ class Main extends egret.DisplayObjectContainer {
 
     /**
      * preload资源组加载完成
-     * Preload resource group is loaded
+     * preload resource group is loaded
      */
     private onResourceLoadComplete(event:RES.ResourceEvent):void {
         if (event.groupName == "preload") {
@@ -75,25 +80,25 @@ class Main extends egret.DisplayObjectContainer {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
-            this.createGameScene();
+            this.createScene();
         }
     }
 
     /**
      * 资源组加载出错
-     *  The resource group loading failed
+     * Resource group loading failed
      */
     private onResourceLoadError(event:RES.ResourceEvent):void {
         //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
         //忽略加载失败的项目
-        //Ignore the loading failed projects
+        //ignore loading failed projects
         this.onResourceLoadComplete(event);
     }
 
     /**
      * preload资源组加载进度
-     * Loading process of preload resource group
+     * loading process of preload resource
      */
     private onResourceProgress(event:RES.ResourceEvent):void {
         if (event.groupName == "preload") {
@@ -101,112 +106,36 @@ class Main extends egret.DisplayObjectContainer {
         }
     }
 
-    private textfield:egret.TextField;
+    private gameLayer:egret.DisplayObjectContainer;
+
+    private guiLayer:egret.gui.UIStage;
 
     /**
-     * 创建游戏场景
-     * Create a game scene
+     * 创建场景界面
+     * Create scene interface
      */
-    private createGameScene():void {
-        var sky:egret.Bitmap = this.createBitmapByName("bgImage");
-        this.addChild(sky);
-        var stageW:number = this.stage.stageWidth;
-        var stageH:number = this.stage.stageHeight;
-        sky.width = stageW;
-        sky.height = stageH;
+    private createScene():void {
 
-        var topMask:egret.Shape = new egret.Shape();
-        topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, stageW, stageH);
-        topMask.graphics.endFill();
-        topMask.width = stageW;
-        topMask.height = stageH;
-        this.addChild(topMask);
+        //游戏场景层，游戏场景相关内容可以放在这里面。
+        //Game scene layer, the game content related to the scene can be placed inside this layer.
+        this.gameLayer = new egret.DisplayObjectContainer();
+        this.addChild(this.gameLayer);
+        var bitmap:egret.Bitmap = new egret.Bitmap();
+        bitmap.texture = RES.getRes("bgImage");
+        this.gameLayer.addChild(bitmap);
 
-        var icon:egret.Bitmap = this.createBitmapByName("egretIcon");
-        icon.anchorX = icon.anchorY = 0.5;
-        this.addChild(icon);
-        icon.x = stageW / 2;
-        icon.y = stageH / 2 - 60;
-        icon.scaleX = 0.55;
-        icon.scaleY = 0.55;
+        //GUI的组件必须都在这个容器内部,UIStage会始终自动保持跟舞台一样大小。
+        //GUI components must be within the container, UIStage will always remain the same as stage size automatically.
+        this.guiLayer = new egret.gui.UIStage();
+        this.addChild(this.guiLayer);
 
-        var colorLabel:egret.TextField = new egret.TextField();
-        colorLabel.x = stageW / 2;
-        colorLabel.y = stageH / 2 + 50;
-        colorLabel.anchorX = colorLabel.anchorY = 0.5;
-        colorLabel.textColor = 0xffffff;
-        colorLabel.textAlign = "center";
-        colorLabel.text = "Hello Egret";
-        colorLabel.size = 20;
-        this.addChild(colorLabel);
-
-        var textfield:egret.TextField = new egret.TextField();
-        textfield.anchorX = textfield.anchorY = 0.5;
-        this.addChild(textfield);
-        textfield.x = stageW / 2;
-        textfield.y = stageH / 2 + 100;
-        textfield.alpha = 0;
-
-        this.textfield = textfield;
-
-        //根据name关键字，异步获取一个json配置文件，name属性请参考resources/resource.json配置文件的内容。
-        // Get asynchronously a json configuration file according to name keyword. As for the property of name please refer to the configuration file of resources/resource.json.
-        RES.getResAsync("description", this.startAnimation, this)
+        var showcase:Showcase = new Showcase();
+        //在GUI范围内一律使用addElement等方法替代addChild等方法。
+        //Within GUI scope, addChild methods should be replaced by addElement methods.
+        this.guiLayer.addElement(showcase);
     }
 
-    /**
-     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
-     */
-    private createBitmapByName(name:string):egret.Bitmap {
-        var result:egret.Bitmap = new egret.Bitmap();
-        var texture:egret.Texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
-    }
 
-    /**
-     * 描述文件加载成功，开始播放动画
-     * Description file loading is successful, start to play the animation
-     */
-    private startAnimation(result:Array<any>):void {
-        var self:any = this;
-
-        var parser:egret.HtmlTextParser = new egret.HtmlTextParser();
-        var textflowArr:Array<Array<egret.ITextElement>> = [];
-        for (var i:number = 0; i < result.length; i++) {
-            textflowArr.push(parser.parser(result[i]));
-        }
-
-        var textfield:egret.TextField = self.textfield;
-        var count:number = -1;
-        var change:Function = function () {
-            count++;
-            if (count >= textflowArr.length) {
-                count = 0;
-            }
-            var lineArr = textflowArr[count];
-
-            self.changeDescription(textfield, lineArr);
-
-            var tw = egret.Tween.get(textfield);
-            tw.to({"alpha": 1}, 200);
-            tw.wait(2000);
-            tw.to({"alpha": 0}, 200);
-            tw.call(change, self);
-        };
-
-        change();
-    }
-
-    /**
-     * 切换描述内容
-     * Switch to described content
-     */
-    private changeDescription(textfield:egret.TextField, textFlow:Array<egret.ITextElement>):void {
-        textfield.textFlow = textFlow;
-    }
 }
 
 
