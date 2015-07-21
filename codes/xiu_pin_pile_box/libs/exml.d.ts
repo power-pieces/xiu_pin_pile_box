@@ -138,7 +138,3 @@ declare module skins.simple{
 	class VSliderThumbSkin extends egret.gui.Skin{
 	}
 }
-declare module views{
-	class MainSkin extends egret.gui.Skin{
-	}
-}

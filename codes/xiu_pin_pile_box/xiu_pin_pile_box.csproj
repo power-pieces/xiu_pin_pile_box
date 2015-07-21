@@ -240,6 +240,9 @@
     <Content Include="resource\assets\simple\VSlider\VSlider_fill.png" />
     <Content Include="resource\assets\simple\VSlider\VSlider_thumb.png" />
     <Content Include="resource\assets\simple\VSlider\VSlider_track.png" />
+    <Content Include="resource\config\description.json" />
+    <Content Include="resource\imgs\box.jpg" />
+    <Content Include="resource\imgs\tower.jpg" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -252,7 +255,6 @@
     <Content Include="libs\core\extension\resource\res.d.json" />
     <Content Include="libs\core\extension\version\version.d.json" />
     <Content Include="libs\module_reference.json" />
-    <Content Include="resource\config\description.json" />
     <Content Include="resource\resource.json" />
     <Content Include="run.bat" />
     <Content Include="bin-debug\src\manifest.json" />
@@ -291,8 +293,8 @@
     <Content Include="src\skins\simple\VScrollBarThumbSkin.exml" />
     <Content Include="src\skins\simple\VSliderSkin.exml" />
     <Content Include="src\skins\simple\VSliderThumbSkin.exml" />
-    <Content Include="src\views\MainSkin.exml" />
     <Content Include="resource\theme.thm" />
+    <Content Include="resource\config\config.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -311,9 +313,26 @@
     <TypeScriptCompile Include="libs\physics\physics.d.ts" />
     <TypeScriptCompile Include="libs\_references.ts" />
     <TypeScriptCompile Include="src\AssetAdapter.ts" />
+    <TypeScriptCompile Include="src\jing\cores\AView.ts" />
+    <TypeScriptCompile Include="src\jing\net\NetProxy.ts" />
+    <TypeScriptCompile Include="src\jing\notice\Notice.ts" />
+    <TypeScriptCompile Include="src\jing\notice\NoticeManager.ts" />
+    <TypeScriptCompile Include="src\jing\utils\AudioDevice.ts" />
+    <TypeScriptCompile Include="src\jing\utils\Extend.ts" />
+    <TypeScriptCompile Include="src\jing\utils\HGroup.ts" />
+    <TypeScriptCompile Include="src\jing\utils\Texture.ts" />
     <TypeScriptCompile Include="src\LoadingUI.ts" />
     <TypeScriptCompile Include="src\Main.ts" />
+    <TypeScriptCompile Include="src\models\DataCenter.ts" />
+    <TypeScriptCompile Include="src\models\Global.ts" />
+    <TypeScriptCompile Include="src\physics\PWorld.ts" />
     <TypeScriptCompile Include="src\scene\Showcase.ts" />
+    <TypeScriptCompile Include="src\views\game\Box.ts" />
+    <TypeScriptCompile Include="src\views\game\Game.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\consts\" />
+    <Folder Include="src\views\uis\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
