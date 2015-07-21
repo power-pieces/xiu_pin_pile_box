@@ -1,6 +1,6 @@
 var game_file_list = [
-	"models/DataCenter.js",
 	"jing/utils/Texture.js",
+	"models/DataCenter.js",
 	"models/Global.js",
 	"physics/PWorld.js",
 	"skins/simple/HScrollBarThumbSkin.js",
@@ -8,6 +8,7 @@ var game_file_list = [
 	"skins/simple/ListSkin.js",
 	"skins/simple/TreeDisclosureButtonSkin.js",
 	"skins/simple/VScrollBarThumbSkin.js",
+	"views/game/Box.js",
 	"AssetAdapter.js",
 	"LoadingUI.js",
 	"skins/simple/CloseButtonSkin.js",

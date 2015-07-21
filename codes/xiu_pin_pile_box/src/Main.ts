@@ -110,7 +110,11 @@ class Main extends egret.DisplayObjectContainer {
      * 创建场景界面
      * Create scene interface
      */
-    private createScene():void {
+    private createScene(): void
+    {
+        this.stage.frameRate = 60;
+       
+
         this.setConfig();
         Global.stage = this.stage;
         //游戏场景层，游戏场景相关内容可以放在这里面。        
@@ -119,6 +123,7 @@ class Main extends egret.DisplayObjectContainer {
         this.addChild(Global.UI_LAYER);
 
         Global.GAME_LAYER.addChild(new Game());
+       
     }
 
     private setConfig():void

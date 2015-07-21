@@ -1,6 +1,6 @@
 [
-	"models/DataCenter.ts",
 	"jing/utils/Texture.ts",
+	"models/DataCenter.ts",
 	"models/Global.ts",
 	"physics/PWorld.ts",
 	"skins/simple/HScrollBarThumbSkin.exml",
@@ -8,6 +8,7 @@
 	"skins/simple/ListSkin.exml",
 	"skins/simple/TreeDisclosureButtonSkin.exml",
 	"skins/simple/VScrollBarThumbSkin.exml",
+	"views/game/Box.ts",
 	"AssetAdapter.ts",
 	"LoadingUI.ts",
 	"skins/simple/CloseButtonSkin.exml",

@@ -1,6 +1,9 @@
 {
 "isDebug":false,
-"friction":1,
-"restitution":0,
+"friction":0.3,
+"restitution":0.05,
+"stiffness":100000000,
+"relaxation":2,
+"mass":2,
 "factor":50
 }

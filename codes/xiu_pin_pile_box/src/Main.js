@@ -44,6 +44,7 @@ var Main = (function (_super) {
         }
     };
     Main.prototype.createScene = function () {
+        this.stage.frameRate = 60;
         this.setConfig();
         Global.stage = this.stage;
         this.addChild(Global.GAME_LAYER);

@@ -98,6 +98,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     __egretProto__.createScene = function () {
+        this.stage.frameRate = 60;
         this.setConfig();
         Global.stage = this.stage;
         //游戏场景层，游戏场景相关内容可以放在这里面。        

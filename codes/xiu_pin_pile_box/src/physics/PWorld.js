@@ -3,13 +3,52 @@ var PWorld = (function () {
         this.world = new p2.World();
         this.world.defaultContactMaterial.friction = DataCenter.cfg.friction;
         this.world.defaultContactMaterial.restitution = DataCenter.cfg.restitution;
+        this.world.defaultContactMaterial.stiffness = DataCenter.cfg.stiffness;
+        this.world.defaultContactMaterial.relaxation = DataCenter.cfg.relaxation;
         this.world.sleepMode = p2.World.NO_SLEEPING;
         this.factor = DataCenter.cfg.factor;
+        this.mass = DataCenter.cfg.mass;
     }
     PWorld.prototype.step = function (dt) {
         this.world.step(dt / 1000);
+        var world = this.world;
+        var stageHeight = egret.MainContext.instance.stage.stageHeight;
+        var l = world.bodies.length;
+        for (var i = 0; i < l; i++) {
+            var boxBody = world.bodies[i];
+            if (boxBody.displays) {
+                var box = boxBody.displays[0];
+                if (box) {
+                    box.x = boxBody.position[0] * this.factor;
+                    box.y = stageHeight - boxBody.position[1] * this.factor;
+                    box.rotation = 360 - boxBody.angle * 180 / Math.PI;
+                    if (boxBody.sleepState == p2.Body.SLEEPING) {
+                        box.alpha = 0.5;
+                    }
+                    else {
+                        box.alpha = 1;
+                    }
+                }
+            }
+        }
     };
     PWorld.prototype.mappingObject = function (obj) {
+        var fw = obj.width / this.factor;
+        var fh = obj.height / this.factor;
+        var fx = obj.x / this.factor;
+        var fy = (Global.stage.stageHeight - obj.y) / this.factor;
+        var shape = new p2.Rectangle(fw, fh);
+        var body = new p2.Body({ mass: this.mass, position: [fx, fy] });
+        body.addShape(shape);
+        body.displays = [obj];
+        this.world.addBody(body);
+    };
+    PWorld.prototype.createGround = function () {
+        var plane = new p2.Plane();
+        var body = new p2.Body({ mass: 2, position: [0, 0] });
+        body.type = p2.Body.STATIC;
+        body.addShape(plane);
+        this.world.addBody(body);
     };
     return PWorld;
 })();
