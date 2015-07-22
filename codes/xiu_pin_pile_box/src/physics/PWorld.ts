@@ -1,4 +1,4 @@
-﻿//物理世界
+//物理世界
 class PWorld
 {
     public world: p2.World;
@@ -8,21 +8,43 @@ class PWorld
     {
         //物理世界
         this.world = new p2.World();
-        //摩擦力
-        this.world.defaultContactMaterial.friction = DataCenter.cfg.friction;
-        //弹力
-        this.world.defaultContactMaterial.restitution = DataCenter.cfg.restitution;
-        //硬度
-        this.world.defaultContactMaterial.stiffness = DataCenter.cfg.stiffness;
-        //柔软度
-        this.world.defaultContactMaterial.relaxation = DataCenter.cfg.relaxation;
+        if (null !=  DataCenter.cfg.friction )
+        {
+            //摩擦力
+            this.world.defaultContactMaterial.friction = DataCenter.cfg.friction;
+        }
+        
+        if (null !=  DataCenter.cfg.restitution )
+        {
+            //弹力
+            this.world.defaultContactMaterial.restitution = DataCenter.cfg.restitution;
+        }
+        
+        if (null != DataCenter.cfg.stiffness )
+        {
+            //硬度
+            this.world.defaultContactMaterial.stiffness = Number.MAX_VALUE;
+        }
+        
+        if (null !=  DataCenter.cfg.relaxation )
+        {
+            //柔软度
+            this.world.defaultContactMaterial.relaxation = 0;
+        }
+        
         //睡眠模式
         this.world.sleepMode = p2.World.NO_SLEEPING;
-
         //物理世界的比例
         this.factor = DataCenter.cfg.factor;
-
+        //默认的箱子质量
         this.mass = DataCenter.cfg.mass;
+        
+        this.world.on( "beginContact", this.onBeginContact, this );
+    }
+    
+    private onBeginContact(e:p2.EventEmitter)
+    {
+        e;
     }
 
     //物理世界更新
@@ -37,6 +59,7 @@ class PWorld
         for (var i: number = 0; i < l; i++)
         {
             var boxBody: p2.Body = world.bodies[i];
+
             if (boxBody.displays)
             {
                 var box: egret.DisplayObject = boxBody.displays[0];
@@ -67,8 +90,24 @@ class PWorld
         var fy: number = (Global.stage.stageHeight - obj.y) / this.factor;
 
         var shape: p2.Rectangle = new p2.Rectangle(fw, fh);
+        
+        shape.material = this.world.defaultMaterial;
+ 
         var body: p2.Body = new p2.Body({ mass: this.mass, position: [fx, fy] });
+                    
+        //body.type = p2.Body.KINEMATIC;
+//        body.on( "sleep", function (e:p2.EventEmitter):void {
+//            //body.type = p2.Body.STATIC;
+//                    body.damping = 0.5;
+//                    body.allowSleep = false;
+//                    body.wakeUp();
+//            },this );
+        //body.type = p2.Body.KINEMATIC;
+        //body.velocity = [0, -1];
+        //body.gravityScale = 0;
         body.addShape(shape);
+        
+
         body.displays = [obj];
 
         this.world.addBody(body);        
@@ -77,10 +116,17 @@ class PWorld
     public createGround()
     {
         var plane: p2.Plane = new p2.Plane();
-        var body: p2.Body = new p2.Body({ mass: 2, position: [0, 0] });
+        plane.material = this.world.defaultMaterial;
+        var body: p2.Body = new p2.Body({ mass: 0, position: [0, 0] });
         body.type = p2.Body.STATIC;
+       
         body.addShape(plane);    
         
         this.world.addBody(body);       
+    }
+    
+    private drawDebug(shape:egret.Shape)
+    {
+        
     }
 }

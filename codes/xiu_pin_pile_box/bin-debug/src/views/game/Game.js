@@ -3,6 +3,7 @@ var Game = (function (_super) {
     __extends(Game, _super);
     function Game() {
         _super.call(this);
+        this.createTime = 0;
         this.init();
         this.addListeners();
     }
@@ -14,7 +15,7 @@ var Game = (function (_super) {
         this.bg = Texture.createBitmap("tower_jpg");
         this.addChild(this.bg);
         this.bg.y = Global.stage.stageHeight - this.bg.height;
-        egret.Profiler.getInstance().run();
+        this.scrollRect = new egret.Rectangle(0, 0, Global.stage.stageWidth, Global.stage.stageHeight);
     };
     __egretProto__.addListeners = function () {
         this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.touchBegionHandler, this);
@@ -25,11 +26,24 @@ var Game = (function (_super) {
         egret.Ticker.getInstance().unregister(this.onTick, this);
     };
     __egretProto__.touchBegionHandler = function (e) {
-        this.createBox(e.stageX, e.stageY);
+        if (egret.getTimer() < this.createTime) {
+            return;
+        }
+        this.createTime = egret.getTimer() + DataCenter.cfg.createBoxInterval;
+        var boxAmount = this.p2.world.bodies.length;
+        if (boxAmount > DataCenter.cfg.scrollBoxAmount) {
+            this.scrollMap();
+        }
+        this.createBox(e.localX, e.localY);
+    };
+    //滚动地图
+    __egretProto__.scrollMap = function () {
+        var scrollHeight = DataCenter.cfg.scrollHeight;
+        var scrollDuration = DataCenter.cfg.scrollDuration;
+        egret.Tween.get(this.scrollRect).to({ y: this.scrollRect.y - scrollHeight }, scrollDuration);
     };
     __egretProto__.onTick = function (dt) {
         this.p2.step(dt);
-        //this.debug(this.p2);
     };
     __egretProto__.createBox = function (x, y) {
         var box = new Box();
@@ -39,81 +53,6 @@ var Game = (function (_super) {
         box.y = y;
         this.addChild(box);
         this.p2.mappingObject(box);
-    };
-    /**
- * debug模式，使用图形绘制
- */
-    __egretProto__.debug = function (w) {
-        var factor = w.factor;
-        var world = w.world;
-        var canvas = document.createElement("canvas");
-        var stage = egret.MainContext.instance.stage;
-        var stageWidth = stage.stageWidth;
-        var stageHeight = stage.stageHeight;
-        canvas.width = stageWidth;
-        canvas.height = stageHeight;
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "rgba(" + 255 + "," + 255 + "," + 0 + "," + 1 + ")";
-        ctx.strokeStyle = "rgba(" + 255 + "," + 0 + "," + 0 + "," + 1 + ")";
-        ctx.lineWidth = 1;
-        var rendererContext = egret.MainContext.instance.rendererContext;
-        var f = rendererContext.onRenderFinish;
-        rendererContext.onRenderFinish = function () {
-            ctx.clearRect(0, 0, stageWidth, stageHeight);
-            var l = world.bodies.length;
-            for (var i = 0; i < l; i++) {
-                var boxBody = world.bodies[i];
-                if (boxBody.sleepState == p2.Body.SLEEPING) {
-                    ctx.globalAlpha = 0.5;
-                }
-                else {
-                    ctx.globalAlpha = 1;
-                }
-                for (var j = 0; j < boxBody.shapes.length; j++) {
-                    var boxShape = boxBody.shapes[j];
-                    if (boxShape instanceof p2.Rectangle) {
-                        var x = (boxBody.position[0] + +boxBody.shapeOffsets[j][0]) * factor;
-                        var y = stageHeight - (boxBody.position[1] + +boxBody.shapeOffsets[j][1]) * factor;
-                        var w = boxShape.width * factor;
-                        var h = boxShape.height * factor;
-                        var matrix = egret.Matrix.identity.identity();
-                        matrix.prependTransform(x, y, 1, 1, 360 - boxBody.angle * 180 / Math.PI, 0, 0, 0, 0);
-                        ctx.save();
-                        ctx.setTransform(matrix.a, matrix.b, matrix.c, matrix.d, matrix.tx, matrix.ty);
-                        ctx.beginPath();
-                        ctx.rect(-boxShape.width / 2 * factor, -boxShape.height / 2 * factor, w, h);
-                        ctx.fill();
-                        ctx.closePath();
-                        ctx.restore();
-                    }
-                    else if (boxShape instanceof p2.Plane) {
-                        ctx.save();
-                        ctx.setTransform(1, 0, 0, 1, 0, stageHeight - (boxBody.position[1] + boxBody.shapeOffsets[j][1]) * factor);
-                        ctx.beginPath();
-                        ctx.moveTo(0, 0);
-                        ctx.lineTo(stageWidth, 0);
-                        ctx.stroke();
-                        ctx.closePath();
-                        ctx.restore();
-                    }
-                    else if (boxShape instanceof p2.Circle) {
-                        var x = (boxBody.position[0] + boxBody.shapeOffsets[j][0]) * factor;
-                        var y = stageHeight - (boxBody.position[1] + boxBody.shapeOffsets[j][1]) * factor;
-                        var matrix = egret.Matrix.identity.identity();
-                        matrix.prependTransform(x, y, 1, 1, 360 - boxBody.angle * 180 / Math.PI, 0, 0, 0, 0);
-                        ctx.save();
-                        ctx.setTransform(matrix.a, matrix.b, matrix.c, matrix.d, matrix.tx, matrix.ty);
-                        ctx.beginPath();
-                        ctx.arc(0, 0, boxShape.radius * factor, 0, Math.PI * 2);
-                        ctx.fill();
-                        ctx.closePath();
-                        ctx.restore();
-                    }
-                }
-            }
-            rendererContext["_cacheCanvasContext"].drawImage(canvas, 0, 0, stageWidth, stageHeight, 0, 0, stageWidth, stageHeight);
-            f.call(rendererContext);
-        };
     };
     return Game;
 })(egret.Sprite);
