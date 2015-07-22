@@ -1,7 +1,6 @@
 var Global = (function () {
     function Global() {
     }
-    var __egretProto__ = Global.prototype;
     //舞台
     Global.stage = null;
     //游戏图层
@@ -10,5 +9,4 @@ var Global = (function () {
     Global.UI_LAYER = new egret.gui.UIStage();
     return Global;
 })();
-Global.prototype.__class__ = "Global";
 //# sourceMappingURL=Global.js.map

@@ -27,12 +27,11 @@ var PWorld = (function () {
         this.mass = DataCenter.cfg.mass;
         this.world.on("beginContact", this.onBeginContact, this);
     }
-    var __egretProto__ = PWorld.prototype;
-    __egretProto__.onBeginContact = function (e) {
+    PWorld.prototype.onBeginContact = function (e) {
         e;
     };
     //物理世界更新
-    __egretProto__.step = function (dt) {
+    PWorld.prototype.step = function (dt) {
         this.world.step(dt / 1000);
         var world = this.world;
         var stageHeight = egret.MainContext.instance.stage.stageHeight;
@@ -56,7 +55,7 @@ var PWorld = (function () {
         }
     };
     //映射一个物体到物理世界
-    __egretProto__.mappingObject = function (obj) {
+    PWorld.prototype.mappingObject = function (obj) {
         var fw = obj.width / this.factor;
         var fh = obj.height / this.factor;
         var fx = obj.x / this.factor;
@@ -78,7 +77,7 @@ var PWorld = (function () {
         body.displays = [obj];
         this.world.addBody(body);
     };
-    __egretProto__.createGround = function () {
+    PWorld.prototype.createGround = function () {
         var plane = new p2.Plane();
         plane.material = this.world.defaultMaterial;
         var body = new p2.Body({ mass: 0, position: [0, 0] });
@@ -86,9 +85,8 @@ var PWorld = (function () {
         body.addShape(plane);
         this.world.addBody(body);
     };
-    __egretProto__.drawDebug = function (shape) {
+    PWorld.prototype.drawDebug = function (shape) {
     };
     return PWorld;
 })();
-PWorld.prototype.__class__ = "PWorld";
 //# sourceMappingURL=PWorld.js.map
