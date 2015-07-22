@@ -11,4 +11,3 @@ var Global = (function () {
     return Global;
 })();
 Global.prototype.__class__ = "Global";
-//# sourceMappingURL=Global.js.map

@@ -91,4 +91,3 @@ var PWorld = (function () {
     return PWorld;
 })();
 PWorld.prototype.__class__ = "PWorld";
-//# sourceMappingURL=PWorld.js.map

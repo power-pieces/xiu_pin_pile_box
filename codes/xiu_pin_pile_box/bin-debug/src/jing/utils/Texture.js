@@ -44,4 +44,3 @@ var Texture = (function () {
     return Texture;
 })();
 Texture.prototype.__class__ = "Texture";
-//# sourceMappingURL=Texture.js.map

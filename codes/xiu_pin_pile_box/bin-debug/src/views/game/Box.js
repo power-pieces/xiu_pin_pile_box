@@ -12,4 +12,3 @@ var Box = (function (_super) {
     return Box;
 })(egret.Sprite);
 Box.prototype.__class__ = "Box";
-//# sourceMappingURL=Box.js.map

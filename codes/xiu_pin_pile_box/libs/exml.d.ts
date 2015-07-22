@@ -1,4 +1,8 @@
 declare module skins.scene{
+	class IndexSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
 	class ShowcaseSkin extends egret.gui.Skin{
 	}
 }

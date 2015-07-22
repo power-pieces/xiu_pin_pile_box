@@ -57,4 +57,3 @@ var Game = (function (_super) {
     return Game;
 })(egret.Sprite);
 Game.prototype.__class__ = "Game";
-//# sourceMappingURL=Game.js.map

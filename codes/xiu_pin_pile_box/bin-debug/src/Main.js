@@ -105,7 +105,8 @@ var Main = (function (_super) {
         this.addChild(Global.GAME_LAYER);
         //GUI的组件必须都在这个容器内部,UIStage会始终自动保持跟舞台一样大小。        
         this.addChild(Global.UI_LAYER);
-        Global.GAME_LAYER.addChild(new Game());
+        //Global.GAME_LAYER.addChild(new Game());
+        Global.UI_LAYER.addElement(new Index());
     };
     __egretProto__.setConfig = function () {
         DataCenter.cfg = RES.getRes("config_json");
@@ -113,4 +114,3 @@ var Main = (function (_super) {
     return Main;
 })(egret.DisplayObjectContainer);
 Main.prototype.__class__ = "Main";
-//# sourceMappingURL=Main.js.map
