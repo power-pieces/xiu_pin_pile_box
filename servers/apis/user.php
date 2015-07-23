@@ -7,202 +7,125 @@ class User
 	 */
 	public function login(&$params, &$res)
 	{
-		$sql = "CALL add_user('%s','%s','%s',%d,'%s');";
-		$sql = sprintf($sql,   mysql_escape_string($params->openId),
-       mysql_escape_string($params->nickname),
-       mysql_escape_string($params->headimgurl),
-		$params->sex,
-       mysql_escape_string($params->adress));
-
-        //die($sql);
+        $openId = mysql_escape_string($params->openId);
+        $name = mysql_escape_string($params->name);
+        $pic = mysql_escape_string($params->pic);
+        $sql = "INSERT INTO tbl_user(id,name,pic) VALUES('%s','%s','%s') ON DUPLICATE KEY UPDATE name='%s',pic='%s'";
+        $sql = sprintf($sql, $openId, $name, $pic, $name, $pic);
 
 		$st = new SqlHelper();
 		$st->conn();
-		$result = $st->query($sql);
+		$result = $st->modify($sql);
+        $st->close();
+
 		if($result)
 		{
-			$res['data'] = $result;
+
+			//数据登陆成功，开始获取用户数据
+            $data = $this->getUserInfo($openId);
+            $data['receives'] = $this->getReceives($openId);
+            $data['rewards'] = $this->getRewards($openId);
+            $res['data'] = $data;
 		}
 		else
 		{
-			$res['data'] = false;
+            $res['error'] = 1;
 		}
-	}
-	
-	/**
-	 * 获取用户信息
-	 */
-	public function get(&$params, &$res)
-	{
-		$sql = "CALL get_user('%s');";
-		$sql = sprintf($sql, mysql_escape_string($params->userId));
-        $st = new SqlHelper();
-        $st->conn();
-        $result = $st->query($sql);
-        if($result)
-        {
-            $res['data'] = $result;
-        }
-        else
-        {
-            $res['error'] = 1;
-            $res['msg'] = 'sql wrong';
-        }
+
 	}
 
-
-	public function follow(&$params, &$res)
-	{
-        $a = $params->oid;
-        $b = $params->userId;
-        $sql = "CALL add_follow('%s','%s');";
-        $sql = sprintf($sql, mysql_escape_string($a)
-        ,mysql_escape_string($b));
-        $st = new SqlHelper();
-        $st->conn();
-        $result = $st->modify($sql);
-        if($result)
-        {
-            $res['data'] = $result;
-        }
-        else
-        {
-            $res['error'] = 1;
-            $res['msg'] = 'sql wrong';
-        }
-	}
-	
-	public function update_head(&$params, &$res)
-	{
-        //保存图片
-        ImgUtil::saveImg($params->imgData,DIR_HEAD,$params->oid);
-        $sql = "CALL update_head_img('%s','%s');";
-        $sql = sprintf($sql, mysql_escape_string($params->oid)
-            ,mysql_escape_string($params->oid));
-
-        $st = new SqlHelper();
-        $st->conn();
-        $result = $st->modify($sql);
-        if($result)
-        {
-            $res['data'] = $result;
-        }
-        else
-        {
-            $res['error'] = 1;
-            $res['msg'] = 'sql wrong';
-        }
-	}
-
-    public function update_head2(&$params, &$res)
+    /**
+     * 获取用户信息
+     * @param $id
+     */
+    private function getUserInfo($id)
     {
-        $fileUrl = 'http://file.api.weixin.qq.com/cgi-bin/media/get?access_token='.$params->at.'&media_id='.$params->mediaId;
-        //保存图片
-        $file = file_get_contents($fileUrl);
-        $wrongObj = null;
-        try{
-            $wrongObj = json_decode($file);
-        }
-        catch(Exception $e)
-        {
-
-        }
-
-        if($wrongObj)
-        {
-            $res['data'] = false;
-//            $res['error'] = 1;
-//            $res['msg'] = $fileUrl;
-            return;
-        }
-
-        $savePath = DIR_HEAD.$params->oid.'.jpg';
-        file_put_contents($savePath,$file);
-
-//        ImgUtil::saveImg($params->imgData,DIR_HEAD,$params->oid);
-
-
-        $sql = "CALL update_head_img('%s','%s');";
-        $sql = sprintf($sql, mysql_escape_string($params->oid)
-            ,mysql_escape_string($params->oid));
-
+        $sql = "SELECT * FROM tbl_user WHERE id='%s'";
+        $sql = sprintf($sql, mysql_escape_string($id));
         $st = new SqlHelper();
         $st->conn();
-        $result = $st->modify($sql);
-        if($result)
-        {
-            $res['data'] = $result;
-        }
-        else
-        {
-            $res['error'] = 1;
-            $res['msg'] = 'sql wrong';
-        }
+        $result = $st->query($sql);
+        $result = $result[0];
+        $st->close();
+        return $result;
     }
-	
-	public function update_info(&$params, &$res)
-	{
-        $sql = "CALL update_info('%s', '%s',%d, '%s', '%s', '%s');";
-        $sql = sprintf($sql, mysql_escape_string($params->oid)
-            ,mysql_escape_string($params->nickname)
-            ,mysql_escape_string($params->sex)
-            ,mysql_escape_string($params->adress)
-            ,mysql_escape_string($params->intro)
-            ,mysql_escape_string($params->phone)
-        );
+
+    /**
+     * 收到的助力信息
+     * @param $id
+     * @return array|bool
+     */
+    private function getReceives($id)
+    {
+        $sql = "SELECT id,name,pic FROM tbl_share_record AS t1 LEFT JOIN tbl_user AS t2 ON t1.sender_id = t2.id WHERE receiver_id = '%d'";
+        $sql = sprintf($sql, mysql_escape_string($id));
         $st = new SqlHelper();
         $st->conn();
-        $result = $st->modify($sql);
-        if($result)
-        {
-            $res['data'] = $result;
-        }
-        else
-        {
-            $res['error'] = 1;
-            $res['msg'] = 'sql wrong';
-        }
-	}
-	
-	public function msg_list(&$params, &$res)
-	{
-        $st = new SqlHelper();
-        $st->conn();
-
-        $rec = array();
-
-        $sql = "CALL get_receive_msg_list('%s');";
-        $sql = sprintf($sql, mysql_escape_string($params->oid));
         $result = $st->query($sql);
-        $rec['received'] = $result;
+        $st->close();
+        return $result;
+    }
 
-        $sql = "CALL get_sent_msg_list('%s');";
-        $sql = sprintf($sql, mysql_escape_string($params->oid));
-        $result = $st->query($sql);
-        $rec['sent'] = $result;
-
-        $res['data'] = $rec;
-	}
-
-	public function send_msg(&$params, &$res)
-	{
-        $sql = "CALL add_msg('%s','%s', '%s');";
-        $sql = sprintf($sql, mysql_escape_string($params->oid)
-            ,mysql_escape_string($params->id)
-            ,mysql_real_escape_string($params->content)
-        );
-
+    /**
+     * 收到的奖励信息
+     * @param $id
+     * @return array|bool
+     */
+    function getRewards($id)
+    {
+        $sql = "SELECT * FROM tbl_rewards WHERE id='%s';";
+        $sql = sprintf($sql, mysql_escape_string($id));
         $st = new SqlHelper();
         $st->conn();
-        $result = $st->modify($sql);
-        if($result)
-        {
-            $res['data'] = $result;
-        }
-        else
-        {
-            $res['error'] = 1;
-            $res['msg'] = 'sql wrong';
-        }
-	}
+        $result = $st->query($sql);
+        $st->close();
+        return $result;
+    }
+
+
+    /**
+     * 给好友助力
+     * @param $params
+     * @param $res
+     */
+    public function give_power(&$params, &$res)
+    {
+        $sql = "SELECT id,name,pic,time_utc FROM tbl_share_record AS t1 LEFT JOIN tbl_user AS t2 ON t1.sender_id = t2.id WHERE receiver_id = '%d'";
+        $sql = sprintf($sql, mysql_escape_string($id));
+        $st = new SqlHelper();
+        $st->conn();
+        $result = $st->query($sql);
+        $st->close();
+        return $result;
+    }
+
+    /**
+     * 发送抽奖信息
+     * @param $params
+     * @param $res
+     */
+    public function lottery(&$params, &$res)
+    {
+
+    }
+
+    /**
+     * 提交游戏结果
+     * @param $params
+     * @param $res
+     */
+    public function game_result(&$params, &$res)
+    {
+
+    }
+
+    /**
+     * 获取排行榜
+     * @param $params
+     * @param $res
+     */
+    public function get_rank(&$params, &$res)
+    {
+
+    }
 }
