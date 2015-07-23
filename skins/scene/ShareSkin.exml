@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="600" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:UIAsset height="100%" width="100%" x="0" y="0" source="bg_jpg"/>
+	<e:SkinnableComponent id="userInfo" x="0" y="0" skinName="skins.components.UserInfoSkin"/>
+	<e:Label id="txtTitle" text="某某某，已获得秀品好礼" x="121" y="120" textColor="0x1FFB01" bold="true"/>
+	<e:Scroller width="100%" height="200" x="0" y="163">
+		<e:Group>
+			<e:UIAsset source="bg_jpg" />
+		</e:Group>
+	</e:Scroller>
+	
+
+</e:Skin>
