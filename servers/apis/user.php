@@ -90,13 +90,19 @@ class User
      */
     public function give_power(&$params, &$res)
     {
-        $sql = "SELECT id,name,pic,time_utc FROM tbl_share_record AS t1 LEFT JOIN tbl_user AS t2 ON t1.sender_id = t2.id WHERE receiver_id = '%d'";
-        $sql = sprintf($sql, mysql_escape_string($id));
+        $id = $params->id;
+        $target_id = $params->target_id;
+
+        $sql = "INSERT INTO tbl_share_record(sender_id,receiver_id,time,time_utc) VALUES('%s','%s',CURDATE(),%d)";
+        $sql = sprintf($sql, mysql_escape_string($id), mysql_escape_string($target_id), time());
         $st = new SqlHelper();
         $st->conn();
-        $result = $st->query($sql);
+        $result = $st->modify($sql);
         $st->close();
-        return $result;
+        if(false == $result)
+        {
+            $res['error'] = 2;
+        }
     }
 
     /**
@@ -106,6 +112,11 @@ class User
      */
     public function lottery(&$params, &$res)
     {
+        $id = mysql_escape_string($params->id);
+        $phone  = mysql_escape_string($params->phone);
+        $name = mysql_escape_string($params->name);
+        $address = mysql_escape_string($params->address);
+
 
     }
 
@@ -116,7 +127,37 @@ class User
      */
     public function game_result(&$params, &$res)
     {
+        $id = mysql_escape_string($params->id);
+        $score = intval($params->score);
 
+        $user = $this->getUserInfo($id);
+        if(intval($user['power']) <= 0)
+        {
+            $res['error'] = 1;
+            return;
+        }
+
+        $sql = null;
+        if(intval($user['best_score']) < $score)
+        {
+            //新纪录
+            $sql = "UPDATE tbl_user SET total_score=total_score + %d,power=power-1,best_score=%d,best_score_utc=%d,best_score_time=NOW() WHERE id='%s';";
+            $sql = sprintf($sql, $score, $score, time(), $id);
+        }
+        else
+        {
+            $sql = "UPDATE tbl_user SET total_score=total_score + %d,power=power-1 WHERE id='%s'";
+            $sql = sprintf($sql, $score, $id);
+        }
+
+        $st = new SqlHelper();
+        $st->conn();
+        $result = $st->modify($sql);
+        $st->close();
+        if(false == $result)
+        {
+            $res['error'] = 2;
+        }
     }
 
     /**
@@ -126,6 +167,11 @@ class User
      */
     public function get_rank(&$params, &$res)
     {
-
+        $sql="SELECT id,name,pic,total_score FROM tbl_user ORDER BY total_score DESC LIMIT 0,20";
+        $st = new SqlHelper();
+        $st->conn();
+        $result = $st->query($sql);
+        $st->close();
+        return $result;
     }
 }
