@@ -167,11 +167,25 @@ class User
      */
     public function get_rank(&$params, &$res)
     {
-        $sql="SELECT id,name,pic,total_score FROM tbl_user ORDER BY total_score DESC LIMIT 0,20";
         $st = new SqlHelper();
+        $data = array();
+        $data['self'] = 1;
+
+        $id = mysql_escape_string($params->id);
+        $sql="SELECT COUNT(*) AS position FROM tbl_user WHERE total_score > (SELECT total_score FROM tbl_user WHERE id = '%s')";
+        $sql = sprintf($sql, $id);
+        $st->conn();
+        $result = $st->query($sql);
+        $data['self'] = $result[0]['position'];
+        $st->close();
+
+        $sql="SELECT id,name,pic,total_score FROM tbl_user ORDER BY total_score DESC LIMIT 0,20";
         $st->conn();
         $result = $st->query($sql);
         $st->close();
+        $data['list'] = $result;
+
+        $res['data'] = $data;
         return $result;
     }
 }
