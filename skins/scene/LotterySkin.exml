@@ -6,4 +6,5 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
+	<e:UIAsset source="bgImage" x="0" y="0" width="100%" height="100%"/>
 </e:Skin>

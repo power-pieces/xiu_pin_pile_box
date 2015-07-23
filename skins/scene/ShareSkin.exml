@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="600" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+<e:Skin width="640" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
@@ -8,10 +8,15 @@
 	</e:states>
 	<e:UIAsset height="100%" width="100%" x="0" y="0" source="bg_jpg"/>
 	<e:SkinnableComponent id="userInfo" x="0" y="0" skinName="skins.components.UserInfoSkin"/>
-	<e:Label id="txtTitle" text="某某某，已获得秀品好礼" x="121" y="120" textColor="0x1FFB01" bold="true"/>
-	<e:Scroller width="100%" height="200" x="0" y="163">
+
+	<e:Button id="btnGivePower" x="223" y="804" label="分享邀好友助力"/>
+	<e:Button id="btnRank" label="查看排行" x="241" y="728"/>
+	<e:Button id="btnGame" label="再来一局" x="241" y="647"/>
+	<e:UIAsset height="100" width="100" x="172" y="430" source="bgImage"/>
+	<e:Label id="txtPower" text="x7" x="295" y="436" textColor="0xFD0404" bold="true" fontFamily="Angsana New" size="60"/>
+	<e:Scroller width="100%" height="134" x="0" y="872">
 		<e:Group>
-			<e:UIAsset source="bg_jpg" />
+			<e:UIAsset source="bgImage" />
 		</e:Group>
 	</e:Scroller>
 	
