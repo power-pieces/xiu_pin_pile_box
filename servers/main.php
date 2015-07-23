@@ -22,7 +22,7 @@ class Main{
     {
         //依赖的PHP
         $dependentConfigs = array('define');
-        $dependentUtils = array('sql_helper', 'json_util','img_util');
+        $dependentUtils = array('sql_helper', 'json_util');
 
         foreach ($dependentConfigs as $v)
         {
