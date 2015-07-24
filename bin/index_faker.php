@@ -75,95 +75,90 @@ getShareToken($appid,$appsecrect,$noncestr,$file,time());
 <html>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
-  wx.config({
-    debug: false,
-    appId: '<?php echo $appid;?>',
-    //在share.php里面有储值
-    timestamp: '<?php echo $GLOBALS["timestamp"];?>',
-    nonceStr: '<?php echo $GLOBALS["noncestr"];?>',
-    signature: '<?php echo getsignature();?>',
-    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage']
-  });
-
-  
-  var sharesuccessfunc;
-  var sharefuncobj;
-  
-	var obj = {};
-	obj.inviter = "<?php echo $shareid;?>";
-	obj.id = "<?php echo $p->openid;?>";
-	obj.name = "<?php echo $p->username;?>";
-	obj.sign = "<?php echo md5($p->openid.'express_315');?>";
-	obj.headUrl = "<?php echo $p->avatar;?>";
-	obj.unionid = "<?php echo $p->unionid;?>";
-	if("0" == obj.inviter)
-	{
-		obj.inviter = null;
-	}
-  	alert(JSON.stringify(obj));
+    wx.config({
+        debug: false,
+        appId: '<?php echo $appid;?>',
+        //在share.php里面有储值
+        timestamp: '<?php echo $GLOBALS["timestamp"];?>',
+        nonceStr: '<?php echo $GLOBALS["noncestr"];?>',
+        signature: '<?php echo getsignature();?>',
+        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage']
+    });
 
 
-  //分享的具体信息，请自行添加修改。
-  function setTimeLine(shareid)
-  {
-	  wx.onMenuShareTimeline({
-		    title: '疯狂打山寨', // 分享标题
-			 desc: '"Duang~！" + DataCenter.inviterName + "击倒了"', // 分享描述
-		    link: 'http://www.g6game.com/h5game/express/index.php?share='+shareid, // 分享链接
-		    imgUrl: '', // 分享图标
-		    success: function () { 
-		        // 用户确认分享后执行的回调函数
-		    	if (sharesuccessfunc != null)
-		    		sharesuccessfunc.apply(sharefuncobj,[]);
-		    },
-		    cancel: function () { 
-		        // 用户取消分享后执行的回调函数
-		    	
-		    }
-		});
-  }
+    var sharesuccessfunc;
+    var sharefuncobj;
+
+    var obj = {};
+    obj.inviter = "<?php echo $shareid;?>";
+    obj.id = "<?php echo $p->openid;?>";
+    obj.name = "<?php echo $p->username;?>";
+    obj.pic = "<?php echo $p->avatar;?>";
+    if("0" == obj.inviter)
+    {
+        obj.inviter = null;
+    }
+    alert(JSON.stringify(obj));
 
 
-  
+    //分享的具体信息，请自行添加修改。
+    function setTimeLine(shareid)
+    {
+        wx.onMenuShareTimeline({
+            title: '疯狂打山寨', // 分享标题
+            desc: '"Duang~！" + DataCenter.inviterName + "击倒了"', // 分享描述
+            link: 'http://www.g6game.com/h5game/express/index.php?share='+shareid, // 分享链接
+            imgUrl: '', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                if (sharesuccessfunc != null)
+                    sharesuccessfunc.apply(sharefuncobj,[]);
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
 
-  //获取游戏需要的信息
-  function getInfo()
-  {
-	  return obj;
-  }
-  
-  function setAppMessage(shareid)
-  {
-	  wx.onMenuShareAppMessage({
-		    title: '疯狂打山寨', // 分享标题
-		    desc: '测试', // 分享描述
-		    link: 'http://www.g6game.com/h5game/express/index.php?share='+shareid, // 分享链接
-		    imgUrl: '', // 分享图标
-		    type: '', // 分享类型,music、video或link，不填默认为link
-		    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-		    success: function () {
-			if (sharesuccessfunc != null)
-		    	sharesuccessfunc.apply(sharefuncobj,[]);				
-		    },
-		    cancel: function () { 
-		    }
-		});
-  }
+            }
+        });
+    }
 
-  //准备分享
-  function readyShare(){
-	  //alert("分享者ID：" + obj.id + "   名称：" + obj.name);
-	 setTimeLine(obj.id);
-	 setAppMessage(obj.id);  
-  }
-  	
-   
+    //获取游戏需要的信息
+    function getInfo()
+    {
+        return obj;
+    }
+
+    function setAppMessage(shareid)
+    {
+        wx.onMenuShareAppMessage({
+            title: '疯狂打山寨', // 分享标题
+            desc: '测试', // 分享描述
+            link: 'http://www.g6game.com/h5game/express/index.php?share='+shareid, // 分享链接
+            imgUrl: '', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                if (sharesuccessfunc != null)
+                    sharesuccessfunc.apply(sharefuncobj,[]);
+            },
+            cancel: function () {
+            }
+        });
+    }
+
+    //准备分享
+    function readyShare(){
+        //alert("分享者ID：" + obj.id + "   名称：" + obj.name);
+        setTimeLine(obj.id);
+        setAppMessage(obj.id);
+    }
+
+
 
     wx.ready(function () {
-	  readyShare(); 
-	  
-	 
-  });
+        readyShare();
+
+
+    });
 </script>
 
 <head>

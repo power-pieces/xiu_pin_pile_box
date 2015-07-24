@@ -37,6 +37,9 @@ class Main extends egret.DisplayObjectContainer {
 
     public constructor() {
         super();
+
+        //TODO 获取外部资源
+
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
 
