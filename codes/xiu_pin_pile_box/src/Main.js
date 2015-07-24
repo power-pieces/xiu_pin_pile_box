@@ -49,7 +49,7 @@ var Main = (function (_super) {
         Global.stage = this.stage;
         this.addChild(Global.GAME_LAYER);
         this.addChild(Global.UI_LAYER);
-        Global.GAME_LAYER.addChild(new Game());
+        Global.UI_LAYER.addElement(new Index());
     };
     Main.prototype.setConfig = function () {
         DataCenter.cfg = RES.getRes("config_json");

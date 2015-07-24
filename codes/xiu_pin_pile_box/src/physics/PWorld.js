@@ -1,14 +1,26 @@
 var PWorld = (function () {
     function PWorld() {
         this.world = new p2.World();
-        this.world.defaultContactMaterial.friction = DataCenter.cfg.friction;
-        this.world.defaultContactMaterial.restitution = DataCenter.cfg.restitution;
-        this.world.defaultContactMaterial.stiffness = DataCenter.cfg.stiffness;
-        this.world.defaultContactMaterial.relaxation = DataCenter.cfg.relaxation;
+        if (null != DataCenter.cfg.friction) {
+            this.world.defaultContactMaterial.friction = DataCenter.cfg.friction;
+        }
+        if (null != DataCenter.cfg.restitution) {
+            this.world.defaultContactMaterial.restitution = DataCenter.cfg.restitution;
+        }
+        if (null != DataCenter.cfg.stiffness) {
+            this.world.defaultContactMaterial.stiffness = Number.MAX_VALUE;
+        }
+        if (null != DataCenter.cfg.relaxation) {
+            this.world.defaultContactMaterial.relaxation = 0;
+        }
         this.world.sleepMode = p2.World.NO_SLEEPING;
         this.factor = DataCenter.cfg.factor;
         this.mass = DataCenter.cfg.mass;
+        this.world.on("beginContact", this.onBeginContact, this);
     }
+    PWorld.prototype.onBeginContact = function (e) {
+        e;
+    };
     PWorld.prototype.step = function (dt) {
         this.world.step(dt / 1000);
         var world = this.world;
@@ -38,6 +50,7 @@ var PWorld = (function () {
         var fx = obj.x / this.factor;
         var fy = (Global.stage.stageHeight - obj.y) / this.factor;
         var shape = new p2.Rectangle(fw, fh);
+        shape.material = this.world.defaultMaterial;
         var body = new p2.Body({ mass: this.mass, position: [fx, fy] });
         body.addShape(shape);
         body.displays = [obj];
@@ -45,10 +58,13 @@ var PWorld = (function () {
     };
     PWorld.prototype.createGround = function () {
         var plane = new p2.Plane();
-        var body = new p2.Body({ mass: 2, position: [0, 0] });
+        plane.material = this.world.defaultMaterial;
+        var body = new p2.Body({ mass: 0, position: [0, 0] });
         body.type = p2.Body.STATIC;
         body.addShape(plane);
         this.world.addBody(body);
+    };
+    PWorld.prototype.drawDebug = function (shape) {
     };
     return PWorld;
 })();
