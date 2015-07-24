@@ -1,0 +1,13 @@
+{
+"isDebug":false,
+"friction":1,
+"restitution":0,
+"stiffness":null,
+"relaxation":null,
+"mass":1,
+"factor":50,
+"scrollDuration":1000,
+"scrollHeight":100,
+"createBoxInterval":1000,
+"scrollBoxAmount":6
+}
