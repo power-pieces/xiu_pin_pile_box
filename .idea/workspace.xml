@@ -4,10 +4,22 @@
     <list default="true" readonly="true" id="0ca9891d-7701-46a9-afab-528e3dc6fe73" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/obj/Debug/TempPE" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/obj/Release/TempPE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/.vs/xp_box/v14/.suo" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/.vs/xp_box/v14/.suo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin/xp_box.dll" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin/xp_box.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin/xp_box.pdb" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin/xp_box.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/models/DataCenter.js" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/models/DataCenter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/models/DataCenter.ts" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/models/DataCenter.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin-debug/src/jing/utils/Extend.js.map" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin-debug/src/jing/utils/Extend.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.js" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.ts" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin-debug/src/Main.js.map" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin-debug/src/Main.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin-debug/src/Main.js" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/bin-debug/src/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.js" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.ts" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/index_faker.php" afterPath="$PROJECT_DIR$/bin/index_faker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/weixin.php" afterPath="$PROJECT_DIR$/bin/weixin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/net/NetProxy.ts" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/net/NetProxy.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/notice/Notice.js" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/notice/Notice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/notice/Notice.ts" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/notice/Notice.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codes/xiu_pin_pile_box/resource/config/config.json" afterPath="$PROJECT_DIR$/codes/xiu_pin_pile_box/resource/config/config.json" />
     </list>
     <ignored path="trunk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,92 +43,50 @@
     <favorites_list name="trunk" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47654095">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="1349">
-                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/bin/index.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.0350554" vertical-offset="1358" max-vertical-offset="2584">
-                  <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="index_faker.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/index_faker.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-28.178572" vertical-offset="1529" max-vertical-offset="4180">
-                  <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="weixin.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/weixin.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-66.5" vertical-offset="0" max-vertical-offset="3135">
-                  <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#6#85#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Extend.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="532">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Main.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.453211" vertical-offset="513" max-vertical-offset="2793">
-                  <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="player.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/player.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.6321839" vertical-offset="59" max-vertical-offset="2698">
-                  <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.785715" vertical-offset="0" max-vertical-offset="1349">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weixin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/weixin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.392857" vertical-offset="2270" max-vertical-offset="3154">
+              <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+              <folding>
+                <element signature="e#6#85#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="interface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servers/interface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="532">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/servers/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.61621624" vertical-offset="456" max-vertical-offset="1045">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -162,7 +132,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,144 +160,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiu_pin_pile_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiu_pin_pile_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiu_pin_pile_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiu_pin_pile_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiu_pin_pile_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="release" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="servers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,10 +198,16 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -402,27 +246,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17776097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18003026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -446,43 +290,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/player.php">
+    <entry file="file://$PROJECT_DIR$/bin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6321839" vertical-offset="59" max-vertical-offset="2698">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1358" max-vertical-offset="2584">
+          <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/index_faker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.178572" vertical-offset="1529" max-vertical-offset="4180">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1529" max-vertical-offset="4180">
           <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="1349">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0350554" vertical-offset="1358" max-vertical-offset="2584">
-          <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/weixin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-66.5" vertical-offset="0" max-vertical-offset="3135">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1862" max-vertical-offset="3135">
           <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
@@ -492,7 +318,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="532">
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="532">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -500,11 +326,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.453211" vertical-offset="513" max-vertical-offset="2793">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2793">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="2698">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10147601" vertical-offset="59" max-vertical-offset="2698">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/index_faker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.178572" vertical-offset="1529" max-vertical-offset="4180">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codes/xiu_pin_pile_box/src/Main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43333334" vertical-offset="532" max-vertical-offset="2812">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codes/xiu_pin_pile_box/src/jing/utils/Extend.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39108062" vertical-offset="0" max-vertical-offset="583">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.785715" vertical-offset="0" max-vertical-offset="1349">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/weixin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.392857" vertical-offset="2270" max-vertical-offset="3154">
+          <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="532">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.61621624" vertical-offset="456" max-vertical-offset="1045">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

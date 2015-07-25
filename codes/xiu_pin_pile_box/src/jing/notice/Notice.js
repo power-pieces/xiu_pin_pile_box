@@ -1,10 +1,8 @@
 var Notice = (function () {
-    function Notice(type, data, args) {
+    function Notice(type, data) {
         if (data === void 0) { data = null; }
-        if (args === void 0) { args = null; }
         this._type = type;
         this._data = data;
-        this._args = args;
     }
     Object.defineProperty(Notice.prototype, "type", {
         get: function () {
@@ -20,13 +18,5 @@ var Notice = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Notice.prototype, "args", {
-        get: function () {
-            return this._args;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Notice.CHANGE_VIEW = "change_view";
     return Notice;
 })();

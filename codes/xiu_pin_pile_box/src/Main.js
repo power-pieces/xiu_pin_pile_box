@@ -8,6 +8,8 @@ var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         _super.call(this);
+        DataCenter.openInfo = Extend.callWindow("getInfo");
+        Extend.callReadyShare();
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
     Main.prototype.onAddToStage = function (event) {

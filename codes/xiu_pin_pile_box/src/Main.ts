@@ -27,18 +27,22 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
-class Main extends egret.DisplayObjectContainer {
+class Main extends egret.DisplayObjectContainer
+{
 
     /**
      * 加载进度界面
      * loading process interface
      */
-    private loadingView:LoadingUI;
+    private loadingView: LoadingUI;
 
-    public constructor() {
+    public constructor()
+    {
         super();
 
         //TODO 获取外部资源
+        DataCenter.openInfo = Extend.callWindow("getInfo");
+        Extend.callReadyShare();
 
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
@@ -65,7 +69,8 @@ class Main extends egret.DisplayObjectContainer {
      * 配置文件加载完成,开始预加载preload资源组。
      * Loading of configuration file is complete, start to pre-load the preload resource group
      */
-    private onConfigComplete(event:RES.ResourceEvent):void {
+    private onConfigComplete(event: RES.ResourceEvent): void
+    {
         RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
@@ -77,8 +82,10 @@ class Main extends egret.DisplayObjectContainer {
      * preload资源组加载完成
      * preload resource group is loaded
      */
-    private onResourceLoadComplete(event:RES.ResourceEvent):void {
-        if (event.groupName == "preload") {
+    private onResourceLoadComplete(event: RES.ResourceEvent): void
+    {
+        if (event.groupName == "preload")
+        {
             this.stage.removeChild(this.loadingView);
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
@@ -91,7 +98,8 @@ class Main extends egret.DisplayObjectContainer {
      * 资源组加载出错
      * Resource group loading failed
      */
-    private onResourceLoadError(event:RES.ResourceEvent):void {
+    private onResourceLoadError(event: RES.ResourceEvent): void
+    {
         //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
         //忽略加载失败的项目
@@ -103,8 +111,10 @@ class Main extends egret.DisplayObjectContainer {
      * preload资源组加载进度
      * loading process of preload resource
      */
-    private onResourceProgress(event:RES.ResourceEvent):void {
-        if (event.groupName == "preload") {
+    private onResourceProgress(event: RES.ResourceEvent): void
+    {
+        if (event.groupName == "preload")
+        {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
     }
@@ -116,7 +126,7 @@ class Main extends egret.DisplayObjectContainer {
     private createScene(): void
     {
         this.stage.frameRate = 60;
-       
+
 
         this.setConfig();
         Global.stage = this.stage;
@@ -126,11 +136,11 @@ class Main extends egret.DisplayObjectContainer {
         this.addChild(Global.UI_LAYER);
 
         //Global.GAME_LAYER.addChild(new Game());
-        Global.UI_LAYER.addElement( new Index() );
-       
+        Global.UI_LAYER.addElement(new Index());
+
     }
 
-    private setConfig():void
+    private setConfig(): void
     {
         DataCenter.cfg = RES.getRes("config_json");
     }

@@ -8,12 +8,8 @@ var Extend = (function () {
         var result = window[funName]();
         return result;
     };
-    Extend.callReadyShare = function (record) {
-        if (null == window["readyShare"]) {
-            return null;
-        }
-        var result = window["readyShare"](record);
-        return result;
+    Extend.callReadyShare = function () {
+        return Extend.callWindow("readyShare");
     };
     return Extend;
 })();

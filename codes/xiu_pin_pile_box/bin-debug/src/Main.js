@@ -30,6 +30,7 @@ var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         _super.call(this);
+        //TODO 获取外部资源
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
     var __egretProto__ = Main.prototype;
