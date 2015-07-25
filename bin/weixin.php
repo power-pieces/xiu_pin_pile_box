@@ -7,21 +7,22 @@
  */
 
 //首先申请公众号，获得appid等信息，并且在公众平台上设置js安全域名。
-require_once 'share.php';
-require_once 'player.php';
-$file = "../token.txt";
-$appid = "wx34bbd2b8333f7e32";
-$appsecrect = "bf1fcc56a20f7037fb450dada9e21717";
-$noncestr = "dajiagame";
-$site = "http://photo.hb.vnet.cn/client/index.php";
+//require_once 'share.php';
+//require_once 'player.php';
+//$file = "../token.txt";
+//$appid = "wx34bbd2b8333f7e32";
+//$appsecrect = "bf1fcc56a20f7037fb450dada9e21717";
+//$noncestr = "dajiagame";
+//$site = "http://photo.hb.vnet.cn/client/index.php";
 
 //首先申请公众号，获得appid等信息，并且在公众平台上设置js安全域名。
-//require_once 'share.php';
-//require_once 'Player.php';
-//$file = "C:/wamp4/www/token.txt";
-//$appid = "wx2c9e2b3c3e0cc058";
-//$appsecrect = "cf67d528c6aab80cebbfcd0ac20c8aee";
-//$noncestr = "dajiagame";
+require_once 'share.php';
+require_once 'Player.php';
+$file = "C:/wamp4/www/token.txt";
+$appid = "wx2c9e2b3c3e0cc058";
+$appsecrect = "cf67d528c6aab80cebbfcd0ac20c8aee";
+$noncestr = "dajiagame";
+$site = "http://www.g6game.com/h5game/xp_box/index.php";
 
 session_start();
 
@@ -98,7 +99,7 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
     if ("0" == obj.inviter) {
         obj.inviter = null;
     }
-    //alert(JSON.stringify(obj));
+    alert(JSON.stringify(obj));
 
 
     //分享的具体信息，请自行添加修改。
