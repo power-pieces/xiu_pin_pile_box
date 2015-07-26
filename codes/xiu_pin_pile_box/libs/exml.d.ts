@@ -1,5 +1,37 @@
+declare module skins.components{
+	class RankItemSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.components{
+	class UserInfoSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class BeShareSkin extends egret.gui.Skin{
+	}
+}
 declare module skins.scene{
 	class IndexSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class IntroSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class LotterySkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class RankSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class RuleSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class ShareSkin extends egret.gui.Skin{
 	}
 }
 declare module skins.scene{
@@ -140,5 +172,13 @@ declare module skins.simple{
 }
 declare module skins.simple{
 	class VSliderThumbSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.windows{
+	class AlertSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.windows{
+	class LotteryInfoWindowSkin extends egret.gui.Skin{
 	}
 }

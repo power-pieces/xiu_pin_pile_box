@@ -471,6 +471,8 @@
     <Content Include="src\models\Global.js" />
     <Content Include="src\physics\PWorld.js" />
     <Content Include="src\scene\Showcase.js" />
+    <Content Include="src\skins\scene\IndexSkin.exml" />
+    <Content Include="src\skins\scene\ShowcaseSkin.exml" />
     <Content Include="src\views\Game.js" />
     <Content Include="src\views\game\Box.js" />
     <Content Include="src\views\game\Game.js" />
@@ -488,8 +490,6 @@
     <Content Include="libs\core\extension\version\version.d.json" />
     <Content Include="libs\module_reference.json" />
     <Content Include="run.bat" />
-    <Content Include="src\skins\scene\IndexSkin.exml" />
-    <Content Include="src\skins\scene\ShowcaseSkin.exml" />
     <Content Include="src\skins\simple\AlertSkin.exml" />
     <Content Include="src\skins\simple\ButtonSkin.exml" />
     <Content Include="src\skins\simple\CheckBoxSkin.exml" />
@@ -530,6 +530,16 @@
     <Content Include="resource\theme.thm" />
     <Content Include="libs\core\extension\gui\gui.d.json" />
     <Content Include="libs\physics\physics.d.json" />
+    <Content Include="src\skins\components\RankItemSkin.exml" />
+    <Content Include="src\skins\components\UserInfoSkin.exml" />
+    <Content Include="src\skins\scene\BeShareSkin.exml" />
+    <Content Include="src\skins\scene\IntroSkin.exml" />
+    <Content Include="src\skins\scene\LotterySkin.exml" />
+    <Content Include="src\skins\scene\RankSkin.exml" />
+    <Content Include="src\skins\scene\RuleSkin.exml" />
+    <Content Include="src\skins\scene\ShareSkin.exml" />
+    <Content Include="src\skins\windows\AlertSkin.exml" />
+    <Content Include="src\skins\windows\LotteryInfoWindowSkin.exml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -548,6 +558,12 @@
     <TypeScriptCompile Include="libs\physics\physics.d.ts" />
     <TypeScriptCompile Include="libs\_references.ts" />
     <TypeScriptCompile Include="src\AssetAdapter.ts" />
+    <TypeScriptCompile Include="src\controls\ACmd.ts" />
+    <TypeScriptCompile Include="src\controls\GameResultCmd.ts" />
+    <TypeScriptCompile Include="src\controls\GetRankCmd.ts" />
+    <TypeScriptCompile Include="src\controls\GivePowerCmd.ts" />
+    <TypeScriptCompile Include="src\controls\LoginCmd.ts" />
+    <TypeScriptCompile Include="src\controls\LotteryCmd.ts" />
     <TypeScriptCompile Include="src\jing\cores\AView.ts" />
     <TypeScriptCompile Include="src\jing\net\NetProxy.ts" />
     <TypeScriptCompile Include="src\jing\notice\Notice.ts" />
@@ -562,10 +578,16 @@
     <TypeScriptCompile Include="src\models\Global.ts" />
     <TypeScriptCompile Include="src\physics\PWorld.ts" />
     <TypeScriptCompile Include="src\scene\Showcase.ts" />
+    <TypeScriptCompile Include="src\util\GameNotice.ts" />
+    <TypeScriptCompile Include="src\util\NetManager.ts" />
     <TypeScriptCompile Include="src\views\game\Box.ts" />
     <TypeScriptCompile Include="src\views\game\Game.ts" />
+    <TypeScriptCompile Include="src\views\uis\components\RankItem.ts" />
     <TypeScriptCompile Include="src\views\uis\Index.ts" />
+    <TypeScriptCompile Include="src\views\uis\scene\Intro.ts" />
+    <TypeScriptCompile Include="src\views\uis\windows\Alert.ts" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

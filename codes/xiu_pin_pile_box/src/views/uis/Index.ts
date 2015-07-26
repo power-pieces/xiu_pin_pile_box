@@ -1,6 +1,6 @@
 /**
  *
- * @author 
+ * @author Jing
  *
  */
 class Index extends egret.gui.SkinnableComponent

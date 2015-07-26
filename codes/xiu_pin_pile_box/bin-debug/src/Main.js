@@ -31,6 +31,8 @@ var Main = (function (_super) {
     function Main() {
         _super.call(this);
         //TODO 获取外部资源
+        DataCenter.openInfo = Extend.callWindow("getInfo");
+        Extend.callReadyShare();
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
     var __egretProto__ = Main.prototype;
