@@ -9,7 +9,7 @@ class Index extends egret.gui.SkinnableComponent
     
 	public constructor() {
         super();
-        this.skinName = "skins.scene.IndexSkin";
+        this.skinName = skins.scene.IndexSkin;
         this.addEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
 	}
 	
@@ -21,8 +21,9 @@ class Index extends egret.gui.SkinnableComponent
     
 	
 	private onTouchTap(e:egret.TouchEvent):void
-	{
-        Global.UI_LAYER.removeElement( this );
-        Global.GAME_LAYER.addChild( new Game());
+    {
+        Alert.show("hello world");
+      //  Global.UI_LAYER.removeElement( this );
+       // Global.GAME_LAYER.addChild( new Game());
 	}
 }

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="450" height="600" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:Rect height="100%" width="100%" fillColor="0xCA5959"/>
+	<e:Label text="恭喜你获得了" x="132" y="32"/>
+	<e:Label id="txtReward" text="XXXXXXX" x="161" y="84"/>
+	<e:UIAsset id="imgReward" height="149" width="178" x="128" y="138" source="bg_jpg"/>
+	<e:TextInput id="txtName" x="130" y="329" text="留下姓名"/>
+	<e:TextInput id="txtPhone" x="130" y="391" text="留下手机号"/>
+	<e:TextArea id="txtAdress" x="130" y="446" text="留下地址"/>
+	<e:Button id="btnSumbit" label="确定提交" x="148" y="523"/>
+</e:Skin>

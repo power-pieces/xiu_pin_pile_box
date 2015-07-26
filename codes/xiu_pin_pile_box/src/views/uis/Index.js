@@ -8,7 +8,7 @@ var Index = (function (_super) {
     __extends(Index, _super);
     function Index() {
         _super.call(this);
-        this.skinName = "skins.scene.IndexSkin";
+        this.skinName = skins.scene.IndexSkin;
         this.addEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
     }
     Index.prototype.createCompleteEvent = function (event) {
@@ -16,8 +16,7 @@ var Index = (function (_super) {
         this.btnStart.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
     };
     Index.prototype.onTouchTap = function (e) {
-        Global.UI_LAYER.removeElement(this);
-        Global.GAME_LAYER.addChild(new Game());
+        Alert.show("hello world");
     };
     return Index;
 })(egret.gui.SkinnableComponent);

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="640" height="100" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:Rect height="100" width="100%" x="0" y="0" fillColor="0x8B8383"/>
+	<e:Label text="10" x="21" y="32" textColor="0xEE0909" bold="true"/>
+	<e:UIAsset source="bgImage" x="78" y="20" width="64" height="64"/>
+	<e:Label text="总积分：00000000" x="381" y="33" textColor="0xFE0303" bold="true" textAlign="right"/>
+</e:Skin>
