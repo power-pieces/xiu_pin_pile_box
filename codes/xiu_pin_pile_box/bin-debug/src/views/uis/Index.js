@@ -4,11 +4,6 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-/**
- *
- * @author Jing
- *
- */
 var Index = (function (_super) {
     __extends(Index, _super);
     function Index() {
@@ -22,9 +17,6 @@ var Index = (function (_super) {
     };
     Index.prototype.onTouchTap = function (e) {
         Alert.show("hello world");
-        //  Global.UI_LAYER.removeElement( this );
-        // Global.GAME_LAYER.addChild( new Game());
     };
     return Index;
 })(egret.gui.SkinnableComponent);
-//# sourceMappingURL=Index.js.map

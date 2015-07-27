@@ -6,7 +6,7 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset source="bg_jpg" x="0" y="0"/>
-	<e:Button id="btn_game" label="进入游戏" x="260" y="765"/>
-	<e:Button id="btn_lottery" label="查看秀品好礼" x="252" y="886"/>
+	<e:UIAsset source="bgImage" width="100%" height="100%" x="0" y="0"/>
+	<e:Button id="btnGame" label="进入游戏" x="260" y="765"/>
+	<e:Button id="btnLottery" label="查看秀品好礼" x="252" y="886"/>
 </e:Skin>

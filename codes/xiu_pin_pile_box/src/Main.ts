@@ -136,7 +136,7 @@ class Main extends egret.DisplayObjectContainer
         this.addChild(Global.UI_LAYER);
 
         //Global.GAME_LAYER.addChild(new Game());
-        Global.UI_LAYER.addElement(new Index());
+        Global.UI_LAYER.addElement(new Intro());
 
     }
 

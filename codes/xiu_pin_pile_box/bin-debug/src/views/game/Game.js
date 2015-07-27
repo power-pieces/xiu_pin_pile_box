@@ -1,9 +1,4 @@
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
+//游戏主体
 var Game = (function (_super) {
     __extends(Game, _super);
     function Game() {
@@ -12,7 +7,8 @@ var Game = (function (_super) {
         this.init();
         this.addListeners();
     }
-    Game.prototype.init = function () {
+    var __egretProto__ = Game.prototype;
+    __egretProto__.init = function () {
         this.touchEnabled = true;
         this.p2 = new PWorld();
         this.p2.createGround();
@@ -21,15 +17,15 @@ var Game = (function (_super) {
         this.bg.y = Global.stage.stageHeight - this.bg.height;
         this.scrollRect = new egret.Rectangle(0, 0, Global.stage.stageWidth, Global.stage.stageHeight);
     };
-    Game.prototype.addListeners = function () {
+    __egretProto__.addListeners = function () {
         this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.touchBegionHandler, this);
         egret.Ticker.getInstance().register(this.onTick, this);
     };
-    Game.prototype.removeListeners = function () {
+    __egretProto__.removeListeners = function () {
         this.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.touchBegionHandler, this);
         egret.Ticker.getInstance().unregister(this.onTick, this);
     };
-    Game.prototype.touchBegionHandler = function (e) {
+    __egretProto__.touchBegionHandler = function (e) {
         if (egret.getTimer() < this.createTime) {
             return;
         }
@@ -40,15 +36,16 @@ var Game = (function (_super) {
         }
         this.createBox(e.localX, e.localY);
     };
-    Game.prototype.scrollMap = function () {
+    //滚动地图
+    __egretProto__.scrollMap = function () {
         var scrollHeight = DataCenter.cfg.scrollHeight;
         var scrollDuration = DataCenter.cfg.scrollDuration;
         egret.Tween.get(this.scrollRect).to({ y: this.scrollRect.y - scrollHeight }, scrollDuration);
     };
-    Game.prototype.onTick = function (dt) {
+    __egretProto__.onTick = function (dt) {
         this.p2.step(dt);
     };
-    Game.prototype.createBox = function (x, y) {
+    __egretProto__.createBox = function (x, y) {
         var box = new Box();
         box.anchorX = 0.5;
         box.anchorY = 0.5;
@@ -59,3 +56,5 @@ var Game = (function (_super) {
     };
     return Game;
 })(egret.Sprite);
+Game.prototype.__class__ = "Game";
+//# sourceMappingURL=Game.js.map

@@ -24,7 +24,9 @@ class Intro extends egret.gui.SkinnableComponent
 
     private onTouchMove(e: egret.TouchEvent): void
     {
-        Alert.show("hello world");
+        //Alert.show("hello world");
+        Global.UI_LAYER.addElementAt(new Rule(), 0);
+        egret.Tween.get(this).to({ y: -Global.stage.stageHeight }, 500);
         //  Global.UI_LAYER.removeElement( this );
         // Global.GAME_LAYER.addChild( new Game());
     }

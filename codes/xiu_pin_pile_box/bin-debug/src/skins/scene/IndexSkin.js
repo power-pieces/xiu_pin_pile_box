@@ -35,4 +35,3 @@ var skins;
         IndexSkin.prototype.__class__ = "skins.scene.IndexSkin";
     })(scene = skins.scene || (skins.scene = {}));
 })(skins || (skins = {}));
-//# sourceMappingURL=IndexSkin.js.map

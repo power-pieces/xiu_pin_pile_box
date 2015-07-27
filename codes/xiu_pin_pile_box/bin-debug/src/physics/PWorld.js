@@ -1,27 +1,38 @@
+//物理世界
 var PWorld = (function () {
     function PWorld() {
+        //物理世界
         this.world = new p2.World();
         if (null != DataCenter.cfg.friction) {
+            //摩擦力
             this.world.defaultContactMaterial.friction = DataCenter.cfg.friction;
         }
         if (null != DataCenter.cfg.restitution) {
+            //弹力
             this.world.defaultContactMaterial.restitution = DataCenter.cfg.restitution;
         }
         if (null != DataCenter.cfg.stiffness) {
+            //硬度
             this.world.defaultContactMaterial.stiffness = Number.MAX_VALUE;
         }
         if (null != DataCenter.cfg.relaxation) {
+            //柔软度
             this.world.defaultContactMaterial.relaxation = 0;
         }
+        //睡眠模式
         this.world.sleepMode = p2.World.NO_SLEEPING;
+        //物理世界的比例
         this.factor = DataCenter.cfg.factor;
+        //默认的箱子质量
         this.mass = DataCenter.cfg.mass;
         this.world.on("beginContact", this.onBeginContact, this);
     }
-    PWorld.prototype.onBeginContact = function (e) {
+    var __egretProto__ = PWorld.prototype;
+    __egretProto__.onBeginContact = function (e) {
         e;
     };
-    PWorld.prototype.step = function (dt) {
+    //物理世界更新
+    __egretProto__.step = function (dt) {
         this.world.step(dt / 1000);
         var world = this.world;
         var stageHeight = egret.MainContext.instance.stage.stageHeight;
@@ -44,7 +55,8 @@ var PWorld = (function () {
             }
         }
     };
-    PWorld.prototype.mappingObject = function (obj) {
+    //映射一个物体到物理世界
+    __egretProto__.mappingObject = function (obj) {
         var fw = obj.width / this.factor;
         var fh = obj.height / this.factor;
         var fx = obj.x / this.factor;
@@ -52,11 +64,21 @@ var PWorld = (function () {
         var shape = new p2.Rectangle(fw, fh);
         shape.material = this.world.defaultMaterial;
         var body = new p2.Body({ mass: this.mass, position: [fx, fy] });
+        //body.type = p2.Body.KINEMATIC;
+        //        body.on( "sleep", function (e:p2.EventEmitter):void {
+        //            //body.type = p2.Body.STATIC;
+        //                    body.damping = 0.5;
+        //                    body.allowSleep = false;
+        //                    body.wakeUp();
+        //            },this );
+        //body.type = p2.Body.KINEMATIC;
+        //body.velocity = [0, -1];
+        //body.gravityScale = 0;
         body.addShape(shape);
         body.displays = [obj];
         this.world.addBody(body);
     };
-    PWorld.prototype.createGround = function () {
+    __egretProto__.createGround = function () {
         var plane = new p2.Plane();
         plane.material = this.world.defaultMaterial;
         var body = new p2.Body({ mass: 0, position: [0, 0] });
@@ -64,7 +86,9 @@ var PWorld = (function () {
         body.addShape(plane);
         this.world.addBody(body);
     };
-    PWorld.prototype.drawDebug = function (shape) {
+    __egretProto__.drawDebug = function (shape) {
     };
     return PWorld;
 })();
+PWorld.prototype.__class__ = "PWorld";
+//# sourceMappingURL=PWorld.js.map
