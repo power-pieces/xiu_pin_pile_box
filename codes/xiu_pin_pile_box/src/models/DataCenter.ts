@@ -1,9 +1,11 @@
-﻿class DataCenter
+class DataCenter
 {
     //配置文件
     public static cfg: any = null;
     //平台获取的信息
     public static openInfo: any = null;
+    //邀请人的ID
+    public static inviter: string = null;
     //用户ID
     public static id: string = null;
     //昵称

@@ -41,7 +41,21 @@ class Main extends egret.DisplayObjectContainer
         super();
 
         //TODO 获取外部资源
-        DataCenter.openInfo = Extend.callWindow("getInfo");
+        var openInfo:any = Extend.callWindow("getInfo");
+        if(null == openInfo)
+        {
+            openInfo = {};
+            openInfo.inviter = null;
+            openInfo.id = "test_id";
+            openInfo.name = "test_name";
+            openInfo.pic = "";
+        }
+        DataCenter.inviter = openInfo.inviter;
+        DataCenter.id = openInfo.id;
+        DataCenter.name = openInfo.name;
+        DataCenter.pic = openInfo.pic;
+        DataCenter.openInfo = openInfo;
+        
         Extend.callReadyShare();
 
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
@@ -137,6 +151,8 @@ class Main extends egret.DisplayObjectContainer
 
         //Global.GAME_LAYER.addChild(new Game());
         Global.UI_LAYER.addElement(new Intro());
+        
+        LockWindow.show( "hello world" );
 
     }
 
