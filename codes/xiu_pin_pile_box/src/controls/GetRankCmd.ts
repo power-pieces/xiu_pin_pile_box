@@ -4,7 +4,7 @@
     {
         var args: any = {};
         args.id = id;
-        NetManager.implicitCall("get_rank", args, this.onResponse, this);
+        NetManager.call("get_rank", args, this.onResponse, this);
     }
 
     private onResponse(jsonStr: string): void

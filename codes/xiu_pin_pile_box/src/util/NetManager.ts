@@ -24,13 +24,14 @@ class NetManager
 
         np.request(url, callBack, thisObject, args);
     }
-    /*
-    public static call(action: string, params: any, callBack: Function, thisObject: any): void
+    
+
+    public static call(action: string, params: any, callBack: Function, thisObject: any, label:string = "网络通信中"): void
     {
-        ViewManager.instance.showPanel(new MessagePanel("网络通信中..."), true, true);
+        LockWindow.show(label);        
         if (null != this._proxy)
         {
-            ViewManager.instance.showPanel(new MessagePanel("网络冲突，请稍后重试!"), true);
+            LockWindow.show("网络断开，请刷新重试!");
             return;
         }
 
@@ -43,9 +44,6 @@ class NetManager
         var args: any = {};
         args.mod = "user";
         args.action = action;
-        params.id = DataCenter.id;
-        params.sign = DataCenter.sign;
-        params.unionid = DataCenter.unionid;
         args.params = JSON.stringify(params);
 
         //alert("传递的参数：" + args.params);
@@ -54,25 +52,17 @@ class NetManager
         this._proxy = np;
     }
 
-    
-    * 发送统计数据
-    
-    public static statistic(content: string): void
-    {
-        NetManager.implicitCall("statistic", { content: content });
-    }
-
     private static onCallBack(jsonStr: string): void
     {
         console.log(jsonStr);
-        ViewManager.instance.closePanel();
+        LockWindow.close();
         this._proxy = null;
 
         try {
             var data: any = JSON.parse(jsonStr);
             if (data.error > 0)
             {
-                ViewManager.instance.showPanel(new MessagePanel("错误：" + data.msg), true, true);
+                LockWindow.show("错误：" + data.msg);                
             }
             else
             {
@@ -80,11 +70,11 @@ class NetManager
             }
         }
         catch (e)
-        {
+        {            
             alert("程序崩溃：" + e.message);
             alert("程序崩溃：" + jsonStr);
             //ViewManager.instance.showPanel(new MessagePanel("程序崩溃：" + jsonStr), true, true);
         }
     }
-    */
+    
 }

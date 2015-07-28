@@ -5,7 +5,7 @@
         var args: any = {};
         args.id = id;
         args.target_id = targetId;
-        NetManager.implicitCall("give_power", args, this.onResponse, this);
+        NetManager.call("give_power", args, this.onResponse, this);
     }
 
     private onResponse(jsonStr: string): void

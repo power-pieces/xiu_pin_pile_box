@@ -7,7 +7,7 @@
         args.phone = phone;
         args.name = name;
         args.address = address;
-        NetManager.implicitCall("lottery", args, this.onResponse, this);
+        NetManager.call("lottery", args, this.onResponse, this);
     }
 
     private onResponse(jsonStr: string): void

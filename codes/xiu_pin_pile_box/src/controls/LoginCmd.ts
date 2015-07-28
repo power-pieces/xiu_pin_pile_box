@@ -6,7 +6,7 @@
         args.id = id;
         args.name = name;
         args.pic = pic;
-        NetManager.implicitCall("login", args, this.onLogin, this);
+        NetManager.call("login", args, this.onLogin, this, "登陆游戏中...");
     }
 
     private onLogin(jsonStr: string): void

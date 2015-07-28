@@ -155,13 +155,6 @@ class Main extends egret.DisplayObjectContainer
         LockWindow.show( "hello world" );
 
     }
-
-    private setConfig(): void
-    {
-        DataCenter.cfg = RES.getRes("config_json");
-    }
-
-
 }
 
 
