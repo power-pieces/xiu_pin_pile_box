@@ -22,7 +22,7 @@ $file = "C:/wamp4/www/token.txt";
 $appid = "wx2c9e2b3c3e0cc058";
 $appsecrect = "cf67d528c6aab80cebbfcd0ac20c8aee";
 $noncestr = "dajiagame";
-$site = "http://www.g6game.com/h5game/xp_box/index.php";
+$site = "http://www.g6game.com/h5game/xp_box/client/index.php";
 
 session_start();
 
@@ -107,7 +107,7 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
         wx.onMenuShareTimeline({
             title: '秀品叠箱子', // 分享标题
             desc: '开发测试', // 分享描述
-            link: 'http://www.g6game.com/h5game/express/index.php?share=' + shareid, // 分享链接
+            link: 'http://www.g6game.com/h5game/xp_box/client/index.php?share=' + shareid, // 分享链接
             imgUrl: '', // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -131,7 +131,7 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
         wx.onMenuShareAppMessage({
             title: '秀品叠箱子', // 分享标题
             desc: '测试', // 分享描述
-            link: 'http://www.g6game.com/h5game/express/index.php?share=' + shareid, // 分享链接
+            link: 'http://www.g6game.com/h5game/xp_box/client/index.php?share=' + shareid, // 分享链接
             imgUrl: '', // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
