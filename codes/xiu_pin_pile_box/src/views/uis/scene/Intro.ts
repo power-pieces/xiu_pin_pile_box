@@ -17,7 +17,7 @@ class Intro extends egret.gui.SkinnableComponent
     public createCompleteEvent(event: egret.gui.UIEvent): void
     {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
-        this.imgBg.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouchMove, this);
+        this.imgBg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onTouchMove, this);
     }
 
 

@@ -7,4 +7,7 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset source="bgImage" x="0" y="0" width="100%" height="100%"/>
+	<e:Label id="txtTitle" text="高空抽奖点" textAlign="center" verticalAlign="middle" y="49" x="240"/>
+	<e:UIAsset id="imgLottery" source="lottery_png"  x="60" y="148"/>
+	<e:Button id="btnRecord" label="查看秀品好礼" x="246" y="799"/>
 </e:Skin>

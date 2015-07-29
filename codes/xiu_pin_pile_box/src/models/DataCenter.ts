@@ -3,9 +3,7 @@ class DataCenter
     //配置文件
     public static cfg: any = null;
     //平台获取的信息
-    public static openInfo: any = null;
-    //邀请人的ID
-    public static inviter: string = null;
+    public static openInfo: any = null;    
     //用户ID
     public static id: string = null;
     //昵称
@@ -28,4 +26,17 @@ class DataCenter
     public static selfRank: number = 0;
     //排行榜
     public static rankList: any[] = null;
+
+
+
+    //邀请人的ID
+    public static inviter: string = null;
+    //邀请人的名称
+    public static inviterName: string = null;
+    //邀请人的图片
+    public static inviterPic: string = null;
+    //邀请人最好分数
+    public static inviterTotalScore: number = 0;
+    //邀请人的奖品列表
+    public static inviterRewards: any[] = null;
 }

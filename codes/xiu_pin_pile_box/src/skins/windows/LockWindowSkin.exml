@@ -6,5 +6,5 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states> 
-	<e:Label id="txtContent" text="Loading" bold="true" verticalCenter="0" horizontalCenter="0" textAlign="center" size="60" fontFamily="新宋体"/>
+	<e:Label id="txtContent" bold="true" verticalCenter="0" horizontalCenter="0" textAlign="center" size="60" fontFamily="新宋体" text="AAA"/>
 </e:Skin>

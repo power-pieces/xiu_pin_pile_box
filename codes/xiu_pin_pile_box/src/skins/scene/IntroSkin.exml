@@ -7,4 +7,5 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset id="imgBg" source="bgImage" width="100%" height="100%" x="0" y="0"/>
+	<e:Label text="点击我进入游戏" x="212" y="813" bold="true"/>
 </e:Skin>

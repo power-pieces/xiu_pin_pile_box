@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="640" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+<e:Skin width="640" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing" xmlns:ns1="*">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
@@ -7,11 +7,8 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset source="bgImage" x="0" y="0" width="640" height="1008"/>
-	<e:SkinnableContainer id="rank1" height="100" width="100%" skinName="skins.components.RankItemSkin"/>
-	<e:SkinnableContainer id="rank2" y="110" height="100" width="100%" skinName="skins.components.RankItemSkin"/>
-	<e:SkinnableContainer id="rank3" y="220" height="100" width="100%" skinName="skins.components.RankItemSkin"/>
-	<e:Scroller id="listRank" width="100%" height="522" x="0" y="365">
-		
-	</e:Scroller>
 	<e:Button id="btnBack" label="返回" x="251" y="916"/>
+	<ns1:RankItem id="rank0" x="1" y="4" skinName="skins.components.RankItemSkin"/>
+	<ns1:RankItem skinName="skins.components.RankItemSkin" id="rank1" x="-2" y="110"/>
+	<ns1:RankItem id="rank2" skinName="skins.components.RankItemSkin" x="1" y="217"/>
 </e:Skin>

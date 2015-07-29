@@ -62,11 +62,12 @@ class PWorld
 
             if (boxBody.displays)
             {
-                var box: egret.DisplayObject = boxBody.displays[0];
+                var box: Box = <Box>boxBody.displays[0];
                 if (box)
                 {
-                    box.x = boxBody.position[0] * this.factor;
-                    box.y = stageHeight - boxBody.position[1] * this.factor;
+                    var newX:number = (boxBody.position[0] * this.factor) >> 0;
+                    var newY:number = (stageHeight - boxBody.position[1] * this.factor) >> 0;
+                    box.setPosition(newX, newY);
                     box.rotation = 360 - boxBody.angle * 180 / Math.PI;
                     if (boxBody.sleepState == p2.Body.SLEEPING)
                     {

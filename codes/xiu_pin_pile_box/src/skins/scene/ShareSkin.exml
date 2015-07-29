@@ -9,7 +9,7 @@
 	<e:UIAsset height="100%" width="100%" x="0" y="0" source="bg_jpg"/>
 	<e:SkinnableComponent id="userInfo" x="0" y="0" skinName="skins.components.UserInfoSkin"/>
 
-	<e:Button id="btnGivePower" x="223" y="804" label="分享邀好友助力"/>
+	<e:Button id="btnShare" x="223" y="804" label="分享邀好友助力"/>
 	<e:Button id="btnRank" label="查看排行" x="241" y="728"/>
 	<e:Button id="btnGame" label="再来一局" x="241" y="647"/>
 	<e:UIAsset height="100" width="100" x="172" y="430" source="bgImage"/>

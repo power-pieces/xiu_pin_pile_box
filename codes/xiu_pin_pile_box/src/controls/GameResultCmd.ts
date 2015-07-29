@@ -5,7 +5,7 @@
         var args: any = {};
         args.id = id;
         args.score = score;
-        NetManager.call("game_result", args, this.onResponse, this);
+        NetManager.implicitCall("game_result", args, this.onResponse, this);
     }
 
     private onResponse(jsonStr: string): void

@@ -7,15 +7,9 @@
         NetManager.call("get_rank", args, this.onResponse, this);
     }
 
-    private onResponse(jsonStr: string): void
+    private onResponse(data:any): void
     {
-        var data: any = JSON.parse(jsonStr);
-        if (data.error)
-        {
-
-        }
-
-        DataCenter.selfRank = data.self;
+        DataCenter.selfRank = +data.self;
         DataCenter.rankList = data.list;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GOT_RANK));
     }

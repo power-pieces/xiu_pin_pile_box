@@ -9,12 +9,11 @@
         NetManager.call("login", args, this.onLogin, this, "登陆游戏中...");
     }
 
-    private onLogin(jsonStr: string): void
-    {
-        var data: any = JSON.parse(jsonStr);
-        DataCenter.power = data.power;
-        DataCenter.totalScore = data.total_score;
-        DataCenter.bestScore = data.best_score;
+    private onLogin(data:any): void
+    {        
+        DataCenter.power = +data.power;
+        DataCenter.totalScore = +data.total_score;
+        DataCenter.bestScore = +data.best_score;
         DataCenter.bestScoreTime = data.best_score_time;
         DataCenter.receives = data.receives;
         DataCenter.rewards = data.rewards;

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="640" height="100" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:Label id="txtInfo" text="本轮高度：100      历史高度：100    总高度：100    体力：5" y="1" x="5" size="20" bold="true" fontFamily="新宋体" textAlign="center" textColor="0xFF0004"/>
+</e:Skin>

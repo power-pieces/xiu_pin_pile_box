@@ -8,13 +8,15 @@
         NetManager.call("give_power", args, this.onResponse, this);
     }
 
-    private onResponse(jsonStr: string): void
+    private onResponse(data:any): void
     {
-        var data: any = JSON.parse(jsonStr);
-        if (data.error)
+        if (data.success == 1)
         {
-
+            Alert.show("助力成功！");
         }
-        NoticeManager.sendNotice(new GameNotice(GameNotice.GIVE_POWER_SUCCESS));
+        else
+        {
+            Alert.show("无法重复助力！");
+        }
     }
 }

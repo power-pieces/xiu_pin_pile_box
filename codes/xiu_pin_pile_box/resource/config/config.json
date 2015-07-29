@@ -10,5 +10,9 @@
   "scrollDuration": 1000,
   "scrollHeight": 100,
   "createBoxInterval": 1000,
-  "scrollBoxAmount": 6
+  "scrollBoxAmount": 6,
+  "eachBoxScore":5,
+  "stopCheckInterval":1000,
+  "tolerance":10,
+  "lotteryScore":[10,30,50]
 }

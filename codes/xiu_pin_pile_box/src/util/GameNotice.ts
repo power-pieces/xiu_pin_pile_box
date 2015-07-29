@@ -11,4 +11,6 @@
     public static GIVE_POWER_SUCCESS: string = "give_power_success";
     //获取到排行榜
     public static GOT_RANK: string = "got_rank";
+    //获取到邀请人信息
+    public static GOT_INVITER_INFO: string = "got_inviter_info";
 }

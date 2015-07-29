@@ -45,7 +45,7 @@ class Main extends egret.DisplayObjectContainer
         if(null == openInfo)
         {
             openInfo = {};
-            openInfo.inviter = null;
+            openInfo.inviter = "1";
             openInfo.id = "test_id";
             openInfo.name = "test_name";
             openInfo.pic = "";
@@ -140,9 +140,10 @@ class Main extends egret.DisplayObjectContainer
     private createScene(): void
     {
         this.stage.frameRate = 60;
+        
 
-
-        this.setConfig();
+        //this.setConfig();
+        DataCenter.cfg = RES.getRes("config_json");
         Global.stage = this.stage;
         //游戏场景层，游戏场景相关内容可以放在这里面。        
         this.addChild(Global.GAME_LAYER);
@@ -150,10 +151,26 @@ class Main extends egret.DisplayObjectContainer
         this.addChild(Global.UI_LAYER);
 
         //Global.GAME_LAYER.addChild(new Game());
-        Global.UI_LAYER.addElement(new Intro());
+        //Global.UI_LAYER.addElement(new Intro());
         
-        LockWindow.show( "hello world" );
+        //LockWindow.show( "hello world" );
 
+        NoticeManager.addNoticeAction(GameNotice.LOGIN_SUCCESS, this.onLoginSuccess);
+        new LoginCmd().run(DataCenter.id, DataCenter.name, DataCenter.pic);
+
+    }
+
+    private onLoginSuccess(n:GameNotice): void
+    {       
+        if (null == DataCenter.inviter)
+        {
+            Global.UI_LAYER.addElement(new Intro());
+            //Global.GAME_LAYER.addChild(new Game());
+        }
+        else
+        {
+            Global.UI_LAYER.addElement(new BeShare());
+        }        
     }
 }
 
