@@ -7,7 +7,7 @@ class User
 	 */
 	public function login(&$params, &$res)
 	{
-        $openId = mysql_escape_string($params->openId);
+        $openId = mysql_escape_string($params->id);
         $name = mysql_escape_string($params->name);
         $pic = mysql_escape_string($params->pic);
         $sql = "INSERT INTO tbl_user(id,name,pic) VALUES('%s','%s','%s') ON DUPLICATE KEY UPDATE name='%s',pic='%s'";
@@ -20,7 +20,6 @@ class User
 
 		if($result)
 		{
-
 			//数据登陆成功，开始获取用户数据
             $data = $this->getUserInfo($openId);
             $data['receives'] = $this->getReceives($openId);
@@ -31,8 +30,21 @@ class User
 		{
             $res['error'] = 1;
 		}
-
 	}
+
+    /**
+     * 获取用户信息
+     * @param $params
+     * @param $res
+     */
+    public function get_info(&$params, &$res)
+    {
+        $id = mysql_escape_string($params->id);
+        $data = $this->getUserInfo($id);
+        $data['receives'] = $this->getReceives($id);
+        $data['rewards'] = $this->getRewards($id);
+        $res['data'] = $data;
+    }
 
     /**
      * 获取用户信息
@@ -93,16 +105,30 @@ class User
         $id = $params->id;
         $target_id = $params->target_id;
 
-        $sql = "INSERT INTO tbl_share_record(sender_id,receiver_id,time,time_utc) VALUES('%s','%s',CURDATE(),%d)";
+        $sql = "INSERT INTO tbl_share_record(sender_id,receiver_id,time,time_utc) VALUES('%s','%s',CURTIME(),%d)";
         $sql = sprintf($sql, mysql_escape_string($id), mysql_escape_string($target_id), time());
+        //die($sql);
         $st = new SqlHelper();
         $st->conn();
         $result = $st->modify($sql);
         $st->close();
+
+        $data = array();
         if(false == $result)
         {
-            $res['error'] = 2;
+            $data['success'] = 0;
         }
+        else
+        {
+            $sql = "UPDATE tbl_user SET power=power+1 WHERE id='%s'";
+            $sql = sprintf($sql, mysql_escape_string($target_id));
+            $st->conn();
+            $st->modify($sql);
+            $st->close();
+            $data['success'] = 1;
+        }
+
+        $res['data'] = $data;
     }
 
     /**

@@ -1,0 +1,18 @@
+{
+  "isDebug": false,
+  "server": "http://localhost/xp_box/interface.php",
+  "friction": 1,
+  "restitution": 0,
+  "stiffness": null,
+  "relaxation": null,
+  "mass": 1,
+  "factor": 50,
+  "scrollDuration": 1000,
+  "scrollHeight": 100,
+  "createBoxInterval": 1000,
+  "scrollBoxAmount": 6,
+  "eachBoxScore":5,
+  "stopCheckInterval":1000,
+  "tolerance":10,
+  "lotteryScore":[10,30,50]
+}
