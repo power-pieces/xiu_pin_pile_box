@@ -23,6 +23,13 @@
     <Content Include="bin-debug\lib\egret_file_list.js" />
     <Content Include="bin-debug\lib\egret_file_list_native.js" />
     <Content Include="bin-debug\src\AssetAdapter.js" />
+    <Content Include="bin-debug\src\consts\readme.txt" />
+    <Content Include="bin-debug\src\controls\ACmd.js" />
+    <Content Include="bin-debug\src\controls\GameResultCmd.js" />
+    <Content Include="bin-debug\src\controls\GetRankCmd.js" />
+    <Content Include="bin-debug\src\controls\GivePowerCmd.js" />
+    <Content Include="bin-debug\src\controls\LoginCmd.js" />
+    <Content Include="bin-debug\src\controls\LotteryCmd.js" />
     <Content Include="bin-debug\src\game_file_list.js" />
     <Content Include="bin-debug\src\jing\cores\AView.js" />
     <Content Include="bin-debug\src\jing\net\NetProxy.js" />
@@ -34,6 +41,10 @@
     <Content Include="bin-debug\src\jing\utils\Texture.js" />
     <Content Include="bin-debug\src\LoadingUI.js" />
     <Content Include="bin-debug\src\Main.js" />
+    <Content Include="bin-debug\src\models\DataCenter.js" />
+    <Content Include="bin-debug\src\models\Global.js" />
+    <Content Include="bin-debug\src\physics\PWorld.js" />
+    <Content Include="bin-debug\src\scene\Showcase.js" />
     <Content Include="bin-debug\src\skins\scene\IndexSkin.js" />
     <Content Include="bin-debug\src\skins\scene\IntroSkin.js" />
     <Content Include="bin-debug\src\skins\simple\AlertSkin.js" />
@@ -68,8 +79,15 @@
     <Content Include="bin-debug\src\skins\simple\VScrollBarThumbSkin.js" />
     <Content Include="bin-debug\src\skins\simple\VSliderSkin.js" />
     <Content Include="bin-debug\src\skins\simple\VSliderThumbSkin.js" />
+    <Content Include="bin-debug\src\skins\windows\LockWindowSkin.js" />
+    <Content Include="bin-debug\src\util\GameNotice.js" />
+    <Content Include="bin-debug\src\util\NetManager.js" />
     <Content Include="bin-debug\src\views\game\Box.js" />
     <Content Include="bin-debug\src\views\game\Game.js" />
+    <Content Include="bin-debug\src\views\uis\scene\Intro.js" />
+    <Content Include="bin-debug\src\views\uis\scene\Rule.js" />
+    <Content Include="bin-debug\src\views\uis\windows\Alert.js" />
+    <Content Include="bin-debug\src\views\uis\windows\LockWindow.js" />
     <Content Include="launcher\egret_loader.js" />
     <Content Include="launcher\egret_require.js" />
     <Content Include="launcher\index.html" />
@@ -541,6 +559,9 @@
     <Content Include="src\skins\scene\ShareSkin.exml" />
     <Content Include="src\skins\windows\AlertSkin.exml" />
     <Content Include="src\skins\windows\LotteryInfoWindowSkin.exml" />
+    <Content Include="bin-debug\src\skins\windows\LockWindowSkin.js.map" />
+    <Content Include="bin-debug\src\views\uis\windows\LockWindow.js.map" />
+    <Content Include="src\skins\components\GameInfoSkin.exml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -561,6 +582,7 @@
     <TypeScriptCompile Include="src\AssetAdapter.ts" />
     <TypeScriptCompile Include="src\controls\ACmd.ts" />
     <TypeScriptCompile Include="src\controls\GameResultCmd.ts" />
+    <TypeScriptCompile Include="src\controls\GetInfoCmd.ts" />
     <TypeScriptCompile Include="src\controls\GetRankCmd.ts" />
     <TypeScriptCompile Include="src\controls\GivePowerCmd.ts" />
     <TypeScriptCompile Include="src\controls\LoginCmd.ts" />
@@ -572,6 +594,7 @@
     <TypeScriptCompile Include="src\jing\utils\AudioDevice.ts" />
     <TypeScriptCompile Include="src\jing\utils\Extend.ts" />
     <TypeScriptCompile Include="src\jing\utils\HGroup.ts" />
+    <TypeScriptCompile Include="src\jing\utils\StringUtil.ts" />
     <TypeScriptCompile Include="src\jing\utils\Texture.ts" />
     <TypeScriptCompile Include="src\LoadingUI.ts" />
     <TypeScriptCompile Include="src\Main.ts" />
@@ -583,6 +606,7 @@
     <TypeScriptCompile Include="src\util\NetManager.ts" />
     <TypeScriptCompile Include="src\views\game\Box.ts" />
     <TypeScriptCompile Include="src\views\game\Game.ts" />
+    <TypeScriptCompile Include="src\views\uis\components\GameInfo.ts" />
     <TypeScriptCompile Include="src\views\uis\components\RankItem.ts" />
     <TypeScriptCompile Include="src\views\uis\components\UserInfo.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\BeShare.ts" />
@@ -592,7 +616,9 @@
     <TypeScriptCompile Include="src\views\uis\scene\Rule.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\Share.ts" />
     <TypeScriptCompile Include="src\views\uis\windows\Alert.ts" />
+    <TypeScriptCompile Include="src\views\uis\windows\LockWindow.ts" />
     <TypeScriptCompile Include="src\views\uis\windows\LotteryInfoWindow.ts" />
+    <TypeScriptCompile Include="src\views\uis\windows\ShareTip.ts" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

@@ -1,4 +1,8 @@
 declare module skins.components{
+	class GameInfoSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.components{
 	class RankItemSkin extends egret.gui.Skin{
 	}
 }
@@ -180,5 +184,9 @@ declare module skins.windows{
 }
 declare module skins.windows{
 	class LotteryInfoWindowSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.windows{
+	class ShareTipSkin extends egret.gui.Skin{
 	}
 }
