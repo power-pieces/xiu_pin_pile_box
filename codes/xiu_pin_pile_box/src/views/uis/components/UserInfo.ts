@@ -33,7 +33,7 @@ class UserInfo extends egret.gui.SkinnableComponent
         if (null == this._userInfo)
         {
             this.imgPic.source = DataCenter.pic;
-            this.txtName.text = DataCenter.name;
+            this.txtName.text = DataCenter.nickname;
             this.txtScore.text = "总高度：" + DataCenter.totalScore;
             this.txtTitle.text = "已获得秀品好礼";
         }
@@ -45,7 +45,7 @@ class UserInfo extends egret.gui.SkinnableComponent
         if (null == this._userInfo)
         {
             this.imgPic.source = DataCenter.pic;
-            this.txtName.text = DataCenter.name;
+            this.txtName.text = DataCenter.nickname;
             this.txtScore.text = "总高度：" + DataCenter.totalScore;
             this.txtTitle.text = "已获得秀品好礼";
         }

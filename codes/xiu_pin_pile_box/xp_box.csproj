@@ -596,6 +596,7 @@
     <TypeScriptCompile Include="src\jing\utils\HGroup.ts" />
     <TypeScriptCompile Include="src\jing\utils\StringUtil.ts" />
     <TypeScriptCompile Include="src\jing\utils\Texture.ts" />
+    <TypeScriptCompile Include="src\jing\view\Strip.ts" />
     <TypeScriptCompile Include="src\LoadingUI.ts" />
     <TypeScriptCompile Include="src\Main.ts" />
     <TypeScriptCompile Include="src\models\DataCenter.ts" />
@@ -616,7 +617,9 @@
     <TypeScriptCompile Include="src\views\uis\scene\Rule.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\Share.ts" />
     <TypeScriptCompile Include="src\views\uis\windows\Alert.ts" />
+    <TypeScriptCompile Include="src\views\uis\windows\GameFailWindow.ts" />
     <TypeScriptCompile Include="src\views\uis\windows\LockWindow.ts" />
+    <TypeScriptCompile Include="src\views\uis\windows\LotteryFailWindow.ts" />
     <TypeScriptCompile Include="src\views\uis\windows\LotteryInfoWindow.ts" />
     <TypeScriptCompile Include="src\views\uis\windows\ShareTip.ts" />
   </ItemGroup>

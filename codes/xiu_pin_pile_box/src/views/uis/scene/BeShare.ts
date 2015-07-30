@@ -5,7 +5,10 @@
 */
 class BeShare extends egret.gui.SkinnableComponent
 {
-    public userInfo: UserInfo;
+    public imgPic: egret.gui.UIAsset;
+    public txtName: egret.gui.Label;
+    public txtScore: egret.gui.Label;
+    public txtTitle: egret.gui.Label;
     public txtRank: egret.gui.Label;
     public btnGivePower: egret.gui.Button;
     public btnGame: egret.gui.Button;
@@ -33,10 +36,10 @@ class BeShare extends egret.gui.SkinnableComponent
 
     public gotInviterInfoHandler(n: GameNotice): void
     {
-        this.userInfo.imgPic.source = DataCenter.inviterPic;
-        this.userInfo.txtName.text = DataCenter.inviterName;
-        this.userInfo.txtScore.text = "总高度：" + DataCenter.inviterTotalScore;
-        this.userInfo.txtTitle.text = DataCenter.inviterName + "，已获得秀品好礼";
+        this.imgPic.source = DataCenter.inviterPic;
+        this.txtName.text = DataCenter.inviterName;
+        this.txtScore.text = DataCenter.inviterTotalScore + "";
+        this.txtTitle.text = DataCenter.inviterName + "，已获得秀品好礼";
     }
 
     public btnGivePower_touchBeginHandler(e: egret.TouchEvent): void

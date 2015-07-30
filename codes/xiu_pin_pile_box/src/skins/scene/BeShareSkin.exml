@@ -1,14 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="640" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing" xmlns:ns1="*">
+<e:Skin width="750" height="1206" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing" xmlns:ns1="*">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset source="bgImage" width="100%" height="100%" />
-	<e:Label id="txtRank" text="前方还有&quot;0000人&quot;挡道" x="161" y="724"/>
-	<e:Button id="btnGivePower" label="给好友助力" x="249" y="810"/>
-	<e:Button id="btnGame" label="我也要玩" x="246" y="897"/>
-	<ns1:UserInfo id="userInfo"  skinName="skins.components.UserInfoSkin"/>
+	<e:UIAsset width="100%" height="100%"  source="be_share_bg_png"/>
+	<e:Label id="txtRank" x="378" y="893" textColor="0xFF0000" text="15" bold="true" size="60" textAlign="right"/>
+	<e:Button id="btnGivePower" skinName="@ButtonSkin('btn_give_power_png','btn_give_power_png','btn_give_power_png')" horizontalCenter="0" y="998"/>
+	<e:Button id="btnGame" skinName="@ButtonSkin('btn_play_png','btn_play_png','btn_play_png')" horizontalCenter="0" y="1085"/>
+<e:UIAsset id="imgPic" height="64" width="64" x="26" y="23" source="box_jpg"/>
+	<e:Label id="txtName" text="帅到想毁容" x="108" y="23" size="20" textColor="0x000000" bold="true"/>
+	<e:Label id="txtScore" verticalAlign="middle" bold="true" textColor="0xFF0000" text="1000" size="60" x="516" y="27" textAlign="left"/>
+	<e:Label id="txtTitle" text="某某某，已获得秀品好礼" bold="true" textColor="0xFFFFFF" y="164" horizontalCenter="0.5"/>
+	
+	
 </e:Skin>

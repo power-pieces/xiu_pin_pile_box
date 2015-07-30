@@ -45,16 +45,18 @@ class Main extends egret.DisplayObjectContainer
         if(null == openInfo)
         {
             openInfo = {};
-            openInfo.inviter = "1";
+            openInfo.inviter = null;
             openInfo.id = "test_id";
             openInfo.name = "test_name";
             openInfo.pic = "";
         }
         DataCenter.inviter = openInfo.inviter;
         DataCenter.id = openInfo.id;
-        DataCenter.name = openInfo.name;
+        DataCenter.nickname = openInfo.name;
         DataCenter.pic = openInfo.pic;
         DataCenter.openInfo = openInfo;
+        //alert(JSON.stringify(openInfo));
+        
         
         Extend.callReadyShare();
 
@@ -156,7 +158,7 @@ class Main extends egret.DisplayObjectContainer
         //LockWindow.show( "hello world" );
 
         NoticeManager.addNoticeAction(GameNotice.LOGIN_SUCCESS, this.onLoginSuccess);
-        new LoginCmd().run(DataCenter.id, DataCenter.name, DataCenter.pic);
+        new LoginCmd().run(DataCenter.id, DataCenter.nickname, DataCenter.pic);
 
     }
 

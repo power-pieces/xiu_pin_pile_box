@@ -1,10 +1,10 @@
 ﻿class LoginCmd extends ACmd
 {
-    public run(id: string, name: string, pic: string): void
+    public run(id: string, nickname: string, pic: string): void
     {
         var args: any = {};
         args.id = id;
-        args.name = name;
+        args.name = nickname;
         args.pic = pic;
         NetManager.call("login", args, this.onLogin, this, "登陆游戏中...");
     }

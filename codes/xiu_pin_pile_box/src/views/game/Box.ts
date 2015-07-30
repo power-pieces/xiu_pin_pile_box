@@ -1,18 +1,37 @@
 ﻿class Box extends egret.Sprite
 {
+    public static getBoxEffectSheet():egret.Texture[]
+    {
+        var sheet: egret.Texture[] = [];
+        
+        var ss: egret.SpriteSheet = RES.getRes("effect_json");
+
+        for (var i: number = 1; i <= 9; i++)
+        {
+            sheet.push(ss.getTexture("a1000" + i));
+        }
+
+        for (var i: number = 10; i <= 34; i++)
+        {
+            sheet.push(ss.getTexture("a100" + i));
+        }
+        return sheet;
+    }
+
     public isDrop: boolean = false;
     private _checkPos: egret.Point = new egret.Point(0, 0);
     private _checkTime: number = 0;
-
-    public constructor()
+    private _isT: boolean = false;
+    public constructor(isT:boolean = false)
     {
         super();
+        this._isT = isT;
         this.init();           
     }
 
     private init()
     {
-        var bmd: egret.Bitmap = Texture.createBitmap("box_jpg");
+        var bmd: egret.Bitmap = Texture.createBitmap(this._isT?"box_t_png":"box_png");
         this.addChild(bmd);
 
         this.anchorX = 0.5;
@@ -38,6 +57,11 @@
                 if (interval >= checkInterval)
                 {
                     this.isDrop = true;
+                   
+                    var strip: Strip = new Strip(Box.getBoxEffectSheet(), 24);
+                    strip.x = this.x;
+                    strip.y = this.y;
+                    this.parent.addChild(strip);
                 }                
             }
             else

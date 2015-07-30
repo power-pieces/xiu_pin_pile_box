@@ -9,7 +9,8 @@ class Game extends egret.Sprite
 
     private _info: GameInfo = new GameInfo();
 
-    private _box: Box = new Box();
+    private _box: Box = new Box(true);
+    private _boxLine: egret.Bitmap = null;
     private _boxVX: number = 10;
     private _boxs: Box[] = [];
     
@@ -26,7 +27,7 @@ class Game extends egret.Sprite
         this.touchEnabled = true;        
         this.p2 = new PWorld();
         this.p2.createGround();
-        this.bg = Texture.createBitmap("tower_jpg");
+        this.bg = Texture.createBitmap("game_bg_png");
         this.addChild(this.bg);
         this.bg.y = Global.stage.stageHeight - this.bg.height;
 
@@ -35,9 +36,11 @@ class Game extends egret.Sprite
         Global.UI_LAYER.addElement(this._info);
         this._info.setInfo(this._score, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
 
-
+        this._boxLine = Texture.createBitmap("box_line_png");
+        this._boxLine.anchorY = 0.5;
+        this.addChild(this._boxLine);
         this.addChild(this._box);
-        this._box.y = 100;
+        this._boxLine.y = this._box.y = 150;
         this._box.x = 100;
     }
 
@@ -78,8 +81,9 @@ class Game extends egret.Sprite
     {
         var scrollHeight: number = DataCenter.cfg.scrollHeight;
         var scrollDuration: number = DataCenter.cfg.scrollDuration;
+        egret.Tween.get(this._box).to({ y: this._box.y -= scrollHeight }, scrollDuration);
+        egret.Tween.get(this._boxLine).to({ y: this._boxLine.y -= scrollHeight }, scrollDuration);
         egret.Tween.get(this.scrollRect).to({ y: this.scrollRect.y - scrollHeight }, scrollDuration);
-        this._box.y -= scrollHeight;
     }
 
     private onTick(dt): void
@@ -102,16 +106,18 @@ class Game extends egret.Sprite
 
     private moveBox(): void
     {
+        var left: number = 100;
+        var right: number = Global.stage.stageWidth - left;
         this._box.visible = egret.getTimer() >= this.createTime ? true : false;
         this._box.x += this._boxVX;
-        if (this._box.x > 540)
+        if (this._box.x > right)
         {
-            this._box.x = 540;
+            this._box.x = right;
             this._boxVX *= -1;
         }
-        else if (this._box.x < 100)
+        else if (this._box.x < left)
         {
-            this._box.x = 100;
+            this._box.x = left;
             this._boxVX *= -1;
         }
     }
@@ -163,7 +169,9 @@ class Game extends egret.Sprite
     private gameOver(): void
     {
         this.removeListeners();
-        Alert.show("游戏结束", this.onSureOver, this);
+
+        this.onSureOver();
+        //Alert.show("游戏结束", this.onSureOver, this);
     }
 
     private onSureOver(): void
@@ -177,7 +185,7 @@ class Game extends egret.Sprite
         }
         DataCenter.power -= 1;
 
-        this.dispose();        
+            
 
         var lotteryScore: number[] = DataCenter.cfg.lotteryScore;
         var len: number = lotteryScore.length;
@@ -185,12 +193,14 @@ class Game extends egret.Sprite
         {
             if (this._score >= lotteryScore[len])
             {
+                this.dispose();   
                 Global.UI_LAYER.addElement(new Lottery(len));
                 return;
             }
         }
 
-        Global.UI_LAYER.addElement(new Share());
+        GameFailWindow.show(this._score);
+        //Global.UI_LAYER.addElement(new Share());
     }
 
     private dispose(): void

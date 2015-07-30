@@ -9,7 +9,9 @@ class Share extends egret.gui.SkinnableComponent
     public btnGame: egret.gui.Button;
     public btnRank: egret.gui.Button;
     public btnShare: egret.gui.Button;
-    public userInfo: UserInfo;
+    public imgPic: egret.gui.UIAsset;
+    public txtName: egret.gui.Label;
+    public txtScore: egret.gui.Label;
 
     public constructor()
     {
@@ -25,10 +27,9 @@ class Share extends egret.gui.SkinnableComponent
         this.addListeners();
         this.txtPower.text = DataCenter.power.toString();
 
-        this.userInfo.imgPic.source = DataCenter.pic;
-        this.userInfo.txtName.text = DataCenter.name;
-        this.userInfo.txtScore.text = "总高度：" + DataCenter.totalScore;
-        this.userInfo.txtTitle.text = "已获得秀品好礼";
+        this.imgPic.source = DataCenter.pic;
+        this.txtName.text = DataCenter.nickname;
+        this.txtScore.text = DataCenter.totalScore + "";
     }
 
     public addListeners(): void

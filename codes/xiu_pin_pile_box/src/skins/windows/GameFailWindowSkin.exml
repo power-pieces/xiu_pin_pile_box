@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="680" height="424" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:UIAsset source="game_fail_window_bg_png"/>
+	<e:UIAsset id="btnOK" source="btn_ok_png" y="302" horizontalCenter="0"/>
+	<e:Label id="txtScore" text="本轮获得高度：00000" y="88" textColor="0xFF0000" bold="true" size="48" fontFamily="新宋体" horizontalCenter="0" textAlign="center"/>
+</e:Skin>

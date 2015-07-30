@@ -7,7 +7,7 @@ class DataCenter
     //用户ID
     public static id: string = null;
     //昵称
-    public static name: string = null;
+    public static nickname: string = null;
     //图片
     public static pic: string = null;
     //剩余游戏次数

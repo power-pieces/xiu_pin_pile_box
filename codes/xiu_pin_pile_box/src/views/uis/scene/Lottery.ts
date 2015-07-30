@@ -8,8 +8,9 @@ class Lottery extends egret.gui.SkinnableComponent
     public imgBg: egret.gui.UIAsset;
 
     public imgLottery: egret.gui.UIAsset;
-    public txtTitle: egret.gui.Label;
-    public btnRecord: egret.gui.Button;
+    public imgTitle: egret.gui.UIAsset;
+    //public txtTitle: egret.gui.Label;
+    //public btnRecord: egret.gui.Button;
 
     private _type: number = -1;
     public constructor(t:number)
@@ -17,36 +18,60 @@ class Lottery extends egret.gui.SkinnableComponent
         super();
         this._type = t;
         this.skinName = skins.scene.LotterySkin;      
+        this.touchChildren = false;
+        this.touchEnabled = true;
         this.addEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this); 
     }
 
     public createCompleteEvent(event: egret.gui.UIEvent): void
     {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
-        this.imgLottery.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.lottery_touchBeginHandler, this);
-        this.btnRecord.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnRecord_touchBeginHandler, this);
+        this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.lottery_touchBeginHandler, this);
+        //this.btnRecord.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnRecord_touchBeginHandler, this);
         this.refresh();
     }
 
     public refresh():void
-    {
-        this.txtTitle.text = DataCenter.cfg.lotteryScore[this._type] + "米高空抽奖点";
-        var lottery: any = this.imgLottery;
-        lottery.anchorX = lottery.anchorY = 0.5;
+    {        
+        switch (this._type)
+        {
+            case 0:
+                this.imgTitle.source = "lottery_100m_png";
+                break;
+            case 1:
+                this.imgTitle.source = "lottery_300m_png";
+                break;
+            case 2:
+                this.imgTitle.source = "lottery_500m_png";
+                break;
+        }
+        //this.txtTitle.text = DataCenter.cfg.lotteryScore[this._type] + "米高空抽奖点";
+        var lottery:any = this.imgLottery;
+        lottery.anchorX = 0.5;
+        lottery.anchorY = 250 / this.imgLottery.height;
         
         lottery.x += lottery.width / 2;
-        lottery.y += lottery.height / 2;
+        lottery.y += this.imgLottery.height * this.imgLottery.anchorY;
+
+        
     }
 
     private lottery_touchBeginHandler(e: egret.TouchEvent): void
     {
         var lottery: any = this.imgLottery;
-        egret.Tween.get(lottery).to({ rotation: 900 }, 1000);        
+        egret.Tween.get(lottery).to({ rotation: 900 }, 1000).call(this.onActionOver,this);        
     }
 
     private btnRecord_touchBeginHandler(e: egret.TouchEvent): void
     {
         Global.UI_LAYER.removeElement(this);
         Global.UI_LAYER.addElement(new Share());
+    }
+
+    private onActionOver(): void
+    {
+        LotteryFailWindow.show();
+
+
     }
 }
