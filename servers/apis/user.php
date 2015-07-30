@@ -7,11 +7,16 @@ class User
 	 */
 	public function login(&$params, &$res)
 	{
+        $time = time();
+        $nowDate = $time - ($time % 86400);
         $openId = mysql_escape_string($params->id);
+
+        $this->checkAddPower($openId, $nowDate);
+
         $name = mysql_escape_string($params->name);
         $pic = mysql_escape_string($params->pic);
-        $sql = "INSERT INTO tbl_user(id,name,pic) VALUES('%s','%s','%s') ON DUPLICATE KEY UPDATE name='%s',pic='%s'";
-        $sql = sprintf($sql, $openId, $name, $pic, $name, $pic);
+        $sql = "INSERT INTO tbl_user(id,name,pic,last_login_utc) VALUES('%s','%s','%s',%d) ON DUPLICATE KEY UPDATE name='%s',pic='%s',last_login_utc=%d";
+        $sql = sprintf($sql, $openId, $name, $pic, $nowDate, $name, $pic, $nowDate);
 
 		$st = new SqlHelper();
 		$st->conn();
@@ -31,6 +36,21 @@ class User
             $res['error'] = 1;
 		}
 	}
+
+    /**
+     * 给用户增加体力
+     * @param $id
+     * @param $nowDate
+     */
+    private function checkAddPower($id, $nowDate)
+    {
+        $sql = "UPDATE tbl_user SET power=power+5 WHERE last_login_utc!=%d AND id='%s'";
+        $sql = sprintf($sql, $nowDate, $id);
+        $st = new SqlHelper();
+        $st->conn();
+        $st->modify($sql);
+        $st->close();
+    }
 
     /**
      * 获取用户信息
