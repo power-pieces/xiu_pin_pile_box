@@ -43,10 +43,9 @@ $code = "";
 //如果session存在
 if (isset($_SESSION["openid"])) {
     $p = new Player($backurl);
-    $p->openid = $_SESSION["openid"];
 
-    //把openid存到session里面
-    $p->saveToSession();
+    //从SESSION获取数据
+    $p->loadFromSession();
     $openid = $_SESSION["openid"];
 } else if (isset($_GET['code'])) {
     //没有session,根据code获取用户的信息
@@ -99,7 +98,7 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
     if ("0" == obj.inviter) {
         obj.inviter = null;
     }
-    alert(JSON.stringify(obj));
+    //alert(JSON.stringify(obj));
 
 
     //分享的具体信息，请自行添加修改。

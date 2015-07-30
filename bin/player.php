@@ -121,7 +121,20 @@ class Player {
 	/*save data to session*/
 	public function saveToSession() {
 		$_SESSION["openid"] = $this->openid;
+        $_SESSION["username"] = $this->username;
+        $_SESSION["avatar"] = $this->avatar;
+        $_SESSION["sex"] = $this->sex;
+        $_SESSION["area"] = $this->area;
 	}
+
+    public function loadFromSession()
+    {
+        $this->openid = $_SESSION["openid"];
+        $this->username = $_SESSION["username"];
+        $this->avatar = $_SESSION["avatar"];
+        $this->sex = $_SESSION["sex"];
+        $this->area = $_SESSION["area"];
+    }
 	
 	
 	/*judge is from timeline*/
