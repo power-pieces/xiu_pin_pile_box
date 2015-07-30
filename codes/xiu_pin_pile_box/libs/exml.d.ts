@@ -179,7 +179,15 @@ declare module skins.windows{
 	}
 }
 declare module skins.windows{
+	class GameFailWindowSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.windows{
 	class LockWindowSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.windows{
+	class LotteryFailWindowSkin extends egret.gui.Skin{
 	}
 }
 declare module skins.windows{
