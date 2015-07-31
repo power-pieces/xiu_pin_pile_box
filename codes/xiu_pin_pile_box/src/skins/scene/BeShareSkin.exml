@@ -16,6 +16,9 @@
 	<e:Label id="txtTitle" text="某某某，已获得秀品好礼" bold="true" textColor="0xFFFFFF" y="164" horizontalCenter="0.5"/>
 	<e:UIAsset source="arrow_left_png" x="18" y="277"/>
 	<e:UIAsset source="arrow_right_png" x="711" y="277"/>
+	<e:Scroller width="611" height="131" x="70" y="221">
+		<e:Group id="listRewards"/>
+	</e:Scroller>
 	
 	
 </e:Skin>
