@@ -156,15 +156,15 @@ class User
      * @param $params
      * @param $res
      */
-    public function lottery(&$params, &$res)
-    {
-        $id = mysql_escape_string($params->id);
-        $phone  = mysql_escape_string($params->phone);
-        $name = mysql_escape_string($params->name);
-        $address = mysql_escape_string($params->address);
-
-
-    }
+//    public function lottery(&$params, &$res)
+//    {
+//        $id = mysql_escape_string($params->id);
+//        $phone  = mysql_escape_string($params->phone);
+//        $name = mysql_escape_string($params->name);
+//        $address = mysql_escape_string($params->address);
+//
+//
+//    }
 
     /**
      * 提交游戏结果
@@ -200,10 +200,71 @@ class User
         $st->conn();
         $result = $st->modify($sql);
         $st->close();
-        if(false == $result)
+        if(true == $result)
+        {
+            $data = $this->lottery($id, $score);
+            $res['data'] = $data;
+        }
+        else
         {
             $res['error'] = 2;
         }
+    }
+
+    /**
+     * 为玩家进行一次抽奖
+     * @param $id
+     * @param $score
+     */
+    private function lottery($id, $score)
+    {
+        $level = 0;
+        if($score > 500)
+        {
+            $level = 500;
+        }
+        else if($score > 300)
+        {
+            $level = 300;
+        }
+        else if($score > 100)
+        {
+            $level = 100;
+        }
+
+        $reward = array();
+        $reward['reward_id'] = 0;
+        $reward['reward_type'] = 0;
+
+        $code = rand(0,9);
+        if($code <= 2)
+        {
+            $now = time();
+            //可以中奖，这里随机出一个奖励type
+            $sql = "UPDATE tbl_key SET user_id='%s',used_utc=%d WHERE level = %d AND user_id = '' ORDER BY RAND() LIMIT 1";
+            $sql = sprintf($sql, $id, $now, $level);
+            $st = new SqlHelper();
+            $st->conn();
+            $result = $st->modify($sql);
+            $affectedRows = mysql_affected_rows();
+            $st->close();
+
+            if(true == $result &&  $affectedRows > 0)
+            {
+                $sql = "SELECT `key`,type FROM tbl_key WHERE user_id='%s' AND used_utc=%d";
+                $sql = sprintf($sql, $id, $now);
+                //die($sql);
+                $st->conn();
+                $result = $st->query($sql);
+                $st->close();
+                if(null != $result)
+                {
+                    $reward['reward_id'] = $result[0]['key'];
+                    $reward['reward_type'] = $result[0]['type'];
+                }
+            }
+        }
+        return $reward;
     }
 
     /**
