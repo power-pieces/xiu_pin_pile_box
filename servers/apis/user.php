@@ -107,8 +107,9 @@ class User
      */
     private function getReceives($id)
     {
-        $sql = "SELECT id,name,pic FROM tbl_share_record AS t1 LEFT JOIN tbl_user AS t2 ON t1.sender_id = t2.id WHERE receiver_id = '%d'";
-        $sql = sprintf($sql, mysql_escape_string($id));
+        $sql = "SELECT id,name,pic FROM tbl_share_record AS t1 LEFT JOIN tbl_user AS t2 ON t1.sender_id = t2.id WHERE receiver_id = '%s'";
+        $sql = sprintf($sql, $id);
+        //die($sql);
         $st = new SqlHelper();
         $st->conn();
         $result = $st->query($sql);
@@ -123,7 +124,7 @@ class User
      */
     function getRewards($id)
     {
-        $sql = "SELECT * FROM tbl_rewards WHERE id='%s';";
+        $sql = "SELECT `key`,type,used_utc FROM tbl_key WHERE user_id='%s';";
         $sql = sprintf($sql, mysql_escape_string($id));
         $st = new SqlHelper();
         $st->conn();
