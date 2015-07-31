@@ -5,16 +5,13 @@
         var args: any = {};
         args.id = id;
         args.score = score;
-        NetManager.implicitCall("game_result", args, this.onResponse, this);
+        NetManager.call("game_result", args, this.onResponse, this);
     }
 
-    private onResponse(jsonStr: string): void
+    private onResponse(data:any): void
     {
-        var data: any = JSON.parse(jsonStr);
-        if (data.error)
-        {
-
-        }
+        DataCenter.rewardKey = data.reward_key;
+        DataCenter.rewardType = +data.reward_type;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GIVE_POWER_SUCCESS));
     }
 }

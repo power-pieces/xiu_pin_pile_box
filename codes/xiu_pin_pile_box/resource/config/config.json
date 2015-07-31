@@ -14,5 +14,5 @@
   "eachBoxScore":10,
   "stopCheckInterval":1000,
   "tolerance":10,
-  "lotteryScore":[30,40,50]
+  "lotteryScore":[100,300,500]
 }

@@ -42,4 +42,9 @@ class DataCenter
     
     //游戏玩家总数
     public static userAmount: number = 5472;
+
+    //获取的奖励类型
+    public static rewardType: number = 0;
+    //获取的奖励KEY
+    public static rewardKey: string = "";
 }

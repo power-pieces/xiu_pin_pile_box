@@ -5,6 +5,11 @@
 */
 class Lottery extends egret.gui.SkinnableComponent
 {
+    //没有奖励的角度
+    static NO_REWARD_ANGLE: number[] = [0, 120, 240];
+    //有奖励的角度
+    static REWARD_ANGLE: number[] = [60, 180, 300];
+
     public imgBg: egret.gui.UIAsset;
 
     public imgLottery: egret.gui.UIAsset;
@@ -58,8 +63,22 @@ class Lottery extends egret.gui.SkinnableComponent
 
     private lottery_touchBeginHandler(e: egret.TouchEvent): void
     {
+        var angle: number = 360 * 10;
+        var index:number = parseInt((Math.random() * 3).toString());
+        if (DataCenter.rewardType == 0)
+        {
+            //找个没有奖的°数
+            angle += Lottery.NO_REWARD_ANGLE[index];
+        }
+        else
+        {
+            //找个有奖的°数
+            angle += Lottery.REWARD_ANGLE[index];
+        }
+
+
         var lottery: any = this.imgLottery;
-        egret.Tween.get(lottery).to({ rotation: 900 }, 1000).call(this.onActionOver,this);        
+        egret.Tween.get(lottery).to({ rotation: angle }, 5000, egret.Ease.quadOut).call(this.onActionOver, this);        
     }
 
     private btnRecord_touchBeginHandler(e: egret.TouchEvent): void
@@ -70,8 +89,14 @@ class Lottery extends egret.gui.SkinnableComponent
 
     private onActionOver(): void
     {
-        LotteryFailWindow.show();
-
+        if (DataCenter.rewardType == 0)
+        {
+            LotteryFailWindow.show();
+        }
+        else
+        {
+            LotteryInfoWindow.show(DataCenter.rewardType, DataCenter.rewardKey);
+        }
 
     }
 }

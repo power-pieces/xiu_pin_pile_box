@@ -18,6 +18,7 @@ class LockWindow extends egret.gui.SkinnableComponent
         {
             LockWindow.instance.setContent( content );
         }
+        LockWindow.instance.addListeners();
         
         egret.gui.PopUpManager.addPopUp(LockWindow.instance, true, true);
     }
@@ -26,7 +27,8 @@ class LockWindow extends egret.gui.SkinnableComponent
     {
         if ( LockWindow.instance )
         {
-            egret.gui.PopUpManager.removePopUp( LockWindow.instance );
+            egret.gui.PopUpManager.removePopUp(LockWindow.instance);
+            LockWindow.instance.removeListeners();
         }
     }
     
@@ -47,6 +49,26 @@ class LockWindow extends egret.gui.SkinnableComponent
     {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
         this.txtContent.text = this._content;
+
+        
+    }
+
+    public addListeners(): void
+    {
+        this.addEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+    }
+
+    public removeListeners(): void
+    {
+        this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+    }
+
+    public enterFrameHandler(e: egret.Event): void
+    {
+        if (this.stage)
+        {
+            egret.gui.PopUpManager.addPopUp(this, true, true);
+        }
     }
 	
 	public setContent(content:string)
