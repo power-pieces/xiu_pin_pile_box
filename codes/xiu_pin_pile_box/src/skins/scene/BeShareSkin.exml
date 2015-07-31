@@ -10,10 +10,12 @@
 	<e:Label id="txtRank" x="378" y="893" textColor="0xFF0000" text="15" bold="true" size="60" textAlign="right"/>
 	<e:Button id="btnGivePower" skinName="@ButtonSkin('btn_give_power_png','btn_give_power_png','btn_give_power_png')" horizontalCenter="0" y="998"/>
 	<e:Button id="btnGame" skinName="@ButtonSkin('btn_play_png','btn_play_png','btn_play_png')" horizontalCenter="0" y="1085"/>
-<e:UIAsset id="imgPic" height="64" width="64" x="26" y="23" source="box_jpg"/>
-	<e:Label id="txtName" text="帅到想毁容" x="108" y="23" size="20" textColor="0x000000" bold="true"/>
+<e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" y="12" x="21"/>
+	<e:Label id="txtName" text="帅到想毁容" size="20" textColor="0x000000" bold="true" x="119" y="17"/>
 	<e:Label id="txtScore" verticalAlign="middle" bold="true" textColor="0xFF0000" text="1000" size="60" x="516" y="27" textAlign="left"/>
 	<e:Label id="txtTitle" text="某某某，已获得秀品好礼" bold="true" textColor="0xFFFFFF" y="164" horizontalCenter="0.5"/>
+	<e:UIAsset source="arrow_left_png" x="18" y="277"/>
+	<e:UIAsset source="arrow_right_png" x="711" y="277"/>
 	
 	
 </e:Skin>

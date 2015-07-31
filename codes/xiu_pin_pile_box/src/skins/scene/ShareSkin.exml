@@ -8,8 +8,8 @@
 	</e:states>
 	<e:UIAsset source="share_bg_png" x="0" y="0"/>
 	<e:UIAsset height="100%" width="100%" x="0" y="0" source="bg_jpg"/>
-<e:UIAsset id="imgPic" height="64" width="64" x="26" y="23" source="box_jpg"/>
-	<e:Label id="txtName" text="帅到想毁容" x="108" y="23" size="20" textColor="0x000000" bold="true"/>
+<e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" y="16" x="25"/>
+	<e:Label id="txtName" text="帅到想毁容" y="23" size="20" textColor="0x000000" bold="true" x="122"/>
 	<e:Label id="txtScore" verticalAlign="middle" bold="true" textColor="0xFF0000" x="518" y="26" size="60" text="1000" textAlign="left"/>
 	<e:Button id="btnShare" skinName="@ButtonSkin('btn_share_png','btn_share_png','btn_share_png')" horizontalCenter="0" y="788"/>
 	<e:Button id="btnRank" skinName="@ButtonSkin('btn_rank_png','btn_rank_png','btn_rank_png')" horizontalCenter="0" y="702"/>
@@ -19,6 +19,10 @@
 		<e:Group>
 		</e:Group>
 	</e:Scroller>
+	<e:UIAsset source="arrow_left_png" x="17" y="280"/>
+	<e:UIAsset source="arrow_right_png" x="711" y="280"/>
+	<e:UIAsset source="arrow_left_png" x="16" y="1048"/>
+	<e:UIAsset source="arrow_right_png" x="710" y="1048"/>
 	
 
 </e:Skin>

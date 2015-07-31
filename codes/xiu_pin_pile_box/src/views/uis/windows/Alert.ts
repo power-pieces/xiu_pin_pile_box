@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 弹出提示框
  * @author Jing 
  *
@@ -19,7 +19,7 @@ class Alert extends egret.gui.SkinnableComponent
     private _content: string = "";
 
     public constructor(closeFun:Function = null, thisObj:any = null)
-    {
+    {        
         super();
         if (closeFun)
         {            

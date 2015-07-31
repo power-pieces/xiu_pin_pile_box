@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="450" height="450" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+<e:Skin width="680" height="424" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
+	<e:UIAsset source="alert_bg_png" x="0" y="0"/>
+	<e:UIAsset id="imgTip" source="alert_tip_0_png" y="99" horizontalCenter="0"/>
 	
-	<e:Rect height="100%" width="100%" fillColor="0xCA5959"/>
-	<e:Label id="txtContent" text="撒旦法撒旦法"  x="120" y="138"/>
-	<e:Button id="btnOK" label="确定" x="147" y="301"/>
 </e:Skin>
