@@ -252,7 +252,7 @@ class User
         }
 
         $reward = array();
-        $reward['reward_id'] = 0;
+        $reward['reward_key'] = 0;
         $reward['reward_type'] = 0;
 
         $code = rand(0,9);
@@ -278,7 +278,7 @@ class User
                 $st->close();
                 if(null != $result)
                 {
-                    $reward['reward_id'] = $result[0]['key'];
+                    $reward['reward_key'] = $result[0]['key'];
                     $reward['reward_type'] = $result[0]['type'];
                 }
             }
