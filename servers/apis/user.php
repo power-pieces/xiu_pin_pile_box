@@ -29,6 +29,7 @@ class User
             $data = $this->getUserInfo($openId);
             $data['receives'] = $this->getReceives($openId);
             $data['rewards'] = $this->getRewards($openId);
+            $data['user_amount'] = $this->getUserAmount();
             $res['data'] = $data;
 		}
 		else
@@ -36,6 +37,23 @@ class User
             $res['error'] = 1;
 		}
 	}
+
+    /**
+     * 获取用户总数
+     */
+    private function getUserAmount()
+    {
+        $sql = "SELECT COUNT(*) AS count FROM tbl_user";
+        $st = new SqlHelper();
+        $st->conn();
+        $result = $st->query($sql);
+        $st->close();
+        if($result)
+        {
+            return $result[0]['count'];
+        }
+        return 485;
+    }
 
     /**
      * 给用户增加体力
