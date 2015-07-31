@@ -12,6 +12,7 @@
         DataCenter.inviterName = data.name;
         DataCenter.inviterPic = data.pic;
         DataCenter.inviterTotalScore = +data.total_score;
+        DataCenter.inviterRewards = data.rewards;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GOT_INVITER_INFO))
     }
 }

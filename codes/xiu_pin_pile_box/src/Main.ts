@@ -45,7 +45,7 @@ class Main extends egret.DisplayObjectContainer
         if(null == openInfo)
         {
             openInfo = {};
-            openInfo.inviter = null;
+            openInfo.inviter = "test_id";
             openInfo.id = "test_id";
             openInfo.name = "test_name";
             openInfo.pic = "";
@@ -65,6 +65,7 @@ class Main extends egret.DisplayObjectContainer
 
     private onAddToStage(event: egret.Event)
     {
+        Global.stage = this.stage;
         //inject the custom material parser
         //注入自定义的素材解析器
         egret.Injector.mapClass("egret.gui.IAssetAdapter", AssetAdapter);
@@ -146,7 +147,7 @@ class Main extends egret.DisplayObjectContainer
 
         //this.setConfig();
         DataCenter.cfg = RES.getRes("config_json");
-        Global.stage = this.stage;
+        //Global.stage = this.stage;
         //游戏场景层，游戏场景相关内容可以放在这里面。        
         this.addChild(Global.GAME_LAYER);
         //GUI的组件必须都在这个容器内部,UIStage会始终自动保持跟舞台一样大小。        

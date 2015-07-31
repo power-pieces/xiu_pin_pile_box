@@ -17,7 +17,11 @@
 	<e:UIAsset source="arrow_left_png" x="18" y="277"/>
 	<e:UIAsset source="arrow_right_png" x="711" y="277"/>
 	<e:Scroller width="611" height="131" x="70" y="221">
-		<e:Group id="listRewards"/>
+		<e:Group id="listRewards">
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
 	</e:Scroller>
 	
 	

@@ -13,5 +13,6 @@ var GameNotice = (function (_super) {
     GameNotice.LOGIN_SUCCESS = "login_success";
     GameNotice.GIVE_POWER_SUCCESS = "give_power_success";
     GameNotice.GOT_RANK = "got_rank";
+    GameNotice.GOT_INVITER_INFO = "got_inviter_info";
     return GameNotice;
 })(Notice);

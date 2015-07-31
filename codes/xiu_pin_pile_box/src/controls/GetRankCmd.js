@@ -12,13 +12,10 @@ var GetRankCmd = (function (_super) {
     GetRankCmd.prototype.run = function (id) {
         var args = {};
         args.id = id;
-        NetManager.implicitCall("get_rank", args, this.onResponse, this);
+        NetManager.call("get_rank", args, this.onResponse, this);
     };
-    GetRankCmd.prototype.onResponse = function (jsonStr) {
-        var data = JSON.parse(jsonStr);
-        if (data.error) {
-        }
-        DataCenter.selfRank = data.self;
+    GetRankCmd.prototype.onResponse = function (data) {
+        DataCenter.selfRank = +data.self;
         DataCenter.rankList = data.list;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GOT_RANK));
     };

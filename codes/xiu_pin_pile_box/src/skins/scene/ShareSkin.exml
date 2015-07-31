@@ -21,10 +21,18 @@
 	<e:UIAsset source="arrow_left_png" x="16" y="1048"/>
 	<e:UIAsset source="arrow_right_png" x="710" y="1048"/>
 	<e:Scroller width="629" height="130" x="60" y="229">
-		<e:Group id="listRewards"/>
+		<e:Group id="listRewards">
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
 	</e:Scroller>
 	<e:Scroller width="621" height="158" x="63" y="984">
-		<e:Group id="listFriends"/>
+		<e:Group id="listFriends">
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
 	</e:Scroller>
 	
 

@@ -4,7 +4,7 @@ var DataCenter = (function () {
     DataCenter.cfg = null;
     DataCenter.openInfo = null;
     DataCenter.id = null;
-    DataCenter.name = null;
+    DataCenter.nickname = null;
     DataCenter.pic = null;
     DataCenter.power = 0;
     DataCenter.totalScore = 0;
@@ -14,5 +14,10 @@ var DataCenter = (function () {
     DataCenter.rewards = null;
     DataCenter.selfRank = 0;
     DataCenter.rankList = null;
+    DataCenter.inviter = null;
+    DataCenter.inviterName = null;
+    DataCenter.inviterPic = null;
+    DataCenter.inviterTotalScore = 0;
+    DataCenter.inviterRewards = null;
     return DataCenter;
 })();

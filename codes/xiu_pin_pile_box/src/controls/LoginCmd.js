@@ -9,18 +9,17 @@ var LoginCmd = (function (_super) {
     function LoginCmd() {
         _super.apply(this, arguments);
     }
-    LoginCmd.prototype.run = function (id, name, pic) {
+    LoginCmd.prototype.run = function (id, nickname, pic) {
         var args = {};
         args.id = id;
-        args.name = name;
+        args.name = nickname;
         args.pic = pic;
-        NetManager.implicitCall("login", args, this.onLogin, this);
+        NetManager.call("login", args, this.onLogin, this, "登陆游戏中...");
     };
-    LoginCmd.prototype.onLogin = function (jsonStr) {
-        var data = JSON.parse(jsonStr);
-        DataCenter.power = data.power;
-        DataCenter.totalScore = data.total_score;
-        DataCenter.bestScore = data.best_score;
+    LoginCmd.prototype.onLogin = function (data) {
+        DataCenter.power = +data.power;
+        DataCenter.totalScore = +data.total_score;
+        DataCenter.bestScore = +data.best_score;
         DataCenter.bestScoreTime = data.best_score_time;
         DataCenter.receives = data.receives;
         DataCenter.rewards = data.rewards;

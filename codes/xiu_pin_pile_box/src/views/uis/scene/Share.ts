@@ -12,6 +12,8 @@ class Share extends egret.gui.SkinnableComponent
     public imgPic: egret.gui.UIAsset;
     public txtName: egret.gui.Label;
     public txtScore: egret.gui.Label;
+    public listRewards: egret.gui.Group;
+    public listFriends: egret.gui.Group;
 
     public constructor()
     {
@@ -30,6 +32,19 @@ class Share extends egret.gui.SkinnableComponent
         this.imgPic.source = DataCenter.pic;
         this.txtName.text = DataCenter.nickname;
         this.txtScore.text = DataCenter.totalScore + "";
+
+
+        for (var k in DataCenter.rewards)
+        {
+            var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
+            this.listRewards.addElement(rewardItem);
+        }
+
+        for (var k in DataCenter.receives)
+        {
+            var friendItem: FriendItem = new FriendItem(DataCenter.receives[k]);
+            this.listFriends.addElement(friendItem);
+        }
     }
 
     public addListeners(): void
@@ -50,7 +65,7 @@ class Share extends egret.gui.SkinnableComponent
     {
         if (DataCenter.power <= 0)
         {
-            Alert.show("能量不足！");
+            Alert.show("alert_tip_1");
             return;
         }
 

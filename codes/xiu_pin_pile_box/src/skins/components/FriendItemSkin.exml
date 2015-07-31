@@ -6,6 +6,6 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset id="imgPic" source="loading_logo_png" y="0" horizontalCenter="0"/>
-	<e:Label id="txtName" text="烫烫烫烫烫烫烫烫烫烫" y="122" fontFamily="新宋体" size="12" verticalAlign="middle" textAlign="center" horizontalCenter="0" textColor="0x817D7D" bold="true"/>
+	<e:UIAsset id="imgPic" source="loading_logo_png" y="0" horizontalCenter="0" width="108" height="108"/>
+	<e:Label id="txtName" text="烫烫烫烫烫烫烫烫烫烫" fontFamily="新宋体" verticalAlign="middle" textAlign="center" textColor="0x817D7D" size="20" horizontalCenter="0" y="115"/>
 </e:Skin>

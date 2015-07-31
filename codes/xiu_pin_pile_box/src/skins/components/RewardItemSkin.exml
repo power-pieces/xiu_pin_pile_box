@@ -6,5 +6,5 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset id="imgIcon" source="loading_logo_png" x="0" y="0"/>
+	<e:UIAsset id="imgIcon" source="loading_logo_png" x="0" y="0" width="108" height="108"/>
 </e:Skin>

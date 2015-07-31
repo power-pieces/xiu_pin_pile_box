@@ -15,7 +15,7 @@ var LotteryCmd = (function (_super) {
         args.phone = phone;
         args.name = name;
         args.address = address;
-        NetManager.implicitCall("lottery", args, this.onResponse, this);
+        NetManager.call("lottery", args, this.onResponse, this);
     };
     LotteryCmd.prototype.onResponse = function (jsonStr) {
         var data = JSON.parse(jsonStr);

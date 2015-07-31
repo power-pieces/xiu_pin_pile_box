@@ -12,8 +12,10 @@ class Alert extends egret.gui.SkinnableComponent
         egret.gui.PopUpManager.addPopUp(alert, true, true);
     }
 
-    public btnOK: egret.gui.Button;
+    //public btnOK: egret.gui.Button;
     public txtContent: egret.gui.Label;
+
+    public imgTip: egret.gui.UIAsset;
 
     private _closeFun: Function;
     private _content: string = "";
@@ -33,9 +35,18 @@ class Alert extends egret.gui.SkinnableComponent
     public createCompleteEvent(event: egret.gui.UIEvent): void
     {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
-        this.btnOK.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
+        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
 
-        this.txtContent.text = this._content;
+        if (this._content == "alert_tip_0" || this._content == "alert_tip_1" || this._content == "alert_tip_2")
+        {
+            this.imgTip.source = this._content + "_png";
+            this.txtContent.visible = false;
+        }
+        else
+        {
+            this.txtContent.text = this._content;
+            this.imgTip.visible = false;
+        }
     }
 
     public setContent(content: string)
@@ -45,6 +56,7 @@ class Alert extends egret.gui.SkinnableComponent
 
     private onTouchTap(e: egret.TouchEvent): void
     {
+        this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
         egret.gui.PopUpManager.removePopUp(this);
         if (this._closeFun)
         {

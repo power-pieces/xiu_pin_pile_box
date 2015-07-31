@@ -1,6 +1,6 @@
 {
   "isDebug": false,
-  "server": "http://192.168.0.110/xp_box/interface.php",
+  "server": "http://localhost/xp_box/interface.php",
   "friction": 1,
   "restitution": 0,
   "stiffness": null,

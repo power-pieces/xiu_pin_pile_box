@@ -8,11 +8,24 @@ var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         _super.call(this);
-        DataCenter.openInfo = Extend.callWindow("getInfo");
+        var openInfo = Extend.callWindow("getInfo");
+        if (null == openInfo) {
+            openInfo = {};
+            openInfo.inviter = null;
+            openInfo.id = "test_id";
+            openInfo.name = "test_name";
+            openInfo.pic = "";
+        }
+        DataCenter.inviter = openInfo.inviter;
+        DataCenter.id = openInfo.id;
+        DataCenter.nickname = openInfo.name;
+        DataCenter.pic = openInfo.pic;
+        DataCenter.openInfo = openInfo;
         Extend.callReadyShare();
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
     Main.prototype.onAddToStage = function (event) {
+        Global.stage = this.stage;
         egret.Injector.mapClass("egret.gui.IAssetAdapter", AssetAdapter);
         egret.gui.Theme.load("resource/theme.thm");
         this.loadingView = new LoadingUI();
@@ -47,14 +60,19 @@ var Main = (function (_super) {
     };
     Main.prototype.createScene = function () {
         this.stage.frameRate = 60;
-        this.setConfig();
-        Global.stage = this.stage;
+        DataCenter.cfg = RES.getRes("config_json");
         this.addChild(Global.GAME_LAYER);
         this.addChild(Global.UI_LAYER);
-        Global.UI_LAYER.addElement(new Index());
+        NoticeManager.addNoticeAction(GameNotice.LOGIN_SUCCESS, this.onLoginSuccess);
+        new LoginCmd().run(DataCenter.id, DataCenter.nickname, DataCenter.pic);
     };
-    Main.prototype.setConfig = function () {
-        DataCenter.cfg = RES.getRes("config_json");
+    Main.prototype.onLoginSuccess = function (n) {
+        if (null == DataCenter.inviter) {
+            Global.UI_LAYER.addElement(new Intro());
+        }
+        else {
+            Global.UI_LAYER.addElement(new BeShare());
+        }
     };
     return Main;
 })(egret.DisplayObjectContainer);

@@ -16,7 +16,7 @@
         }
         else
         {
-            Alert.show("无法重复助力！");
+            Alert.show("alert_tip_0");
         }
     }
 }

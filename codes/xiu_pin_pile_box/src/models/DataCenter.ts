@@ -39,4 +39,7 @@ class DataCenter
     public static inviterTotalScore: number = 0;
     //邀请人的奖品列表
     public static inviterRewards: any[] = null;
+    
+    //游戏玩家总数
+    public static userAmount: number = 5472;
 }

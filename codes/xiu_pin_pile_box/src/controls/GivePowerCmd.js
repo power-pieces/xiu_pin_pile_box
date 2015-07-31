@@ -13,13 +13,15 @@ var GivePowerCmd = (function (_super) {
         var args = {};
         args.id = id;
         args.target_id = targetId;
-        NetManager.implicitCall("give_power", args, this.onResponse, this);
+        NetManager.call("give_power", args, this.onResponse, this);
     };
-    GivePowerCmd.prototype.onResponse = function (jsonStr) {
-        var data = JSON.parse(jsonStr);
-        if (data.error) {
+    GivePowerCmd.prototype.onResponse = function (data) {
+        if (data.success == 1) {
+            Alert.show("助力成功！");
         }
-        NoticeManager.sendNotice(new GameNotice(GameNotice.GIVE_POWER_SUCCESS));
+        else {
+            Alert.show("无法重复助力！");
+        }
     };
     return GivePowerCmd;
 })(ACmd);

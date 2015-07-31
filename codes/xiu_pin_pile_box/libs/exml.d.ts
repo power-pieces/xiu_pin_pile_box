@@ -1,9 +1,17 @@
 declare module skins.components{
+	class FriendItemSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.components{
 	class GameInfoSkin extends egret.gui.Skin{
 	}
 }
 declare module skins.components{
 	class RankItemSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.components{
+	class RewardItemSkin extends egret.gui.Skin{
 	}
 }
 declare module skins.components{

@@ -12,6 +12,7 @@ class BeShare extends egret.gui.SkinnableComponent
     public txtRank: egret.gui.Label;
     public btnGivePower: egret.gui.Button;
     public btnGame: egret.gui.Button;
+    public listRewards: egret.gui.Group;
 
     public constructor()
     {
@@ -40,6 +41,14 @@ class BeShare extends egret.gui.SkinnableComponent
         this.txtName.text = DataCenter.inviterName;
         this.txtScore.text = DataCenter.inviterTotalScore + "";
         this.txtTitle.text = DataCenter.inviterName + "，已获得秀品好礼";
+
+        for (var k in DataCenter.inviterRewards)
+        {
+            var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
+            this.listRewards.addElement(rewardItem);
+        }
+        
+        this.txtRank.text = DataCenter.userAmount + "";
     }
 
     public btnGivePower_touchBeginHandler(e: egret.TouchEvent): void

@@ -13,10 +13,11 @@ var LoadingUI = (function (_super) {
     LoadingUI.prototype.createView = function () {
         this.textField = new egret.TextField();
         this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
         this.textField.textAlign = "center";
+        this.textField.width = 600;
+        this.textField.height = 300;
+        this.textField.x = (Global.stage.stageWidth - this.textField.width) / 2;
+        this.textField.y = (Global.stage.stageHeight - this.textField.height) / 2;
     };
     LoadingUI.prototype.setProgress = function (current, total) {
         this.textField.text = "Loading..." + current + "/" + total;

@@ -8,5 +8,6 @@
 	</e:states>
 	<e:UIAsset source="alert_bg_png" x="0" y="0"/>
 	<e:UIAsset id="imgTip" source="alert_tip_0_png" y="99" horizontalCenter="0"/>
+	<e:Label id="txtContent" text="我觉得这里可以显示多少个字合适呢" y="175" textColor="0x000000" fontFamily="新宋体" bold="true" horizontalCenter="0" textAlign="center"/>
 	
 </e:Skin>

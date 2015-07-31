@@ -38,11 +38,15 @@ class LoadingUI extends egret.Sprite {
 
     private createView():void {
         this.textField = new egret.TextField();
+       
         this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
+        
         this.textField.textAlign = "center";
+        this.textField.width = 600;
+        this.textField.height = 300;
+
+        this.textField.x = (Global.stage.stageWidth - this.textField.width) / 2;
+        this.textField.y = (Global.stage.stageHeight - this.textField.height) / 2;
     }
 
     public setProgress(current, total):void {
