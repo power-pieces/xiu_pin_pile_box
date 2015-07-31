@@ -12,7 +12,7 @@ class SqlHelper
 	//连接数据库
 	public function conn()
 	{
-		$this->conn = @mysql_connect(DB_URL,'root',DB_PWD);
+		$this->conn = @mysql_connect(DB_URL,DB_USER,DB_PWD);
 		mysql_select_db(DB_NAME, $this->conn);
         mysql_query('SET NAMES UTF8');
 	}
