@@ -7,5 +7,10 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset source="game_info_bar_png" x="0" y="0"/>
-	<e:Label id="txtInfo" text="本轮高度：100      历史高度：100    总高度：100    体力：5" bold="true" fontFamily="新宋体" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0xFFFEFE" size="22"/>
+	<e:Label id="txtInfo" bold="true" fontFamily="新宋体" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0xFFFEFE" text="本轮高度：100      历史高度：100    总高度：100" size="28"/>
+	<e:Group id="groupPower" height="44" width="704" x="5" y="83">
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
 </e:Skin>

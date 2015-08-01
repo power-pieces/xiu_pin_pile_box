@@ -5,13 +5,13 @@
 */
 class Share extends egret.gui.SkinnableComponent
 {
-    public txtPower: egret.gui.Label;
+    public txtPower: egret.gui.BitmapLabel;
     public btnGame: egret.gui.Button;
     public btnRank: egret.gui.Button;
     public btnShare: egret.gui.Button;
     public imgPic: egret.gui.UIAsset;
     public txtName: egret.gui.Label;
-    public txtScore: egret.gui.Label;
+    public txtScore: egret.gui.BitmapLabel;
     public listRewards: egret.gui.Group;
     public listFriends: egret.gui.Group;
 
@@ -32,7 +32,7 @@ class Share extends egret.gui.SkinnableComponent
         this.imgPic.source = DataCenter.pic;
         this.txtName.text = DataCenter.nickname;
         this.txtScore.text = DataCenter.totalScore + "";
-
+        
 
         for (var k in DataCenter.rewards)
         {

@@ -8,11 +8,11 @@
   "mass": 1,
   "factor": 50,
   "scrollDuration": 1000,
-  "scrollHeight": 150,
+  "scrollHeight": 130,
   "createBoxInterval": 1000,
   "scrollBoxAmount": 4,
   "eachBoxScore":10,
   "stopCheckInterval":1000,
   "tolerance":10,
-  "lotteryScore":[100,300,500]
+  "lotteryScore":[100,200,340]
 }

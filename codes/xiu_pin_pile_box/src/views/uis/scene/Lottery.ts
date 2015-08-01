@@ -44,19 +44,19 @@ class Lottery extends egret.gui.SkinnableComponent
                 this.imgTitle.source = "lottery_100m_png";
                 break;
             case 1:
-                this.imgTitle.source = "lottery_300m_png";
+                this.imgTitle.source = "lottery_200m_png";
                 break;
             case 2:
-                this.imgTitle.source = "lottery_500m_png";
+                this.imgTitle.source = "lottery_340m_png";
                 break;
         }
         //this.txtTitle.text = DataCenter.cfg.lotteryScore[this._type] + "米高空抽奖点";
         var lottery:any = this.imgLottery;
         lottery.anchorX = 0.5;
-        lottery.anchorY = 250 / this.imgLottery.height;
+        lottery.anchorY = 0.5;
         
         lottery.x += lottery.width / 2;
-        lottery.y += this.imgLottery.height * this.imgLottery.anchorY;
+        lottery.y += lottery.height / 2;
 
         
     }

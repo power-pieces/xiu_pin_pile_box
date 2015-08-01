@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="640" height="1008" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing" xmlns:ns1="*">
+<e:Skin width="750" height="1206" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing" xmlns:ns1="*">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset x="0" y="0" width="640" height="1008" source="lottery_bg_png"/>
+	<e:UIAsset x="0" y="0" width="750" height="1206" source="lottery_bg_png"/>
 	<e:Button id="btnBack" label="返回" x="251" y="916"/>
 	<ns1:RankItem id="rank0" x="1" y="4" skinName="skins.components.RankItemSkin"/>
 	<ns1:RankItem skinName="skins.components.RankItemSkin" id="rank1" x="-2" y="110"/>

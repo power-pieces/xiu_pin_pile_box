@@ -40,7 +40,7 @@ class Game extends egret.Sprite
         this._boxLine.anchorY = 0.5;
         this.addChild(this._boxLine);
         this.addChild(this._box);
-        this._boxLine.y = this._box.y = 150;
+        this._boxLine.y = this._box.y = 200;
         this._box.x = 100;
     }
 
@@ -157,8 +157,8 @@ class Game extends egret.Sprite
         while (--len > 0)
         {
             box = this._boxs[len];
-            var downBox:Box= this._boxs[len - 1];
-            if (box.y >= downBox.y)
+            var downBox: Box = this._boxs[len - 1];
+            if (box.y >= downBox.y - (downBox.height / 2))
             {                
                 this.gameOver();
                 break;
