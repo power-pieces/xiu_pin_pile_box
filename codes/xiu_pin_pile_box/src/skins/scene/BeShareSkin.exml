@@ -6,23 +6,14 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset width="100%" height="100%"  source="be_share_bg_png"/>
-	<e:Button id="btnGivePower" skinName="@ButtonSkin('btn_give_power_png','btn_give_power_png','btn_give_power_png')" horizontalCenter="0" y="998"/>
-	<e:Button id="btnGame" skinName="@ButtonSkin('btn_play_png','btn_play_png','btn_play_png')" horizontalCenter="0" y="1085"/>
-<e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" y="12" x="21"/>
-	<e:Label id="txtName" text="帅到想毁容" size="20" textColor="0x000000" bold="true" x="119" y="17"/>
-	<e:Label id="txtTitle" text="某某某，已获得秀品好礼" bold="true" textColor="0xFFFFFF" y="164" horizontalCenter="0.5"/>
+	<e:UIAsset width="100%" height="100%"  source="be_share_bg_png" x="1" y="1"/>
+	<e:Button id="btnGivePower" skinName="@ButtonSkin('btn_give_power_png','btn_give_power_png','btn_give_power_png')" y="1008" horizontalCenter="0"/>
+	<e:Button id="btnGame" skinName="@ButtonSkin('btn_play_png','btn_play_png','btn_play_png')" y="1097" horizontalCenter="0"/>
+<e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" x="328" y="598"/>
+	<e:Label id="txtName" textColor="0x000000" x="227" y="766" fontFamily="新宋体" size="22" textAlign="center" text="Jing" width="118"/>
 	<e:UIAsset source="arrow_left_png" x="18" y="277"/>
 	<e:UIAsset source="arrow_right_png" x="711" y="277"/>
-	<e:Scroller width="611" height="131" x="70" y="221">
-		<e:Group id="listRewards">
-			<e:layout>
-				<e:HorizontalLayout verticalAlign="middle"/>
-			</e:layout>
-		</e:Group>
-	</e:Scroller>
-	<e:BitmapLabel id="txtRank"  font="red_num_fnt" textAlign="right" text="12345" y="907" x="381"/>
-	<e:BitmapLabel id="txtScore" x="524" y="47" font="red_num_fnt" text="1111" width="121" textAlign="center"/>
+	<e:BitmapLabel id="txtRank"  font="red_num_fnt" textAlign="right" text="12345" x="409" y="711"/>
 	
 	
 </e:Skin>

@@ -46,6 +46,7 @@
 		"components/supportClasses/SliderBase.ts",
 		"components/supportClasses/SkinnableTextBase.ts",
 		"components/Label.ts",
+		"components/BitmapLabel.ts",
 		"components/Rect.ts",
 		"components/Button.ts",
 		"components/ToggleButton.ts",

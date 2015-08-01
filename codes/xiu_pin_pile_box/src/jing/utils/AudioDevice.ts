@@ -8,7 +8,7 @@
     /**
     * 在第一次捕获到点击事件时，预加载声音文件，用这个的好处是第一次准备好以后，可以在IOS或ANDROID中无点击事件时播放声音
     */
-    public static prep(names: string[], stage: egret.Stage, onPrep:Function): void {
+    public static prep(names: string[], stage: egret.Stage, onPrep:Function = null): void {
         if (stage != null && names != null) {
             this._names = names;
             this._stage = stage;

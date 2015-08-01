@@ -37,6 +37,7 @@ class Rule extends egret.gui.SkinnableComponent
 
     private btnGame_touchTapHandler(e: egret.TouchEvent): void
     {
+        AudioDevice.playEffect(AudioName.CLICK);
         if (DataCenter.power <= 0)
         {
             Alert.show("alert_tip_1");
@@ -50,6 +51,7 @@ class Rule extends egret.gui.SkinnableComponent
 
     private btnLottery_touchTapHandler(e: egret.TouchEvent): void
     {
+        AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Share());
     }

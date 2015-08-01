@@ -476,6 +476,7 @@
     <Content Include="resource\imgs\box.jpg" />
     <Content Include="resource\imgs\tower.jpg" />
     <Content Include="src\AssetAdapter.js" />
+    <Content Include="src\consts\readme.txt" />
     <Content Include="src\jing\cores\AView.js" />
     <Content Include="src\jing\net\NetProxy.js" />
     <Content Include="src\jing\notice\Notice.js" />
@@ -495,7 +496,9 @@
     <Content Include="src\views\Game.js" />
     <Content Include="src\views\game\Box.js" />
     <Content Include="src\views\game\Game.js" />
-    <Content Include="web.config" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin-debug\src\manifest.json" />
@@ -549,10 +552,14 @@
     <Content Include="resource\theme.thm" />
     <Content Include="libs\core\extension\gui\gui.d.json" />
     <Content Include="libs\physics\physics.d.json" />
-    <Content Include="src\skins\components\RankItemSkin.exml" />
+    <Content Include="src\skins\components\RankItemSkin.exml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="src\skins\components\UserInfoSkin.exml" />
     <Content Include="src\skins\scene\BeShareSkin.exml" />
-    <Content Include="src\skins\scene\IntroSkin.exml" />
+    <Content Include="src\skins\scene\IntroSkin.exml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="src\skins\scene\LotterySkin.exml" />
     <Content Include="src\skins\scene\RankSkin.exml" />
     <Content Include="src\skins\scene\RuleSkin.exml" />
@@ -562,6 +569,8 @@
     <Content Include="bin-debug\src\skins\windows\LockWindowSkin.js.map" />
     <Content Include="bin-debug\src\views\uis\windows\LockWindow.js.map" />
     <Content Include="src\skins\components\GameInfoSkin.exml" />
+    <Content Include="src\skins\components\RewardItemSkin.exml" />
+    <Content Include="src\skins\components\FriendItemSkin.exml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -580,6 +589,7 @@
     <TypeScriptCompile Include="libs\physics\physics.d.ts" />
     <TypeScriptCompile Include="libs\_references.ts" />
     <TypeScriptCompile Include="src\AssetAdapter.ts" />
+    <TypeScriptCompile Include="src\consts\AudioName.ts" />
     <TypeScriptCompile Include="src\controls\ACmd.ts" />
     <TypeScriptCompile Include="src\controls\GameResultCmd.ts" />
     <TypeScriptCompile Include="src\controls\GetInfoCmd.ts" />
@@ -607,8 +617,10 @@
     <TypeScriptCompile Include="src\util\NetManager.ts" />
     <TypeScriptCompile Include="src\views\game\Box.ts" />
     <TypeScriptCompile Include="src\views\game\Game.ts" />
+    <TypeScriptCompile Include="src\views\uis\components\FriendItem.ts" />
     <TypeScriptCompile Include="src\views\uis\components\GameInfo.ts" />
     <TypeScriptCompile Include="src\views\uis\components\RankItem.ts" />
+    <TypeScriptCompile Include="src\views\uis\components\RewardItem.ts" />
     <TypeScriptCompile Include="src\views\uis\components\UserInfo.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\BeShare.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\Intro.ts" />

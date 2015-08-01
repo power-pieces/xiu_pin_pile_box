@@ -806,6 +806,21 @@
 				"isFolder":false,
 				"key":"loading_logo_png",
 				"name":"loading_logo_png"
+			},
+			{
+				"isFolder":false,
+				"key":"lottery_200m_png",
+				"name":"lottery_200m_png"
+			},
+			{
+				"isFolder":false,
+				"key":"lottery_340m_png",
+				"name":"lottery_340m_png"
+			},
+			{
+				"isFolder":false,
+				"key":"power_png",
+				"name":"power_png"
 			}]
 		}
 	},

@@ -7,12 +7,9 @@ class BeShare extends egret.gui.SkinnableComponent
 {
     public imgPic: egret.gui.UIAsset;
     public txtName: egret.gui.Label;
-    public txtScore: egret.gui.BitmapLabel;
-    public txtTitle: egret.gui.Label;
     public txtRank: egret.gui.BitmapLabel;
     public btnGivePower: egret.gui.Button;
     public btnGame: egret.gui.Button;
-    public listRewards: egret.gui.Group;
 
     public constructor()
     {
@@ -39,26 +36,28 @@ class BeShare extends egret.gui.SkinnableComponent
     {
         this.imgPic.source = DataCenter.inviterPic;
         this.txtName.text = DataCenter.inviterName;
-        this.txtScore.text = DataCenter.inviterTotalScore + "";
-        this.txtScore.letterSpacing = 2;
-        this.txtTitle.text = DataCenter.inviterName + "，已获得秀品好礼";
+        //this.txtScore.text = DataCenter.inviterTotalScore + "";
+        //this.txtScore.letterSpacing = 2;
+        //this.txtTitle.text = DataCenter.inviterName + "，已获得秀品好礼";
 
-        for (var k in DataCenter.inviterRewards)
-        {
-            var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
-            this.listRewards.addElement(rewardItem);
-        }
+        //for (var k in DataCenter.inviterRewards)
+        //{
+        //    var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
+        //    this.listRewards.addElement(rewardItem);
+        //}
         this.txtRank.text = DataCenter.userAmount.toString();
         this.txtRank.letterSpacing = 2;
     }
 
     public btnGivePower_touchBeginHandler(e: egret.TouchEvent): void
     {
+        AudioDevice.playEffect(AudioName.CLICK);
         new GivePowerCmd().run(DataCenter.id, DataCenter.inviter);
     }
 
     public btnGame_touchBeginHandler(e: egret.TouchEvent): void
     {
+        AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Intro());
     }

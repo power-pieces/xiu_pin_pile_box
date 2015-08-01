@@ -62,6 +62,8 @@
                     strip.x = this.x;
                     strip.y = this.y;
                     this.parent.addChild(strip);
+
+                    AudioDevice.playEffect(AudioName.HIT_BOX);
                 }                
             }
             else

@@ -63,6 +63,7 @@ class Share extends egret.gui.SkinnableComponent
 
     private btnGame_touchBegionHandler(e: egret.TouchEvent): void
     {
+        AudioDevice.playEffect(AudioName.CLICK);
         if (DataCenter.power <= 0)
         {
             Alert.show("alert_tip_1");
@@ -75,12 +76,13 @@ class Share extends egret.gui.SkinnableComponent
     }
     private btnRank_touchBegionHandler(e: egret.TouchEvent): void
     {
-        Global.UI_LAYER.removeElement(this);
+        AudioDevice.playEffect(AudioName.CLICK);
+        Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Rank());
     }
     private btnShare_touchBegionHandler(e: egret.TouchEvent): void
     {
-        
+        AudioDevice.playEffect(AudioName.CLICK);
         ShareTip.show();
     }
 

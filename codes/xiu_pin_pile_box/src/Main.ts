@@ -143,7 +143,10 @@ class Main extends egret.DisplayObjectContainer
     private createScene(): void
     {
         this.stage.frameRate = 60;
-        
+
+        AudioDevice.prep([AudioName.CLICK,
+            AudioName.HIT_BOX,
+            AudioName.LOTTERY], this.stage);
 
         //this.setConfig();
         DataCenter.cfg = RES.getRes("config_json");

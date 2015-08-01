@@ -63,6 +63,7 @@ class Lottery extends egret.gui.SkinnableComponent
 
     private lottery_touchBeginHandler(e: egret.TouchEvent): void
     {
+        AudioDevice.playEffect(AudioName.LOTTERY);
         var angle: number = 360 * 10;
         var index:number = parseInt((Math.random() * 3).toString());
         if (DataCenter.rewardType == 0)
