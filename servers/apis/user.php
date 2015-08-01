@@ -238,13 +238,13 @@ class User
     private function lottery($id, $score)
     {
         $level = 0;
-        if($score > 500)
+        if($score > 340)
         {
-            $level = 500;
+            $level = 340;
         }
-        else if($score > 300)
+        else if($score > 200)
         {
-            $level = 300;
+            $level = 200;
         }
         else if($score > 100)
         {
