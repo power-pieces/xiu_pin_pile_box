@@ -9,7 +9,7 @@
   "factor": 50,
   "scrollDuration": 1000,
   "scrollHeight": 130,
-  "createBoxInterval": 1000,
+  "createBoxInterval": 500,
   "scrollBoxAmount": 4,
   "eachBoxScore":10,
   "stopCheckInterval":1000,
