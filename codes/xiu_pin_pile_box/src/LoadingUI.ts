@@ -47,6 +47,16 @@ class LoadingUI extends egret.Sprite {
 
         this.textField.x = (Global.stage.stageWidth - this.textField.width) / 2;
         this.textField.y = (Global.stage.stageHeight - this.textField.height) / 2;
+
+        RES.getResByUrl("./resource/images/logo.png", function (data:any): void
+        {
+            var logo: egret.Bitmap = new egret.Bitmap(data);
+            logo.anchorX = 0.5;
+            logo.anchorY = 1;
+            logo.x = Global.stage.stageWidth >> 1;
+            logo.y = this.textField.y - 10;
+            this.addChild(logo);
+        }, this, RES.ResourceItem.TYPE_IMAGE);
     }
 
     public setProgress(current, total):void {

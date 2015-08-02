@@ -92,10 +92,12 @@ class Lottery extends egret.gui.SkinnableComponent
     {
         if (DataCenter.rewardType == 0)
         {
+            AudioDevice.playEffect(AudioName.LOTTERY_FAIL);
             LotteryFailWindow.show();
         }
         else
         {
+            AudioDevice.playEffect(AudioName.LOTTERY_SUCCESS);
             LotteryInfoWindow.show(DataCenter.rewardType, DataCenter.rewardKey);
         }
 

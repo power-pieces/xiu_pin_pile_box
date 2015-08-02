@@ -24,6 +24,7 @@ class Game extends egret.Sprite
 
     private init():void
     {
+        AudioDevice.playBGM(AudioName.BGM_GAME);
         this.touchEnabled = true;        
         this.p2 = new PWorld();
         this.p2.createGround();
@@ -124,6 +125,7 @@ class Game extends egret.Sprite
 
     private createBox(x:number, y:number): void
     {
+        AudioDevice.playEffect(AudioName.DROP_BOX);
         var box: Box = new Box();
         this._boxs.push(box);
         box.x = this._box.x;        
@@ -176,6 +178,7 @@ class Game extends egret.Sprite
 
     private onSureOver(): void
     {
+        AudioDevice.playBGM(AudioName.BGM);
         new GameResultCmd().run(DataCenter.id, this._score);
 
         DataCenter.totalScore += this._score;

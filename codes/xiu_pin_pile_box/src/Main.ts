@@ -146,7 +146,19 @@ class Main extends egret.DisplayObjectContainer
 
         AudioDevice.prep([AudioName.CLICK,
             AudioName.HIT_BOX,
-            AudioName.LOTTERY], this.stage);
+            AudioName.LOTTERY,
+            AudioName.BGM,
+            AudioName.BGM_GAME,
+            AudioName.BOX_HEIGHT_ENOUGH,
+            AudioName.DROP_BOX,
+            AudioName.GAME_RESULT,
+            AudioName.LOTTERY_FAIL,
+            AudioName.LOTTERY_SUCCESS],
+            this.stage,
+            function (): void
+            {
+                AudioDevice.playBGM(AudioName.BGM);
+            });
 
         //this.setConfig();
         DataCenter.cfg = RES.getRes("config_json");

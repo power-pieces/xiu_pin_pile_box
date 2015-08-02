@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="750" height="1206" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:Rect height="100%" width="100%" fillColor="0x606F77"/>
+	<e:UIAsset source="ex_title_png" y="53" horizontalCenter="0"/>
+	<e:Button id="btnBack" y="1118" skinName="@ButtonSkin('btn_back_png','btn_back_png','btn_back_png')" horizontalCenter="0"/>
+	<e:Scroller width="633" height="952" x="62" y="131">
+		<e:Group >
+			<e:UIAsset source="ex_content_png"/>
+			</e:Group>
+	</e:Scroller>
+	
+</e:Skin>

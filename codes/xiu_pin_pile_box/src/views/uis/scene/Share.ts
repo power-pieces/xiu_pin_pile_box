@@ -12,7 +12,7 @@ class Share extends egret.gui.SkinnableComponent
     public imgPic: egret.gui.UIAsset;
     public txtName: egret.gui.Label;
     public txtScore: egret.gui.BitmapLabel;
-    public listRewards: egret.gui.Group;
+    //public listRewards: egret.gui.Group;
     public listFriends: egret.gui.Group;
 
     public constructor()
@@ -34,11 +34,11 @@ class Share extends egret.gui.SkinnableComponent
         this.txtScore.text = DataCenter.totalScore + "";
         
 
-        for (var k in DataCenter.rewards)
-        {
-            var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
-            this.listRewards.addElement(rewardItem);
-        }
+        //for (var k in DataCenter.rewards)
+        //{
+        //    var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
+        //    this.listRewards.addElement(rewardItem);
+        //}
 
         for (var k in DataCenter.receives)
         {

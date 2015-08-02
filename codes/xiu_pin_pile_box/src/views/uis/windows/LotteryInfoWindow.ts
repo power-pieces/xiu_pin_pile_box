@@ -58,12 +58,21 @@ class LotteryInfoWindow extends egret.gui.SkinnableComponent
             return;
         }
         this.btnSumbit.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnSumbit_touchBeginHandler, this);
+        this.btnEx.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnEx_touchBeginHandler, this);
     }
 
     public removeListeners(): void
     {
         this.btnSumbit.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnSumbit_touchBeginHandler, this);
+        this.btnEx.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnEx_touchBeginHandler, this);
     
+    }
+
+    public btnEx_touchBeginHandler(e: egret.TouchEvent): void
+    {
+        LotteryInfoWindow.close();
+        Global.UI_LAYER.removeAllElements();
+        Global.UI_LAYER.addElement(new ExHelp());
     }
 
     public btnSumbit_touchBeginHandler(e: egret.TouchEvent): void

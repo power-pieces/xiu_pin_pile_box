@@ -623,6 +623,7 @@
     <TypeScriptCompile Include="src\views\uis\components\RewardItem.ts" />
     <TypeScriptCompile Include="src\views\uis\components\UserInfo.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\BeShare.ts" />
+    <TypeScriptCompile Include="src\views\uis\scene\ExHelp.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\Intro.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\Lottery.ts" />
     <TypeScriptCompile Include="src\views\uis\scene\Rank.ts" />

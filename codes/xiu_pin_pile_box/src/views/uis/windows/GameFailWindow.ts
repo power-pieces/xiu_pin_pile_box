@@ -3,11 +3,14 @@
     public static show(score:number)
     {
         var w: GameFailWindow = new GameFailWindow(score);
-        egret.gui.PopUpManager.addPopUp(w, true, true);        
+        egret.gui.PopUpManager.addPopUp(w, true, true);
+        AudioDevice.playEffect(AudioName.GAME_RESULT);   
     }
 
     public txtScore: egret.gui.Label;
-    public btnOK: egret.gui.Button;
+    public btnOK: egret.gui.UIAsset;
+    public imgLight: egret.gui.UIAsset;
+
     private _score: number = 0;
     public constructor(score:number)
     {
@@ -21,14 +24,24 @@
     {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
 
-        this.txtScore.text = "本轮获得高度：" + this._score;
+        this.txtScore.text = this._score.toString();
 
         this.btnOK.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
+        this.addEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
 
+        this.imgLight.anchorX = this.imgLight.anchorY = 0.5;
+        this.imgLight.x += this.imgLight.width / 2;
+        this.imgLight.y += this.imgLight.height / 2;
+    }
+
+    private enterFrameHandler(e: egret.Event): void
+    {
+        this.imgLight.rotation += 1;
     }
 
     private onTouchTap(e: egret.TouchEvent): void
     {
+        this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
         this.btnOK.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
         egret.gui.PopUpManager.removePopUp(this);
        

@@ -821,6 +821,31 @@
 				"isFolder":false,
 				"key":"power_png",
 				"name":"power_png"
+			},
+			{
+				"isFolder":false,
+				"key":"btn_back_png",
+				"name":"btn_back_png"
+			},
+			{
+				"isFolder":false,
+				"key":"ex_content_png",
+				"name":"ex_content_png"
+			},
+			{
+				"isFolder":false,
+				"key":"ex_title_png",
+				"name":"ex_title_png"
+			},
+			{
+				"isFolder":false,
+				"key":"result_light_png",
+				"name":"result_light_png"
+			},
+			{
+				"isFolder":false,
+				"key":"btn_keys_png",
+				"name":"btn_keys_png"
 			}]
 		}
 	},

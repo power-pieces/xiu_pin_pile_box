@@ -10,30 +10,19 @@
 	<e:UIAsset height="100%" width="100%" x="0" y="0" source="bg_jpg"/>
 <e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" y="16" x="25"/>
 	<e:Label id="txtName" text="帅到想毁容" y="23" size="20" textColor="0x000000" bold="true" x="122"/>
-	<e:Button id="btnShare" skinName="@ButtonSkin('btn_share_png','btn_share_png','btn_share_png')" horizontalCenter="0" y="788"/>
-	<e:Button id="btnRank" skinName="@ButtonSkin('btn_rank_png','btn_rank_png','btn_rank_png')" horizontalCenter="0" y="702"/>
-	<e:Button id="btnGame" skinName="@ButtonSkin('btn_again_png','btn_again_png','btn_again_png')" y="620" horizontalCenter="0"/>
+	<e:Button id="btnShare" skinName="@ButtonSkin('btn_share_png','btn_share_png','btn_share_png')" horizontalCenter="0" y="957"/>
+	<e:Button id="btnRank" skinName="@ButtonSkin('btn_rank_png','btn_rank_png','btn_rank_png')" horizontalCenter="0" y="871"/>
+	<e:Button id="btnGame" skinName="@ButtonSkin('btn_again_png','btn_again_png','btn_again_png')" horizontalCenter="0" y="789"/>
 
-	<e:UIAsset source="arrow_left_png" x="17" y="280"/>
-	<e:UIAsset source="arrow_right_png" x="711" y="280"/>
-	<e:UIAsset source="arrow_left_png" x="16" y="1048"/>
-	<e:UIAsset source="arrow_right_png" x="710" y="1048"/>
-	<e:Scroller width="629" height="130" x="60" y="229">
-		<e:Group id="listRewards">
-			<e:layout>
-				<e:HorizontalLayout verticalAlign="middle"/>
-			</e:layout>
-		</e:Group>
-	</e:Scroller>
-	<e:Scroller width="621" height="158" x="63" y="984">
+	<e:Scroller width="621" height="158" x="63" y="214">
 		<e:Group id="listFriends">
 			<e:layout>
 				<e:HorizontalLayout verticalAlign="middle"/>
 			</e:layout>
 		</e:Group>
 	</e:Scroller>
-	<e:BitmapLabel id="txtPower" x="427" y="497" font="black_num_fnt" text="777" width="185" letterSpacing="2"/>
-	<e:BitmapLabel id="txtScore" x="522" y="46" font="red_num_fnt" text="1234" letterSpacing="2"/>
+	<e:BitmapLabel id="txtPower" x="427" font="black_num_fnt" text="777" width="185" letterSpacing="2" y="530"/>
+	<e:BitmapLabel id="txtScore" font="red_num_fnt" text="1234" letterSpacing="2" x="582" y="44"/>
 	
 
 </e:Skin>

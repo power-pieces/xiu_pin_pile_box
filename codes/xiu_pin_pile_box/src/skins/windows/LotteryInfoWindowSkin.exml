@@ -8,8 +8,8 @@
 	</e:states>
 	<e:UIAsset source="lottery_result_bg_png" x="0" y="0"/>
 	<e:UIAsset id="imgReward" height="149" width="178" x="128" y="138" source="bg_jpg"/>
-	<e:Button id="btnSumbit" y="898" skinName="@ButtonSkin('btn_submit_png','btn_submit_png','btn_submit_png')" horizontalCenter="0"/>
-	<e:Button id="btnCopy" y="699" skinName="@ButtonSkin('btn_copy_key_png','btn_copy_key_png','btn_copy_key_png')" horizontalCenter="0"/>
+	<e:Button id="btnSumbit" y="898" horizontalCenter="0" skinName="@ButtonSkin('btn_ok_png','btn_ok_png','btn_ok_png')"/>
+	<e:Button id="btnKeys" y="699" horizontalCenter="0" skinName="@ButtonSkin('btn_keys_png','btn_keys_png','btn_keys_png')"/>
 	<e:Button id="btnEx" y="790" skinName="@ButtonSkin('btn_exchange_png','btn_exchange_png','btn_exchange_png')" horizontalCenter="0"/>
 	<e:TextInput id="txtKey" y="635" width="533" text="kadsjflkajdskfie" verticalAlign="middle" textAlign="center" bold="true" textColor="0x8E7F7F" horizontalCenter="0"/>
 	<e:UIAsset id="imgIcon" source="r_icon_1_png" y="238" horizontalCenter="0"/>
