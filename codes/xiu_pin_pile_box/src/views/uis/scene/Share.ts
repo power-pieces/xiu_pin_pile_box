@@ -45,6 +45,15 @@ class Share extends egret.gui.SkinnableComponent
             var friendItem: FriendItem = new FriendItem(DataCenter.receives[k]);
             this.listFriends.addElement(friendItem);
         }
+
+        if (this.listFriends.numElements < 4)
+        {
+            for (var i: number = 0; i < 4 - this.listFriends.numElements; i++)
+            {
+                var friendItem: FriendItem = new FriendItem(null);
+                this.listFriends.addElement(friendItem);
+            }
+        }
     }
 
     public addListeners(): void

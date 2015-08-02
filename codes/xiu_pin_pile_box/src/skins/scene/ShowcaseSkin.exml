@@ -8,4 +8,5 @@
 	</e:states>
 	<e:Button id="btnShowMessage" label="click" y="50" horizontalCenter="0"/>
 	<e:List id="list"  skinName="skins.simple.ListSkin" y="150" itemRendererSkinName="skins.simple.ItemRendererSkin" horizontalCenter="0"/>
+	<e:TextInput x="182" y="254" textAlign="center"/>
 </e:Skin>

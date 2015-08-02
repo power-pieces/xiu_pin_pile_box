@@ -12,7 +12,10 @@
 
     public childrenCreated(): void
     {
-        this.imgPic.source = this._data.pic;
-        this.txtName.text = this._data.name;
+        if (null != this._data)
+        {
+            this.imgPic.source = this._data.pic;
+            this.txtName.text = this._data.name;
+        }
     }
 }

@@ -20,16 +20,29 @@ var LockWindow = (function (_super) {
         else {
             LockWindow.instance.setContent(content);
         }
+        LockWindow.instance.addListeners();
         egret.gui.PopUpManager.addPopUp(LockWindow.instance, true, true);
     };
     LockWindow.close = function () {
         if (LockWindow.instance) {
             egret.gui.PopUpManager.removePopUp(LockWindow.instance);
+            LockWindow.instance.removeListeners();
         }
     };
     LockWindow.prototype.createCompleteEvent = function (event) {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
         this.txtContent.text = this._content;
+    };
+    LockWindow.prototype.addListeners = function () {
+        this.addEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+    };
+    LockWindow.prototype.removeListeners = function () {
+        this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+    };
+    LockWindow.prototype.enterFrameHandler = function (e) {
+        if (this.stage) {
+            egret.gui.PopUpManager.addPopUp(this, true, true);
+        }
     };
     LockWindow.prototype.setContent = function (content) {
         this._content = content;

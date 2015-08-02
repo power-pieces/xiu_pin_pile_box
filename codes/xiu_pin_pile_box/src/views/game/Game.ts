@@ -13,6 +13,7 @@ class Game extends egret.Sprite
     private _boxLine: egret.Bitmap = null;
     private _boxVX: number = 10;
     private _boxs: Box[] = [];
+    private _gotHeight: boolean[] = [false, false, false];
     
 
     public constructor()
@@ -145,9 +146,43 @@ class Game extends egret.Sprite
             if (box.isDrop)
             {
                 this._score = DataCenter.cfg.eachBoxScore * (len + 1);
+                var strip: Strip;
+                if (this._score > 100 && this._gotHeight[0] == false)
+                {
+                    this._gotHeight[0] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+
+                    strip = new Strip(Effect.getEffectSheet("got_100m_json", "C", 1, 27), 24);
+                }
+                else if (this._score > 200 && this._gotHeight[1] == false)
+                {
+                    this._gotHeight[1] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+
+                    strip = new Strip(Effect.getEffectSheet("got_200m_json", "D", 1, 27), 24);
+                }
+                else if (this._score > 340 && this._gotHeight[2] == false)
+                {
+                    this._gotHeight[2] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+
+                    strip = new Strip(Effect.getEffectSheet("got_340m_json", "E", 1, 27), 24);
+
+                }
+
+                if (null != strip)
+                {
+                    strip.x = Global.stage.stageWidth / 2;
+                    strip.y = 250;
+                    Global.GAME_LAYER.addChild(strip);
+                    //this.addChild(strip);
+                }
                 break;
             }
         }
+
+        //TODO 检查有多少个COOL
+
         this._info.setInfo(this._score, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
     }
 
@@ -190,17 +225,17 @@ class Game extends egret.Sprite
 
             
 
-        var lotteryScore: number[] = DataCenter.cfg.lotteryScore;
-        var len: number = lotteryScore.length;
-        while (--len > -1)
-        {
-            if (this._score >= lotteryScore[len])
-            {
-                this.dispose();   
-                Global.UI_LAYER.addElement(new Lottery(len));
-                return;
-            }
-        }
+        //var lotteryScore: number[] = DataCenter.cfg.lotteryScore;
+        //var len: number = lotteryScore.length;
+        //while (--len > -1)
+        //{
+        //    if (this._score >= lotteryScore[len])
+        //    {
+        //        this.dispose();   
+        //        Global.UI_LAYER.addElement(new Lottery(len));
+        //        return;
+        //    }
+        //}
 
         GameFailWindow.show(this._score);
         //Global.UI_LAYER.addElement(new Share());

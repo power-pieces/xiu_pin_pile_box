@@ -47,6 +47,21 @@
        
         Global.GAME_LAYER.removeChildren();
         Global.UI_LAYER.removeAllElements();
+
+        var lotteryScore: number[] = DataCenter.cfg.lotteryScore;
+        var len: number = lotteryScore.length;
+        while (--len > -1)
+        {
+            if (this._score >= lotteryScore[len])
+            {
+                //this.dispose();
+                Global.UI_LAYER.addElement(new Lottery(len));
+                return;
+            }
+        }
+
+
+
         Global.UI_LAYER.addElement(new Share());
     }
 }

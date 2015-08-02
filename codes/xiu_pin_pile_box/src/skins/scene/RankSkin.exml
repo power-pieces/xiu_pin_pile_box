@@ -6,9 +6,19 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset x="0" y="0" width="750" height="1206" source="lottery_bg_png"/>
-	<e:Button id="btnBack" label="返回" x="251" y="916"/>
-	<ns1:RankItem id="rank0" x="1" y="4" skinName="skins.components.RankItemSkin"/>
-	<ns1:RankItem skinName="skins.components.RankItemSkin" id="rank1" x="-2" y="110"/>
-	<ns1:RankItem id="rank2" skinName="skins.components.RankItemSkin" x="1" y="217"/>
+	<e:UIAsset x="0" y="0" width="750" height="1206" source="rank_bg_png"/>
+	<e:Button id="btnBack" skinName="@ButtonSkin('btn_back_png','btn_back_png','btn_back_png')" y="1084" horizontalCenter="0"/>
+	<ns1:RankItem id="rank0" skinName="skins.components.RankItemSkin" horizontalCenter="0" y="34"/>
+	<ns1:RankItem skinName="skins.components.RankItemSkin" id="rank1" y="160" x="26"/>
+	<ns1:RankItem id="rank2" skinName="skins.components.RankItemSkin" horizontalCenter="0" y="285"/>
+	<e:UIAsset source="rank_1_png" x="58" y="64"/>
+	<e:UIAsset source="rank_2_png" x="58" y="192"/>
+	<e:UIAsset source="rank_3_png" x="58" y="320"/>
+	<e:Scroller width="706" height="574" x="32" y="478">
+		<e:Group id="listRank">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
 </e:Skin>

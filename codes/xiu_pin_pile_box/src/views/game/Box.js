@@ -16,17 +16,6 @@ var Box = (function (_super) {
         this._isT = isT;
         this.init();
     }
-    Box.getBoxEffectSheet = function () {
-        var sheet = [];
-        var ss = RES.getRes("effect_json");
-        for (var i = 1; i <= 9; i++) {
-            sheet.push(ss.getTexture("a1000" + i));
-        }
-        for (var i = 10; i <= 34; i++) {
-            sheet.push(ss.getTexture("a100" + i));
-        }
-        return sheet;
-    };
     Box.prototype.init = function () {
         var bmd = Texture.createBitmap(this._isT ? "box_t_png" : "box_png");
         this.addChild(bmd);
@@ -44,10 +33,11 @@ var Box = (function (_super) {
                 var interval = now - this._checkTime;
                 if (interval >= checkInterval) {
                     this.isDrop = true;
-                    var strip = new Strip(Box.getBoxEffectSheet(), 24);
+                    var strip = new Strip(Effect.getEffectSheet("effect_json", "A", 1, 19), 24);
                     strip.x = this.x;
                     strip.y = this.y;
                     this.parent.addChild(strip);
+                    AudioDevice.playEffect(AudioName.HIT_BOX);
                 }
             }
             else {

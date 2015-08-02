@@ -16,6 +16,7 @@ var Intro = (function (_super) {
         this.imgBg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onTouchMove, this);
     };
     Intro.prototype.onTouchMove = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.addElementAt(new Rule(), 0);
         egret.Tween.get(this).to({ y: -Global.stage.stageHeight }, 500);
     };

@@ -8,6 +8,7 @@ class Rank extends egret.gui.SkinnableComponent
     public rank0: RankItem;
     public rank1: RankItem;
     public rank2: RankItem;
+    public listRank: egret.gui.Group;
     public btnBack: egret.gui.Button;
 
 
@@ -46,12 +47,19 @@ class Rank extends egret.gui.SkinnableComponent
     {
         for (var i: number = 0; i < DataCenter.rankList.length; i++)
         {
+            if (i >= 20)
+            {
+                break;
+            }
             var info: any = DataCenter.rankList[i];
             var rankItem: RankItem = <RankItem>this["rank" + i];
-            if (null != rankItem)
+            if (null == rankItem)
             {
-                rankItem.init(i + 1, info.pic, info.name, +info.total_score);
+                rankItem = new RankItem();
+                this.listRank.addElement(rankItem);
             }
+
+            rankItem.init(i + 1, info.pic, info.name, +info.total_score);
         }
     }
 }

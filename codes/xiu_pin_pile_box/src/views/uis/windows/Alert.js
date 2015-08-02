@@ -26,13 +26,21 @@ var Alert = (function (_super) {
     };
     Alert.prototype.createCompleteEvent = function (event) {
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
-        this.btnOK.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
-        this.txtContent.text = this._content;
+        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
+        if (this._content == "alert_tip_0" || this._content == "alert_tip_1" || this._content == "alert_tip_2") {
+            this.imgTip.source = this._content + "_png";
+            this.txtContent.visible = false;
+        }
+        else {
+            this.txtContent.text = this._content;
+            this.imgTip.visible = false;
+        }
     };
     Alert.prototype.setContent = function (content) {
         this._content = content;
     };
     Alert.prototype.onTouchTap = function (e) {
+        this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
         egret.gui.PopUpManager.removePopUp(this);
         if (this._closeFun) {
             this._closeFun();

@@ -23,6 +23,7 @@ var LoginCmd = (function (_super) {
         DataCenter.bestScoreTime = data.best_score_time;
         DataCenter.receives = data.receives;
         DataCenter.rewards = data.rewards;
+        DataCenter.userAmount = +data.user_amount;
         NoticeManager.sendNotice(new GameNotice(GameNotice.LOGIN_SUCCESS));
     };
     return LoginCmd;

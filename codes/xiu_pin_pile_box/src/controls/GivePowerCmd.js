@@ -20,7 +20,7 @@ var GivePowerCmd = (function (_super) {
             Alert.show("助力成功！");
         }
         else {
-            Alert.show("无法重复助力！");
+            Alert.show("alert_tip_0");
         }
     };
     return GivePowerCmd;

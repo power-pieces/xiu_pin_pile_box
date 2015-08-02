@@ -188,6 +188,7 @@ class Main extends egret.DisplayObjectContainer
         else
         {
             Global.UI_LAYER.addElement(new BeShare());
+            //Global.UI_LAYER.addElement(new Keys());
         }        
     }
 }

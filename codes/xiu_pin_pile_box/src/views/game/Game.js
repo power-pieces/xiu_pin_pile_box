@@ -15,10 +15,12 @@ var Game = (function (_super) {
         this._boxLine = null;
         this._boxVX = 10;
         this._boxs = [];
+        this._gotHeight = [false, false, false];
         this.init();
         this.addListeners();
     }
     Game.prototype.init = function () {
+        AudioDevice.playBGM(AudioName.BGM_GAME);
         this.touchEnabled = true;
         this.p2 = new PWorld();
         this.p2.createGround();
@@ -32,7 +34,7 @@ var Game = (function (_super) {
         this._boxLine.anchorY = 0.5;
         this.addChild(this._boxLine);
         this.addChild(this._box);
-        this._boxLine.y = this._box.y = 150;
+        this._boxLine.y = this._box.y = 200;
         this._box.x = 100;
     };
     Game.prototype.addListeners = function () {
@@ -88,6 +90,7 @@ var Game = (function (_super) {
         }
     };
     Game.prototype.createBox = function (x, y) {
+        AudioDevice.playEffect(AudioName.DROP_BOX);
         var box = new Box();
         this._boxs.push(box);
         box.x = this._box.x;
@@ -102,6 +105,27 @@ var Game = (function (_super) {
             box = this._boxs[len];
             if (box.isDrop) {
                 this._score = DataCenter.cfg.eachBoxScore * (len + 1);
+                var strip;
+                if (this._score > 100 && this._gotHeight[0] == false) {
+                    this._gotHeight[0] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                    strip = new Strip(Effect.getEffectSheet("got_100m_json", "C", 1, 27), 24);
+                }
+                else if (this._score > 200 && this._gotHeight[1] == false) {
+                    this._gotHeight[1] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                    strip = new Strip(Effect.getEffectSheet("got_200m_json", "D", 1, 27), 24);
+                }
+                else if (this._score > 340 && this._gotHeight[2] == false) {
+                    this._gotHeight[2] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                    strip = new Strip(Effect.getEffectSheet("got_340m_json", "E", 1, 27), 24);
+                }
+                if (null != strip) {
+                    strip.x = Global.stage.stageWidth / 2;
+                    strip.y = 250;
+                    this.addChild(strip);
+                }
                 break;
             }
         }
@@ -113,7 +137,7 @@ var Game = (function (_super) {
         while (--len > 0) {
             box = this._boxs[len];
             var downBox = this._boxs[len - 1];
-            if (box.y >= downBox.y) {
+            if (box.y >= downBox.y - (downBox.height / 2)) {
                 this.gameOver();
                 break;
             }
@@ -124,21 +148,13 @@ var Game = (function (_super) {
         this.onSureOver();
     };
     Game.prototype.onSureOver = function () {
+        AudioDevice.playBGM(AudioName.BGM);
         new GameResultCmd().run(DataCenter.id, this._score);
         DataCenter.totalScore += this._score;
         if (this._score > DataCenter.bestScore) {
             DataCenter.bestScore = this._score;
         }
         DataCenter.power -= 1;
-        var lotteryScore = DataCenter.cfg.lotteryScore;
-        var len = lotteryScore.length;
-        while (--len > -1) {
-            if (this._score >= lotteryScore[len]) {
-                this.dispose();
-                Global.UI_LAYER.addElement(new Lottery(len));
-                return;
-            }
-        }
         GameFailWindow.show(this._score);
     };
     Game.prototype.dispose = function () {

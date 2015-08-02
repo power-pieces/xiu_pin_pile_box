@@ -1,24 +1,7 @@
 ﻿class Box extends egret.Sprite
 {
-    public static getBoxEffectSheet():egret.Texture[]
-    {
-        var sheet: egret.Texture[] = [];
-        
-        var ss: egret.SpriteSheet = RES.getRes("effect_json");
-
-        for (var i: number = 1; i <= 9; i++)
-        {
-            sheet.push(ss.getTexture("a1000" + i));
-        }
-
-        for (var i: number = 10; i <= 34; i++)
-        {
-            sheet.push(ss.getTexture("a100" + i));
-        }
-        return sheet;
-    }
-
     public isDrop: boolean = false;
+    public isCool: boolean = false;
     private _checkPos: egret.Point = new egret.Point(0, 0);
     private _checkTime: number = 0;
     private _isT: boolean = false;
@@ -47,20 +30,20 @@
             //检查时间间隔
             var checkInterval: number = DataCenter.cfg.stopCheckInterval; 
 
-            var dx: number = Math.abs(x - this._checkPos.x);
+            //var dx: number = Math.abs(x - this._checkPos.x);
             var dy: number = Math.abs(y - this._checkPos.y);
             var now: number = egret.getTimer();
             
-            if (dx < tolerance && dy < tolerance )
+            if (true && dy < tolerance )
             {
                 var interval = now - this._checkTime;
                 if (interval >= checkInterval)
                 {
                     this.isDrop = true;
                    
-                    var strip: Strip = new Strip(Box.getBoxEffectSheet(), 24);
+                    var strip: Strip = new Strip(Effect.getEffectSheet("effect_json","A",1,19), 24);
                     strip.x = this.x;
-                    strip.y = this.y;
+                    strip.y = this.y - 100;
                     this.parent.addChild(strip);
 
                     AudioDevice.playEffect(AudioName.HIT_BOX);

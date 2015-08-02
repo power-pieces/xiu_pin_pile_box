@@ -16,6 +16,9 @@ var RankItem = (function (_super) {
     };
     RankItem.prototype.init = function (rank, pic, name, score) {
         this.txtRank.text = rank.toString();
+        if (rank <= 3) {
+            this.txtRank.text = "";
+        }
         this.pic.source = pic;
         this.txtName.text = name;
         this.txtScore.text = "最高分：" + score.toString();

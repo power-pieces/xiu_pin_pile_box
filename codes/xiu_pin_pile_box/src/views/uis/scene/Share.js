@@ -18,6 +18,10 @@ var Share = (function (_super) {
         this.imgPic.source = DataCenter.pic;
         this.txtName.text = DataCenter.nickname;
         this.txtScore.text = DataCenter.totalScore + "";
+        for (var k in DataCenter.receives) {
+            var friendItem = new FriendItem(DataCenter.receives[k]);
+            this.listFriends.addElement(friendItem);
+        }
     };
     Share.prototype.addListeners = function () {
         this.btnGame.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnGame_touchBegionHandler, this);
@@ -30,18 +34,21 @@ var Share = (function (_super) {
         this.btnShare.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnShare_touchBegionHandler, this);
     };
     Share.prototype.btnGame_touchBegionHandler = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         if (DataCenter.power <= 0) {
-            Alert.show("能量不足！");
+            Alert.show("alert_tip_1");
             return;
         }
         Global.UI_LAYER.removeAllElements();
         Global.GAME_LAYER.addChild(new Game());
     };
     Share.prototype.btnRank_touchBegionHandler = function (e) {
-        Global.UI_LAYER.removeElement(this);
+        AudioDevice.playEffect(AudioName.CLICK);
+        Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Rank());
     };
     Share.prototype.btnShare_touchBegionHandler = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         ShareTip.show();
     };
     return Share;

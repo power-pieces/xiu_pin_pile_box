@@ -26,11 +26,16 @@ var Rank = (function (_super) {
     };
     Rank.prototype.gotRankNotice = function (n) {
         for (var i = 0; i < DataCenter.rankList.length; i++) {
+            if (i >= 20) {
+                break;
+            }
             var info = DataCenter.rankList[i];
             var rankItem = this["rank" + i];
-            if (null != rankItem) {
-                rankItem.init(i + 1, info.pic, info.name, +info.total_score);
+            if (null == rankItem) {
+                rankItem = new RankItem();
+                this.listRank.addElement(rankItem);
             }
+            rankItem.init(i + 1, info.pic, info.name, +info.total_score);
         }
     };
     return Rank;

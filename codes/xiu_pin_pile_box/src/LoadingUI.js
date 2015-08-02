@@ -18,6 +18,14 @@ var LoadingUI = (function (_super) {
         this.textField.height = 300;
         this.textField.x = (Global.stage.stageWidth - this.textField.width) / 2;
         this.textField.y = (Global.stage.stageHeight - this.textField.height) / 2;
+        RES.getResByUrl("./resource/images/logo.png", function (data) {
+            var logo = new egret.Bitmap(data);
+            logo.anchorX = 0.5;
+            logo.anchorY = 1;
+            logo.x = Global.stage.stageWidth >> 1;
+            logo.y = this.textField.y - 10;
+            this.addChild(logo);
+        }, this, RES.ResourceItem.TYPE_IMAGE);
     };
     LoadingUI.prototype.setProgress = function (current, total) {
         this.textField.text = "Loading..." + current + "/" + total;

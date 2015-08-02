@@ -2,6 +2,7 @@ var AudioDevice = (function () {
     function AudioDevice() {
     }
     AudioDevice.prep = function (names, stage, onPrep) {
+        if (onPrep === void 0) { onPrep = null; }
         if (stage != null && names != null) {
             this._names = names;
             this._stage = stage;
@@ -22,14 +23,18 @@ var AudioDevice = (function () {
                 this._soundDic[name] = sound;
             }
         }
-        if (this._onPrepFun) {
+        if (this._onPrepFun != null) {
             this._onPrepFun.call(null);
         }
     };
     AudioDevice.playBGM = function (name) {
+        if (this._bgm != null) {
+            this._bgm.pause();
+        }
         var sound = AudioDevice.getSound(name);
         sound.type = egret.Sound.MUSIC;
         sound.play(true);
+        this._bgm = sound;
         return sound;
     };
     AudioDevice.playEffect = function (name) {
@@ -56,5 +61,6 @@ var AudioDevice = (function () {
     AudioDevice._names = null;
     AudioDevice._stage = null;
     AudioDevice._onPrepFun = null;
+    AudioDevice._bgm = null;
     return AudioDevice;
 })();

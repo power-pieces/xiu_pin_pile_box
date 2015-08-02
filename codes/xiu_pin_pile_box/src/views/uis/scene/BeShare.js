@@ -21,13 +21,15 @@ var BeShare = (function (_super) {
     BeShare.prototype.gotInviterInfoHandler = function (n) {
         this.imgPic.source = DataCenter.inviterPic;
         this.txtName.text = DataCenter.inviterName;
-        this.txtScore.text = DataCenter.inviterTotalScore + "";
-        this.txtTitle.text = DataCenter.inviterName + "，已获得秀品好礼";
+        this.txtRank.text = DataCenter.userAmount.toString();
+        this.txtRank.letterSpacing = 2;
     };
     BeShare.prototype.btnGivePower_touchBeginHandler = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         new GivePowerCmd().run(DataCenter.id, DataCenter.inviter);
     };
     BeShare.prototype.btnGame_touchBeginHandler = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Intro());
     };

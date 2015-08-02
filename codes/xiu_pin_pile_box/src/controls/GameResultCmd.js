@@ -13,12 +13,11 @@ var GameResultCmd = (function (_super) {
         var args = {};
         args.id = id;
         args.score = score;
-        NetManager.implicitCall("game_result", args, this.onResponse, this);
+        NetManager.call("game_result", args, this.onResponse, this);
     };
-    GameResultCmd.prototype.onResponse = function (jsonStr) {
-        var data = JSON.parse(jsonStr);
-        if (data.error) {
-        }
+    GameResultCmd.prototype.onResponse = function (data) {
+        DataCenter.rewardKey = data.reward_key;
+        DataCenter.rewardType = +data.reward_type;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GIVE_POWER_SUCCESS));
     };
     return GameResultCmd;

@@ -18,6 +18,6 @@
         DataCenter.receives = data.receives;
         DataCenter.rewards = data.rewards;
         DataCenter.userAmount = +data.user_amount;
-        NoticeManager.sendNotice(new GameNotice(GameNotice.LOGIN_SUCCESS))
+        NoticeManager.sendNotice(new GameNotice(GameNotice.LOGIN_SUCCESS));
     }
 }

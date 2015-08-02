@@ -19,5 +19,8 @@ var DataCenter = (function () {
     DataCenter.inviterPic = null;
     DataCenter.inviterTotalScore = 0;
     DataCenter.inviterRewards = null;
+    DataCenter.userAmount = 5472;
+    DataCenter.rewardType = 0;
+    DataCenter.rewardKey = "";
     return DataCenter;
 })();

@@ -8,16 +8,18 @@
         this.skinName = skins.scene.ExHelpSkin;
     }
 
-    public createChildren(): void
+    public childrenCreated(): void
     {
         this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBack_touchTapHandler, this);
+        egret.gui.PopUpManager.addPopUp(this, true);
     }
 
     private btnBack_touchTapHandler(e: egret.TouchEvent): void
     {
         this.btnBack.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBack_touchTapHandler, this);
-        Global.UI_LAYER.removeAllElements();
-        Global.GAME_LAYER.addChild(new Share());
-
+        //Global.UI_LAYER.removeElement(this);
+        //Global.UI_LAYER.removeAllElements();
+        //Global.GAME_LAYER.addChild(new Share());
+        egret.gui.PopUpManager.removePopUp(this);
     }
 } 

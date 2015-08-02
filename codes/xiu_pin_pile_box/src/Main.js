@@ -11,7 +11,7 @@ var Main = (function (_super) {
         var openInfo = Extend.callWindow("getInfo");
         if (null == openInfo) {
             openInfo = {};
-            openInfo.inviter = null;
+            openInfo.inviter = "test_id";
             openInfo.id = "test_id";
             openInfo.name = "test_name";
             openInfo.pic = "";
@@ -60,6 +60,9 @@ var Main = (function (_super) {
     };
     Main.prototype.createScene = function () {
         this.stage.frameRate = 60;
+        AudioDevice.prep([AudioName.CLICK, AudioName.HIT_BOX, AudioName.LOTTERY, AudioName.BGM, AudioName.BGM_GAME, AudioName.BOX_HEIGHT_ENOUGH, AudioName.DROP_BOX, AudioName.GAME_RESULT, AudioName.LOTTERY_FAIL, AudioName.LOTTERY_SUCCESS], this.stage, function () {
+            AudioDevice.playBGM(AudioName.BGM);
+        });
         DataCenter.cfg = RES.getRes("config_json");
         this.addChild(Global.GAME_LAYER);
         this.addChild(Global.UI_LAYER);

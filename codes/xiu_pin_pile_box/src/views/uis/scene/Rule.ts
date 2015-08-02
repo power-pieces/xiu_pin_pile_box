@@ -52,7 +52,7 @@ class Rule extends egret.gui.SkinnableComponent
     private btnLottery_touchTapHandler(e: egret.TouchEvent): void
     {
         AudioDevice.playEffect(AudioName.CLICK);
-        Global.UI_LAYER.removeAllElements();
-        Global.UI_LAYER.addElement(new Share());
+        //Global.UI_LAYER.removeAllElements();
+        Global.UI_LAYER.addElement(new ExHelp());
     }
 }

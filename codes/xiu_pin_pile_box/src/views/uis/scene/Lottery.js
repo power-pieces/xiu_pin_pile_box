@@ -26,28 +26,46 @@ var Lottery = (function (_super) {
                 this.imgTitle.source = "lottery_100m_png";
                 break;
             case 1:
-                this.imgTitle.source = "lottery_300m_png";
+                this.imgTitle.source = "lottery_200m_png";
                 break;
             case 2:
-                this.imgTitle.source = "lottery_500m_png";
+                this.imgTitle.source = "lottery_340m_png";
                 break;
         }
         var lottery = this.imgLottery;
         lottery.anchorX = 0.5;
-        lottery.anchorY = 250 / this.imgLottery.height;
+        lottery.anchorY = 0.5;
         lottery.x += lottery.width / 2;
-        lottery.y += this.imgLottery.height * this.imgLottery.anchorY;
+        lottery.y += lottery.height / 2;
     };
     Lottery.prototype.lottery_touchBeginHandler = function (e) {
+        AudioDevice.playEffect(AudioName.LOTTERY);
+        var angle = 360 * 10;
+        var index = parseInt((Math.random() * 3).toString());
+        if (DataCenter.rewardType == 0) {
+            angle += Lottery.NO_REWARD_ANGLE[index];
+        }
+        else {
+            angle += Lottery.REWARD_ANGLE[index];
+        }
         var lottery = this.imgLottery;
-        egret.Tween.get(lottery).to({ rotation: 900 }, 1000).call(this.onActionOver, this);
+        egret.Tween.get(lottery).to({ rotation: angle }, 5000, egret.Ease.quadOut).call(this.onActionOver, this);
     };
     Lottery.prototype.btnRecord_touchBeginHandler = function (e) {
         Global.UI_LAYER.removeElement(this);
         Global.UI_LAYER.addElement(new Share());
     };
     Lottery.prototype.onActionOver = function () {
-        LotteryFailWindow.show();
+        if (DataCenter.rewardType == 0) {
+            AudioDevice.playEffect(AudioName.LOTTERY_FAIL);
+            LotteryFailWindow.show();
+        }
+        else {
+            AudioDevice.playEffect(AudioName.LOTTERY_SUCCESS);
+            LotteryInfoWindow.show(DataCenter.rewardType, DataCenter.rewardKey);
+        }
     };
+    Lottery.NO_REWARD_ANGLE = [0, 120, 240];
+    Lottery.REWARD_ANGLE = [60, 180, 300];
     return Lottery;
 })(egret.gui.SkinnableComponent);

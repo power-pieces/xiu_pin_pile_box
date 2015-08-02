@@ -25,6 +25,10 @@ class RankItem extends egret.gui.SkinnableComponent
     public init(rank:number, pic:string, name:string, score:number): void
     {
         this.txtRank.text = rank.toString();
+        if (rank <= 3)
+        {
+            this.txtRank.text = "";
+        }
         this.pic.source = pic;
         this.txtName.text = name;
         this.txtScore.text = "最高分：" + score.toString();

@@ -28,7 +28,7 @@ class LotteryInfoWindow extends egret.gui.SkinnableComponent
     public imgTitle: egret.gui.UIAsset;
     public imgIcon: egret.gui.UIAsset;
     public txtKey: egret.gui.TextInput;
-    public btnCopy: egret.gui.Button;
+    public btnKeys: egret.gui.Button;
     public btnEx: egret.gui.Button;
     public btnSumbit: egret.gui.Button;
 
@@ -59,19 +59,26 @@ class LotteryInfoWindow extends egret.gui.SkinnableComponent
         }
         this.btnSumbit.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnSumbit_touchBeginHandler, this);
         this.btnEx.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnEx_touchBeginHandler, this);
+        this.btnKeys.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnKeys_touchBeginHandler, this);
     }
 
     public removeListeners(): void
     {
         this.btnSumbit.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnSumbit_touchBeginHandler, this);
         this.btnEx.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnEx_touchBeginHandler, this);
+        this.btnKeys.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnKeys_touchBeginHandler, this);
     
+    }
+
+    public btnKeys_touchBeginHandler(e: egret.TouchEvent): void
+    {
+        Global.UI_LAYER.addElement(new Keys());
     }
 
     public btnEx_touchBeginHandler(e: egret.TouchEvent): void
     {
-        LotteryInfoWindow.close();
-        Global.UI_LAYER.removeAllElements();
+        //LotteryInfoWindow.close();
+        //Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new ExHelp());
     }
 

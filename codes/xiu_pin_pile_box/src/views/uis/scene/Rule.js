@@ -24,14 +24,16 @@ var Rule = (function (_super) {
         this.btnLottery.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.btnLottery_touchTapHandler, this);
     };
     Rule.prototype.btnGame_touchTapHandler = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         if (DataCenter.power <= 0) {
-            Alert.show("能量不足！");
+            Alert.show("alert_tip_1");
             return;
         }
         Global.UI_LAYER.removeAllElements();
         Global.GAME_LAYER.addChild(new Game());
     };
     Rule.prototype.btnLottery_touchTapHandler = function (e) {
+        AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Share());
     };

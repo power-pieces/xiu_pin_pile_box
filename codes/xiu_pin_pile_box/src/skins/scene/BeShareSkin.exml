@@ -11,8 +11,6 @@
 	<e:Button id="btnGame" skinName="@ButtonSkin('btn_play_png','btn_play_png','btn_play_png')" y="1097" horizontalCenter="0"/>
 <e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" y="572" x="329"/>
 	<e:Label id="txtName" textColor="0x000000" x="227" fontFamily="新宋体" size="22" textAlign="center" text="Jing" width="118" y="763"/>
-	<e:UIAsset source="arrow_left_png" x="18" y="277"/>
-	<e:UIAsset source="arrow_right_png" x="711" y="277"/>
 	<e:BitmapLabel id="txtRank"  font="red_num_fnt" textAlign="right" text="12345" y="711" x="405"/>
 	
 	
