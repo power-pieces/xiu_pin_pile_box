@@ -9,11 +9,11 @@
   "factor": 50,
   "scrollDuration": 1000,
   "scrollHeight": 130,
-  "createBoxInterval": 1000,
-  "scrollBoxAmount": 4,
+  "createBoxInterval": 2000,
+  "scrollBoxAmount": 5,
   "eachBoxScore": 10,
   "coolDistance": 10,
-  "stopCheckInterval":1000,
+  "stopCheckInterval":300,
   "tolerance":10,
   "lotteryScore":[100,200,340]
 }

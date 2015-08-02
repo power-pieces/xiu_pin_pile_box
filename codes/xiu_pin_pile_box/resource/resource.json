@@ -1,7 +1,7 @@
 {
 	"groups":[
 	{
-		"keys":"button_disabled_png,button_down_png,button_normal_png,config_json,share_png,black_num_fnt,red_num_fnt,box_png,box_line_png,box_t_png,btn_game_png,btn_share_png,game_bg_png,lottery_100m_png,lottery_arrow_png,lottery_bg_png,lottery_board_png,rule_bg_png,lottery_reward_png,share_bg_png,be_share_bg_png,btn_again_png,btn_ok_png,btn_play_png,btn_rank_png,game_fail_window_bg_png,game_info_bar_png,lottery_fail_window_png,btn_check_png,effect_json,alert_tip_1_png,alert_bg_png,alert_tip_0_png,alert_tip_2_png,btn_copy_key_png,btn_exchange_png,btn_submit_png,lottery_result_bg_png,r_icon_10_png,r_icon_11_png,r_icon_2_png,r_icon_3_png,r_icon_4_png,r_icon_5_png,r_icon_6_png,r_icon_7_png,r_icon_8_png,r_icon_9_png,r_title_10_png,r_title_11_png,r_title_2_png,r_title_3_png,r_title_4_png,r_title_5_png,r_title_6_png,r_title_7_png,r_title_8_png,r_title_9_png,r_title_1_png,r_icon_1_png,arrow_right_png,arrow_left_png,loading_logo_png,lottery_200m_png,lottery_340m_png,power_png,btn_click_mp3,hit_box_mp3,lottery_mp3,btn_back_png,ex_content_png,ex_title_png,result_light_png,btn_keys_png,box_height_enough_mp3,drop_box_mp3,game_result_mp3,lottery_fail_mp3,lottery_success_mp3,bgm_mp3,bgm_game_mp3,logo_png,rank_1_png,rank_2_png,rank_3_png,rank_item_bg_png,rank_bg_png,key_title_png,key_type_png,got_300m_json,got_100m_json,got_200m_json",
+		"keys":"button_disabled_png,button_down_png,button_normal_png,config_json,share_png,black_num_fnt,red_num_fnt,box_png,box_line_png,box_t_png,btn_game_png,btn_share_png,game_bg_png,lottery_100m_png,lottery_arrow_png,lottery_bg_png,lottery_board_png,rule_bg_png,lottery_reward_png,share_bg_png,be_share_bg_png,btn_again_png,btn_ok_png,btn_play_png,btn_rank_png,game_fail_window_bg_png,game_info_bar_png,lottery_fail_window_png,btn_check_png,effect_json,alert_tip_1_png,alert_bg_png,alert_tip_0_png,alert_tip_2_png,btn_copy_key_png,btn_exchange_png,btn_submit_png,lottery_result_bg_png,r_icon_10_png,r_icon_11_png,r_icon_2_png,r_icon_3_png,r_icon_4_png,r_icon_5_png,r_icon_6_png,r_icon_7_png,r_icon_8_png,r_icon_9_png,r_title_10_png,r_title_11_png,r_title_2_png,r_title_3_png,r_title_4_png,r_title_5_png,r_title_6_png,r_title_7_png,r_title_8_png,r_title_9_png,r_title_1_png,r_icon_1_png,arrow_right_png,arrow_left_png,loading_logo_png,lottery_200m_png,lottery_340m_png,power_png,btn_click_mp3,hit_box_mp3,lottery_mp3,btn_back_png,ex_content_png,ex_title_png,result_light_png,btn_keys_png,box_height_enough_mp3,drop_box_mp3,game_result_mp3,lottery_fail_mp3,lottery_success_mp3,bgm_mp3,bgm_game_mp3,logo_png,rank_1_png,rank_2_png,rank_3_png,rank_item_bg_png,rank_bg_png,key_title_png,key_type_png,got_300m_json,got_100m_json,got_200m_json,intro_bg_png,lottery_300m_png,lottery_500m_png,btn_give_power_png,alert_tip_3_png,effect_cool_json",
 		"name":"preload"
 	}],
 	"resources":[
@@ -819,5 +819,16 @@
 		"subkeys":"D10001,D10002,D10003,D10004,D10005,D10006,D10007,D10008,D10009,D10010,D10011,D10012,D10013,D10014,D10015,D10016,D10017,D10018,D10019,D10020,D10021,D10022,D10023,D10024,D10025,D10026,D10027",
 		"type":"sheet",
 		"url":"sheet/got_200m.json"
+	},
+	{
+		"name":"alert_tip_3_png",
+		"type":"image",
+		"url":"images/alert_tip_3.png"
+	},
+	{
+		"name":"effect_cool_json",
+		"subkeys":"B10001,B10002,B10003,B10004,B10005,B10006,B10007,B10008,B10009,B10010,B10011,B10012,B10013,B10014,B10015,B10016,B10017,B10018,B10019",
+		"type":"sheet",
+		"url":"sheet/effect_cool.json"
 	}]
 }
