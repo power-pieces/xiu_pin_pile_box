@@ -7,6 +7,10 @@ declare module skins.components{
 	}
 }
 declare module skins.components{
+	class KeysItemSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.components{
 	class RankItemSkin extends egret.gui.Skin{
 	}
 }
@@ -28,6 +32,10 @@ declare module skins.scene{
 }
 declare module skins.scene{
 	class IntroSkin extends egret.gui.Skin{
+	}
+}
+declare module skins.scene{
+	class KeysSkin extends egret.gui.Skin{
 	}
 }
 declare module skins.scene{
