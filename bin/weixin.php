@@ -102,12 +102,13 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
 
 
     //分享的具体信息，请自行添加修改。
-    function setTimeLine(shareid) {
+    function setTimeLine(shareid, shareName) {		
+		//分享到朋友圈的设置
         wx.onMenuShareTimeline({
-            title: '秀品叠箱子', // 分享标题
-            desc: '开发测试', // 分享描述
+            title: '游戏《秀品叠箱子》免费邀您游巴黎', // 分享标题
+            desc: '您的好友' + shareName == null?'':'"shareName"' +'只差一步就可以免费游巴黎了，快来为好友助力。' // 分享描述
             link: 'http://www.g6game.com/h5game/xp_box/client/index.php?share=' + shareid, // 分享链接
-            imgUrl: '', // 分享图标
+            imgUrl: 'http://www.g6game.com/h5game/xp_box/client/share.png', // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
                 if (sharesuccessfunc != null)
@@ -126,12 +127,13 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
         return obj;
     }
 
-    function setAppMessage(shareid) {
+    function setAppMessage(shareid) {		
+		//分享给朋友的设置
         wx.onMenuShareAppMessage({
-            title: '秀品叠箱子', // 分享标题
-            desc: '测试', // 分享描述
+            title: '游戏《秀品叠箱子》免费邀您游巴黎', // 分享标题
+            desc: '您的好友' + shareName == null?'':'"shareName"' +'只差一步就可以免费游巴黎了，快来为好友助力。' // 分享描述
             link: 'http://www.g6game.com/h5game/xp_box/client/index.php?share=' + shareid, // 分享链接
-            imgUrl: '', // 分享图标
+            imgUrl: 'http://www.g6game.com/h5game/xp_box/client/share.png', // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
@@ -145,9 +147,9 @@ getShareToken($appid, $appsecrect, $noncestr, $file, time());
 
     //准备分享
     function readyShare() {
-        //alert("分享者ID：" + obj.id + "   名称：" + obj.name);
-        setTimeLine(obj.id);
-        setAppMessage(obj.id);
+        alert("分享者ID：" + obj.id + "   名称：" + obj.name);
+        setTimeLine(obj.id, obj.name);
+        setAppMessage(obj.id, obj.name);
     }
 
 
