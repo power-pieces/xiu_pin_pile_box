@@ -48,7 +48,8 @@ class Share extends egret.gui.SkinnableComponent
 
         if (this.listFriends.numElements < 4)
         {
-            for (var i: number = 0; i < 4 - this.listFriends.numElements; i++)
+            var emptyCount: number = 4 - this.listFriends.numElements;
+            for (var i: number = 0; i < emptyCount; i++)
             {
                 var friendItem: FriendItem = new FriendItem(null);
                 this.listFriends.addElement(friendItem);

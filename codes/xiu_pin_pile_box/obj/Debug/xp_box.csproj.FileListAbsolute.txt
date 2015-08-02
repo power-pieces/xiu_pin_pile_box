@@ -12,5 +12,6 @@ C:\code\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xp_box.pdb
 E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xp_box.dll.config
 E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xp_box.dll
 E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\bin\xp_box.pdb
+E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\obj\Debug\xp_box.csprojResolveAssemblyReference.cache
 E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\obj\Debug\xp_box.dll
 E:\projects\html5\xiu_pin_pile_box\trunk\codes\xiu_pin_pile_box\obj\Debug\xp_box.pdb
