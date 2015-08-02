@@ -5,7 +5,7 @@ class Game extends egret.Sprite
     public bg: egret.Bitmap;
     public createTime: number = 0;
     //游戏分数
-    private _score: number = 0;
+    //private _score: number = 0;
 
     private _info: GameInfo = new GameInfo();
 
@@ -25,6 +25,7 @@ class Game extends egret.Sprite
 
     private init():void
     {
+        DataCenter.scoreGameing = 0;
         AudioDevice.playBGM(AudioName.BGM_GAME);
         this.touchEnabled = true;        
         this.p2 = new PWorld();
@@ -36,7 +37,7 @@ class Game extends egret.Sprite
         this.scrollRect = new egret.Rectangle(0, 0, Global.stage.stageWidth, Global.stage.stageHeight);
 
         Global.UI_LAYER.addElement(this._info);
-        this._info.setInfo(this._score, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
+        this._info.setInfo(DataCenter.scoreGameing, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
 
         this._boxLine = Texture.createBitmap("box_line_png");
         this._boxLine.anchorY = 0.5;
@@ -128,6 +129,11 @@ class Game extends egret.Sprite
     {
         AudioDevice.playEffect(AudioName.DROP_BOX);
         var box: Box = new Box();
+        
+        if (this._boxs.length > 0)
+        {
+            box.setDownBox(this._boxs[this._boxs.length - 1]);
+        }
         this._boxs.push(box);
         box.x = this._box.x;        
         box.y = this._box.y;
@@ -140,28 +146,28 @@ class Game extends egret.Sprite
     {
         var len: number = this._boxs.length;
         var box: Box = null;
-        while (--len > -1)
-        {
-            box = this._boxs[len];
-            if (box.isDrop)
-            {
-                this._score = DataCenter.cfg.eachBoxScore * (len + 1);
+        //while (--len > -1)
+        //{
+        //    box = this._boxs[len];
+        //    if (box.isDrop)
+        //    {
+        //        DataCenter.scoreGameing = DataCenter.cfg.eachBoxScore * (len + 1);
                 var strip: Strip;
-                if (this._score > 100 && this._gotHeight[0] == false)
+                if (DataCenter.scoreGameing >= 100 && this._gotHeight[0] == false)
                 {
                     this._gotHeight[0] = true;
                     AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
 
                     strip = new Strip(Effect.getEffectSheet("got_100m_json", "C", 1, 27), 24);
                 }
-                else if (this._score > 200 && this._gotHeight[1] == false)
+                else if (DataCenter.scoreGameing >= 200 && this._gotHeight[1] == false)
                 {
                     this._gotHeight[1] = true;
                     AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
 
                     strip = new Strip(Effect.getEffectSheet("got_200m_json", "D", 1, 27), 24);
                 }
-                else if (this._score > 340 && this._gotHeight[2] == false)
+                else if (DataCenter.scoreGameing >= 340 && this._gotHeight[2] == false)
                 {
                     this._gotHeight[2] = true;
                     AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
@@ -177,13 +183,13 @@ class Game extends egret.Sprite
                     Global.GAME_LAYER.addChild(strip);
                     //this.addChild(strip);
                 }
-                break;
-            }
-        }
+                //break;
+            //}
+        //}
 
         //TODO 检查有多少个COOL
 
-        this._info.setInfo(this._score, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
+        this._info.setInfo(DataCenter.scoreGameing, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
     }
 
     //检查游戏是否结束
@@ -214,12 +220,12 @@ class Game extends egret.Sprite
     private onSureOver(): void
     {
         AudioDevice.playBGM(AudioName.BGM);
-        new GameResultCmd().run(DataCenter.id, this._score);
+        new GameResultCmd().run(DataCenter.id, DataCenter.scoreGameing);
 
-        DataCenter.totalScore += this._score;
-        if (this._score > DataCenter.bestScore)
+        DataCenter.totalScore += DataCenter.scoreGameing;
+        if (DataCenter.scoreGameing > DataCenter.bestScore)
         {
-            DataCenter.bestScore = this._score;
+            DataCenter.bestScore = DataCenter.scoreGameing;
         }
         DataCenter.power -= 1;
 
@@ -229,7 +235,7 @@ class Game extends egret.Sprite
         //var len: number = lotteryScore.length;
         //while (--len > -1)
         //{
-        //    if (this._score >= lotteryScore[len])
+        //    if (DataCenter.scoreGameing >= lotteryScore[len])
         //    {
         //        this.dispose();   
         //        Global.UI_LAYER.addElement(new Lottery(len));
@@ -237,7 +243,7 @@ class Game extends egret.Sprite
         //    }
         //}
 
-        GameFailWindow.show(this._score);
+        GameFailWindow.show(DataCenter.scoreGameing);
         //Global.UI_LAYER.addElement(new Share());
     }
 

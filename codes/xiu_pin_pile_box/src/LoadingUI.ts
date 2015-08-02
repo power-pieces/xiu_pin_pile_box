@@ -54,8 +54,11 @@ class LoadingUI extends egret.Sprite {
             logo.anchorX = 0.5;
             logo.anchorY = 1;
             logo.x = Global.stage.stageWidth >> 1;
-            logo.y = this.textField.y - 10;
+            logo.y = Global.stage.stageHeight >> 1;
+            this.textField.y = logo.y + 50;
             this.addChild(logo);
+            logo.alpha = 0;
+            egret.Tween.get(logo, {loop:true}).to({ alpha: 1 }, 1000).to({ alpha: 0 }, 1000);
         }, this, RES.ResourceItem.TYPE_IMAGE);
     }
 

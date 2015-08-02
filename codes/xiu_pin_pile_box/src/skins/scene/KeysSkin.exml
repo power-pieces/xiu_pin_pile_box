@@ -14,7 +14,7 @@
 	<e:Scroller id="listKeys" width="688" height="974" x="30" y="98">
 		<e:Group id="list">
 			<e:layout>
-				<e:VerticalLayout horizontalAlign="center"/>
+				<e:VerticalLayout horizontalAlign="center" gap="20"/>
 			</e:layout>
 		</e:Group>
 	</e:Scroller>

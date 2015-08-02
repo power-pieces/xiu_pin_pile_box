@@ -9,9 +9,12 @@
 	<e:Rect height="100%" width="100%" fillColor="0x606F77"/>
 	<e:UIAsset source="ex_title_png" y="53" horizontalCenter="0"/>
 	<e:Button id="btnBack" y="1118" skinName="@ButtonSkin('btn_back_png','btn_back_png','btn_back_png')" horizontalCenter="0"/>
-	<e:Scroller width="633" height="952" x="62" y="131">
+	<e:Scroller width="670" height="952" y="131" horizontalCenter="0">
 		<e:Group >
 			<e:UIAsset source="ex_content_png"/>
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center"/>
+			</e:layout>
 			</e:Group>
 	</e:Scroller>
 	

@@ -12,7 +12,7 @@
     {
         if (data.success == 1)
         {
-            Alert.show("助力成功！");
+            Alert.show("alert_tip_3");
         }
         else
         {

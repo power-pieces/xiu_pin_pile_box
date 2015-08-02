@@ -79,7 +79,8 @@ class Lottery extends egret.gui.SkinnableComponent
 
 
         var lottery: any = this.imgLottery;
-        egret.Tween.get(lottery).to({ rotation: angle }, 5000, egret.Ease.quadOut).call(this.onActionOver, this);        
+        egret.Tween.get(lottery).to({ rotation: angle }, 5000, egret.Ease.quadOut).call(this.onActionOver, this);   
+        Global.stage.touchEnabled = false;     
     }
 
     private btnRecord_touchBeginHandler(e: egret.TouchEvent): void
@@ -90,6 +91,7 @@ class Lottery extends egret.gui.SkinnableComponent
 
     private onActionOver(): void
     {
+        Global.stage.touchEnabled = true;
         if (DataCenter.rewardType == 0)
         {
             AudioDevice.playEffect(AudioName.LOTTERY_FAIL);

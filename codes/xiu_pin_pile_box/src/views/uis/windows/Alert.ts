@@ -37,7 +37,7 @@ class Alert extends egret.gui.SkinnableComponent
         this.removeEventListener(egret.gui.UIEvent.CREATION_COMPLETE, this.createCompleteEvent, this);
         this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
 
-        if (this._content == "alert_tip_0" || this._content == "alert_tip_1" || this._content == "alert_tip_2")
+        if (this._content.indexOf("alert_tip_") > -1)
         {
             this.imgTip.source = this._content + "_png";
             this.txtContent.visible = false;

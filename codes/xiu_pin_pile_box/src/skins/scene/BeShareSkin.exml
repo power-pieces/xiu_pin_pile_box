@@ -6,12 +6,12 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset width="100%" height="100%"  source="be_share_bg_png" x="1" y="1"/>
+	<e:UIAsset width="100%" height="100%"  source="be_share_bg_png" y="0" x="0"/>
 	<e:Button id="btnGivePower" skinName="@ButtonSkin('btn_give_power_png','btn_give_power_png','btn_give_power_png')" y="1008" horizontalCenter="0"/>
 	<e:Button id="btnGame" skinName="@ButtonSkin('btn_play_png','btn_play_png','btn_play_png')" y="1097" horizontalCenter="0"/>
-<e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" y="572" x="329"/>
-	<e:Label id="txtName" textColor="0x000000" x="227" fontFamily="新宋体" size="22" textAlign="center" text="Jing" width="118" y="763"/>
-	<e:BitmapLabel id="txtRank"  font="red_num_fnt" textAlign="right" text="12345" y="711" x="405"/>
+<e:UIAsset id="imgPic" height="90" width="90" source="loading_logo_png" x="328" y="574"/>
+	<e:Label id="txtName" textColor="0x000000" fontFamily="新宋体" size="22" textAlign="center" width="118" x="239" y="769" text="Jing马撒旦法" height="30"/>
+	<e:BitmapLabel id="txtRank"  font="red_num_fnt" textAlign="right" text="12345" x="405" y="714"/>
 	
 	
 </e:Skin>

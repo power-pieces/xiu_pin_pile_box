@@ -47,4 +47,7 @@ class DataCenter
     public static rewardType: number = 0;
     //获取的奖励KEY
     public static rewardKey: string = "";
+
+    //正在进行的游戏
+    public static scoreGameing: number = 0;
 }

@@ -41,13 +41,13 @@ class Main extends egret.DisplayObjectContainer
         super();
 
         //TODO 获取外部资源
-        var openInfo:any = Extend.callWindow("getInfo");
-        if(null == openInfo)
+        var openInfo: any = Extend.callWindow("getInfo");
+        if (null == openInfo)
         {
             openInfo = {};
             openInfo.inviter = "test_id";
             openInfo.id = "test_id";
-            openInfo.name = "test_name";
+            openInfo.name = "我的名字有点特别长";
             openInfo.pic = "";
         }
         DataCenter.inviter = openInfo.inviter;
@@ -55,9 +55,7 @@ class Main extends egret.DisplayObjectContainer
         DataCenter.nickname = openInfo.name;
         DataCenter.pic = openInfo.pic;
         DataCenter.openInfo = openInfo;
-        //alert(JSON.stringify(openInfo));
-        
-        
+        //alert(JSON.stringify(openInfo));        
         Extend.callReadyShare();
 
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
@@ -142,6 +140,8 @@ class Main extends egret.DisplayObjectContainer
      */
     private createScene(): void
     {
+
+
         this.stage.frameRate = 60;
 
         AudioDevice.prep([AudioName.CLICK,
