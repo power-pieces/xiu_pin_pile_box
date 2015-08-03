@@ -18,6 +18,8 @@
         DataCenter.receives = data.receives;
         DataCenter.rewards = data.rewards;
         DataCenter.userAmount = +data.user_amount;
+        //DataCenter.lotteryPoint = +data.lottery_point;
+        //DataCenter.lotteryCount = +data.lottery_count;
         NoticeManager.sendNotice(new GameNotice(GameNotice.LOGIN_SUCCESS));
     }
 }

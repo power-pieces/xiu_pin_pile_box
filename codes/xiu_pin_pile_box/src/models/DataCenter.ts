@@ -26,6 +26,10 @@ class DataCenter
     public static selfRank: number = 0;
     //排行榜
     public static rankList: any[] = null;
+    //抽奖积分
+    //public static lotteryPoint: number = 0;
+    //抽奖次数
+    //public static lotteryCount: number = 0;
 
 
 
@@ -43,6 +47,8 @@ class DataCenter
     //游戏玩家总数
     public static userAmount: number = 5472;
 
+    //是否参与抽奖
+    public static isLottery: number = 0;
     //获取的奖励类型
     public static rewardType: number = 0;
     //获取的奖励KEY

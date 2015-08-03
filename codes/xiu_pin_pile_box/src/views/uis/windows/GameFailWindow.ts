@@ -48,20 +48,30 @@
         Global.GAME_LAYER.removeChildren();
         Global.UI_LAYER.removeAllElements();
 
-        var lotteryScore: number[] = DataCenter.cfg.lotteryScore;
-        var len: number = lotteryScore.length;
-        while (--len > -1)
+        if (DataCenter.isLottery != 0)
         {
-            if (this._score >= lotteryScore[len])
-            {
-                //this.dispose();
-                Global.UI_LAYER.addElement(new Lottery(len));
-                return;
-            }
+            DataCenter.isLottery = 0;
+            Global.UI_LAYER.addElement(new Lottery(-1));
+        }
+        else
+        {
+            Global.UI_LAYER.addElement(new Share());
         }
 
+        //var lotteryScore: number[] = DataCenter.cfg.lotteryScore;
+        //var len: number = lotteryScore.length;
+        //while (--len > -1)
+        //{
+        //    if (this._score >= lotteryScore[len])
+        //    {
+        //        //this.dispose();
+        //        Global.UI_LAYER.addElement(new Lottery(len));
+        //        return;
+        //    }
+        //}
 
 
-        Global.UI_LAYER.addElement(new Share());
+
+        //Global.UI_LAYER.addElement(new Share());
     }
 }
