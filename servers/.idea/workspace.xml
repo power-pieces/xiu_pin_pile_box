@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="3a030c2d-3c46-448b-a55b-a5059fa6d9ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs/define.php" afterPath="$PROJECT_DIR$/configs/define.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/sql_helper.php" afterPath="$PROJECT_DIR$/utils/sql_helper.php" />
-    </list>
-    <ignored path="servers.iws" />
+    <list default="true" readonly="true" id="260fcee1-62e1-49ff-b1f8-84c329e23796" name="Default" comment="" />
+    <ignored path="xp_box.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,75 +21,55 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="servers" />
+    <favorites_list name="xp_box" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="interface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="532">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="399" max-vertical-offset="1045">
-              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="define.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/configs/define.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2733813" vertical-offset="0" max-vertical-offset="556">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apis/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.3053152" vertical-offset="5301" max-vertical-offset="8246">
+              <caret line="292" column="42" selection-start-line="292" selection-start-column="42" selection-end-line="292" selection-end-column="42" />
+              <folding>
+                <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+                <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+                <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+                <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+                <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+                <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+                <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+                <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+                <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+                <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+                <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+                <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+                <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+                <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+                <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+                <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+                <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+                <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+                <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+                <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+                <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+                <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+                <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+                <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+                <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+                <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+                <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+                <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+                <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api_test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debug/api_test.html">
+      <file leaf-file-name="define.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/define.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1292">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="img_util.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/img_util.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="456">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sql_helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/sql_helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0" vertical-offset="14" max-vertical-offset="1254">
-              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -103,10 +80,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/interface.php" />
-        <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/utils/sql_helper.php" />
-        <option value="$PROJECT_DIR$/configs/define.php" />
+        <option value="$PROJECT_DIR$/apis/user.php" />
       </list>
     </option>
   </component>
@@ -117,8 +91,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -129,6 +103,9 @@
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -162,34 +139,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xp_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xp_box" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -199,6 +148,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/projects/html5/xiu_pin_pile_box/trunk/bin" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
@@ -209,35 +159,17 @@
     <configuration>C:\Users\Jing\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\wwwroot\xp_box" />
-          <option name="myCopyRoot" value="C:\wwwroot\xp_box" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\wwwroot\xp_box" />
-          <option name="myCopyRoot" value="C:\wwwroot\xp_box" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3a030c2d-3c46-448b-a55b-a5059fa6d9ee" name="Default" comment="" />
-      <created>1437618477567</created>
+      <changelist id="260fcee1-62e1-49ff-b1f8-84c329e23796" name="Default" comment="" />
+      <created>1438171295154</created>
       <option name="number" value="Default" />
-      <updated>1437618477567</updated>
+      <updated>1438171295154</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -246,19 +178,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25416037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27132195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -282,26 +214,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/interface.php">
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="532">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1045">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/define.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="323">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -310,95 +264,343 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debug/api_test.html">
+    <entry file="file://$PROJECT_DIR$/configs/define.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1292">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/img_util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="456">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/sql_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1254">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apis/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4047">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/debug/api_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1292">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/img_util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="456">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="532">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="399" max-vertical-offset="1045">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/sql_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0" vertical-offset="14" max-vertical-offset="1254">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-          <folding />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/define.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2733813" vertical-offset="0" max-vertical-offset="556">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/define.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/define.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4598">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4598">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4218">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/define.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="323">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3053152" vertical-offset="5301" max-vertical-offset="8246">
+          <caret line="292" column="42" selection-start-line="292" selection-start-column="42" selection-end-line="292" selection-end-column="42" />
+          <folding>
+            <marker date="1438610590499" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="463:488" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438610590499" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="1765:1831" placeholder="/** * 获取用户信息..." />
+            <marker date="1438610590499" expanded="true" signature="2222:2258" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="2623:2743" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="2762:2882" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438610590499" expanded="true" signature="3069:3127" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="3538:3630" placeholder="INSERT INTO ..." />
+            <marker date="1438610590499" expanded="true" signature="4014:4061" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5144:5274" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="5394:5470" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6174" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:6179" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="6116:9535" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438610590499" expanded="true" signature="7672:7773" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="7805:8076" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="8501:8566" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="9192:9270" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="9401:9468" placeholder="/** * 为玩家进行一..." />
+            <marker date="1438610590499" expanded="true" signature="10003:10104" placeholder="UPDATE tbl_k..." />
+            <marker date="1438610590499" expanded="true" signature="10431:10496" placeholder="SELECT `key`..." />
+            <marker date="1438610590499" expanded="true" signature="10568:10644" placeholder="UPDATE tbl_u..." />
+            <marker date="1438610590499" expanded="true" signature="11203:11315" placeholder="SELECT COUNT..." />
+            <marker date="1438610590499" expanded="true" signature="11495:11576" placeholder="SELECT id,na..tbl_user..." />
+          </folding>
         </state>
       </provider>
     </entry>

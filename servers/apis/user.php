@@ -144,7 +144,7 @@ class User
         $id = $params->id;
         $target_id = $params->target_id;
 
-        $sql = "INSERT INTO tbl_share_record(sender_id,receiver_id,time,time_utc) VALUES('%s','%s',CURTIME(),%d)";
+        $sql = "INSERT INTO tbl_share_record(sender_id,receiver_id,time,time_utc) VALUES('%s','%s',NOW(),%d)";
         $sql = sprintf($sql, mysql_escape_string($id), mysql_escape_string($target_id), time());
         //die($sql);
         $st = new SqlHelper();
@@ -221,13 +221,125 @@ class User
         $st->close();
         if(true == $result)
         {
-            $data = $this->lottery($id, $score);
+            $data = $this->newLottery($id, $score);
             $res['data'] = $data;
         }
         else
         {
             $res['error'] = 2;
         }
+    }
+
+    /**
+     * 新抽奖规则
+     * @param $id
+     * @param $score
+     */
+    private function newLottery($id, $score)
+    {
+        $reward = array();
+        $reward['is_lottery'] = 0;
+        $reward['reward_key'] = 0;
+        $reward['reward_type'] = 0;
+
+        $sql = "SELECT lottery_point,lottery_count FROM tbl_user WHERE id='$id'";
+        $st = new SqlHelper();
+        $st->conn();
+        $result = $st->query($sql);
+        $st->close();
+
+        if(count($result) > 0)
+        {
+            $point = +$result[0]['lottery_point'];
+            $count = +$result[0]['lottery_count'];
+
+            $point += $score;
+
+            $lotteryEnable = false;
+            switch($count)
+            {
+                case 0:
+                    //第一次抽奖
+                    if($point >= 100)
+                    {
+                        $lotteryEnable = true;
+                    }
+                    break;
+                case 1:
+                    //第二次抽奖
+                    if($point >= 200)
+                    {
+                        $lotteryEnable = true;
+                    }
+                    break;
+                case 2:
+                    //第三次抽奖
+                    if($point >= 300)
+                    {
+                        $lotteryEnable = true;
+                    }
+                    break;
+                default:
+                    //之后的抽奖
+                    if($point >= 500)
+                    {
+                        $lotteryEnable = true;
+                    }
+            }
+
+            //可以抽奖
+            if($lotteryEnable == true)
+            {
+                $reward['is_lottery'] = 1;
+
+                $code = rand(0,9);
+                if($code <= 9)
+                {
+                    $now = time();
+                    //可以中奖，这里随机出一个奖励type
+                    //$sql = "UPDATE tbl_key SET user_id='%s',used_utc=%d WHERE level = %d AND user_id = '' ORDER BY RAND() LIMIT 1";
+
+                    $sql = "UPDATE tbl_key SET user_id='%s',used_utc=%d
+                            WHERE user_id = '' AND type NOT IN
+                                 (SELECT a.type FROM (SELECT DISTINCT(type) FROM tbl_key WHERE user_id = '%s')a)
+                            ORDER BY RAND() LIMIT 1";
+                    $sql = sprintf($sql, $id, $now, $id);
+                    $st->conn();
+                    $result = $st->modify($sql);
+                    $affectedRows = mysql_affected_rows();
+                   // echo($affectedRows);
+                    //die();
+                    $st->close();
+
+                    if(true == $result &&  $affectedRows > 0)
+                    {
+                        $sql = "SELECT `key`,type FROM tbl_key WHERE user_id='%s' AND used_utc=%d";
+                        $sql = sprintf($sql, $id, $now);
+                        //die($sql);
+                        $st->conn();
+                        $result = $st->query($sql);
+                        $st->close();
+                        if(null != $result)
+                        {
+                            $reward['reward_key'] = $result[0]['key'];
+                            $reward['reward_type'] = $result[0]['type'];
+                        }
+                    }
+                }
+
+                //积分清0，计数+1
+                $point = 0;
+                $count += 1;
+            }
+
+
+            $sql = "UPDATE tbl_user SET lottery_point = $point,lottery_count=$count WHERE id='$id'";
+            $st->conn();
+            $st->modify($sql);
+            $st->close();
+        }
+
+        return $reward;
     }
 
     /**
