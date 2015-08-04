@@ -239,6 +239,7 @@ class User
     {
         $reward = array();
         $reward['is_lottery'] = 0;
+        $reward['reward_score'] = 0;
         $reward['reward_key'] = 0;
         $reward['reward_type'] = 0;
 
@@ -263,6 +264,7 @@ class User
                     if($point >= 100)
                     {
                         $lotteryEnable = true;
+                        $reward['reward_score'] = 100;
                     }
                     break;
                 case 1:
@@ -270,13 +272,15 @@ class User
                     if($point >= 200)
                     {
                         $lotteryEnable = true;
+                        $reward['reward_score'] = 200;
                     }
                     break;
                 case 2:
                     //第三次抽奖
-                    if($point >= 300)
+                    if($point >= 340)
                     {
                         $lotteryEnable = true;
+                        $reward['reward_score'] = 340;
                     }
                     break;
                 default:
@@ -284,6 +288,7 @@ class User
                     if($point >= 500)
                     {
                         $lotteryEnable = true;
+                        $reward['reward_score'] = 500;
                     }
             }
 
