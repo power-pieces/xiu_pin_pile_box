@@ -27,6 +27,7 @@ class LotteryInfoWindow extends egret.gui.SkinnableComponent
 
     public imgTitle: egret.gui.UIAsset;
     public imgIcon: egret.gui.UIAsset;
+    public imgTicket: egret.gui.UIAsset;
     public txtKey: egret.gui.TextInput;
     public btnKeys: egret.gui.Button;
     public btnEx: egret.gui.Button;
@@ -105,6 +106,7 @@ class LotteryInfoWindow extends egret.gui.SkinnableComponent
 
         this.imgTitle.source = "r_title_" + this._type + "_png";
         this.imgIcon.source = "r_icon_" + this._type + "_png";
+        this.imgTicket.source = "r_ticket_" + this._type + "_png";
         this.txtKey.text = this._key;
     }
 }

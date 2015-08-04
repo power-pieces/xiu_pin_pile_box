@@ -7,11 +7,15 @@ class GameInfo extends egret.gui.SkinnableComponent
 {
     public imgBg: egret.gui.UIAsset;
 
-    public txtInfo: egret.gui.Label;
+    public txtScore: egret.gui.Label;
+    public txtBest: egret.gui.Label;
+    public txtTotal: egret.gui.Label;
 
     public groupPower: egret.gui.Group;
 
-    private _info: string = "";
+    private _score: string;
+    private _best: string;
+    private _total: string;
 
     public constructor()
     {
@@ -37,11 +41,10 @@ class GameInfo extends egret.gui.SkinnableComponent
 
     public setInfo(score:number, best:number, total:number, power:number): void
     {
-        this._info = StringUtil.format("本轮高度：{0}      历史高度：{1}    总高度：{2}", score, best, total);
-        for (var i: number = 0; i < power; i++)
-        {
+        this._score = "SCORE:" + score;
+        this._best = "历史最高:" + total;
+        this._total = "总高度:" + power;
 
-        }
         this.refresh();
     }
 
@@ -49,7 +52,10 @@ class GameInfo extends egret.gui.SkinnableComponent
     {
         if (this.initialized)
         {
-            this.txtInfo.text = this._info;
+            this.txtScore.text = this._score;
+            this.txtBest.text = this._best;
+            this.txtTotal.text = this._total;
+
         }
     }
 }

@@ -20,7 +20,7 @@
 
     private init()
     {
-        var bmd: egret.Bitmap = Texture.createBitmap(this._isT?"box_t_png":"box_png");
+        var bmd: egret.Bitmap = Texture.createBitmap("box_png");
         this.addChild(bmd);
 
         this.anchorX = 0.5;

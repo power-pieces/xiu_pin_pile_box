@@ -49,6 +49,8 @@ class DataCenter
 
     //是否参与抽奖
     public static isLottery: number = 0;
+    //获奖的分数级别
+    public static rewardScore: number = 0;
     //获取的奖励类型
     public static rewardType: number = 0;
     //获取的奖励KEY

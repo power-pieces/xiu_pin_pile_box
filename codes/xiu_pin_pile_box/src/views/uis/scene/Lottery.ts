@@ -5,10 +5,8 @@
 */
 class Lottery extends egret.gui.SkinnableComponent
 {
-    //没有奖励的角度
-    static NO_REWARD_ANGLE: number[] = [0, 120, 240];
-    //有奖励的角度
-    static REWARD_ANGLE: number[] = [60, 180, 300];
+    //奖品和角度的关系
+    private static TYPE_ANGLE: number[] = [240, 60, 180, 300, 30, 210, 330, 0, 120, 90, 270, 150];
 
     public imgBg: egret.gui.UIAsset;
 
@@ -38,18 +36,7 @@ class Lottery extends egret.gui.SkinnableComponent
 
     public refresh():void
     {        
-        switch (this._type)
-        {
-            case 0:
-                this.imgTitle.source = "lottery_100m_png";
-                break;
-            case 1:
-                this.imgTitle.source = "lottery_200m_png";
-                break;
-            case 2:
-                this.imgTitle.source = "lottery_340m_png";
-                break;
-        }
+        this.imgTitle.source = "lottery_" + DataCenter.rewardScore + "m_png";
         //this.txtTitle.text = DataCenter.cfg.lotteryScore[this._type] + "米高空抽奖点";
         var lottery:any = this.imgLottery;
         lottery.anchorX = 0.5;
@@ -65,18 +52,7 @@ class Lottery extends egret.gui.SkinnableComponent
     {
         AudioDevice.playEffect(AudioName.LOTTERY);
         var angle: number = 360 * 10;
-        var index:number = parseInt((Math.random() * 3).toString());
-        if (DataCenter.rewardType == 0)
-        {
-            //找个没有奖的°数
-            angle += Lottery.NO_REWARD_ANGLE[index];
-        }
-        else
-        {
-            //找个有奖的°数
-            angle += Lottery.REWARD_ANGLE[index];
-        }
-
+        angle += Lottery.TYPE_ANGLE[DataCenter.rewardType];
 
         var lottery: any = this.imgLottery;
         egret.Tween.get(lottery).to({ rotation: angle }, 5000, egret.Ease.quadOut).call(this.onActionOver, this);   

@@ -11,6 +11,7 @@
     private onResponse(data:any): void
     {
         DataCenter.isLottery = +data.is_lottery;
+        DataCenter.rewardScore = +data.reward_score;
         DataCenter.rewardKey = data.reward_key;
         DataCenter.rewardType = +data.reward_type;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GIVE_POWER_SUCCESS));

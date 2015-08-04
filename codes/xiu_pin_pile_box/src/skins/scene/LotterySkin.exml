@@ -7,8 +7,7 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset y="0" width="100%" height="100%" source="lottery_bg_png" horizontalCenter="0"/>
-	<e:UIAsset id="imgLottery" source="lottery_board_png" y="359" x="67"/>
-	<e:UIAsset id="imgTitle" source="lottery_100m_png" y="106" horizontalCenter="0"/>
-	<e:UIAsset source="lottery_arrow_png" y="449" horizontalCenter="0"/>
-	<e:UIAsset source="lottery_reward_png" y="594" horizontalCenter="-4"/>
+	<e:UIAsset id="imgLottery" source="lottery_board_png" x="125" y="384"/>
+	<e:UIAsset id="imgTitle" source="lottery_100m_png" y="236" horizontalCenter="0"/>
+	<e:UIAsset source="lottery_arrow_png" verticalCenter="-76" horizontalCenter="0.5"/>
 </e:Skin>

@@ -10,8 +10,8 @@
 	
 	<e:Rect height="100%" width="100%" fillColor="0x606F77"/>
 	<e:UIAsset source="key_title_png" y="26" horizontalCenter="0"/>
-	<e:Button id="btnBack" y="1118" skinName="@ButtonSkin('btn_back_png','btn_back_png','btn_back_png')" horizontalCenter="0"/>
-	<e:Scroller id="listKeys" width="688" height="974" x="30" y="98">
+	<e:Button id="btnBack" skinName="@ButtonSkin('btn_back_png','btn_back_png','btn_back_png')" horizontalCenter="0" y="1141"/>
+	<e:Scroller id="listKeys" width="688" height="970" x="30" y="164">
 		<e:Group id="list">
 			<e:layout>
 				<e:VerticalLayout horizontalAlign="center" gap="20"/>

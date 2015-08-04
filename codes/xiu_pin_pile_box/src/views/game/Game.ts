@@ -10,8 +10,8 @@ class Game extends egret.Sprite
     private _info: GameInfo = new GameInfo();
 
     private _box: Box = new Box(true);
-    private _boxLine: egret.Bitmap = null;
-    private _boxVX: number = 10;
+    private _plane: egret.Bitmap = null;
+    private _planeVX: number = 10;
     private _boxs: Box[] = [];
     private _gotHeight: boolean[] = [false, false, false];
     
@@ -39,12 +39,13 @@ class Game extends egret.Sprite
         Global.UI_LAYER.addElement(this._info);
         this._info.setInfo(DataCenter.scoreGameing, DataCenter.bestScore, DataCenter.totalScore, DataCenter.power);
 
-        this._boxLine = Texture.createBitmap("box_line_png");
-        this._boxLine.anchorY = 0.5;
-        this.addChild(this._boxLine);
+        this._plane = Texture.createBitmap("plane_png");
+        this._plane.anchorOffsetX = 117;
+        this._plane.anchorOffsetY = 189;
+        this.addChild(this._plane);
         this.addChild(this._box);
-        this._boxLine.y = this._box.y = 200;
-        this._box.x = 100;
+        this._plane.y = this._box.y = 300;
+        this._box.x = this._plane.x;
     }
 
     public addListeners(): void
@@ -83,9 +84,8 @@ class Game extends egret.Sprite
     private scrollMap()
     {
         var scrollHeight: number = DataCenter.cfg.scrollHeight;
-        var scrollDuration: number = DataCenter.cfg.scrollDuration;
-        egret.Tween.get(this._box).to({ y: this._box.y -= scrollHeight }, scrollDuration);
-        egret.Tween.get(this._boxLine).to({ y: this._boxLine.y -= scrollHeight }, scrollDuration);
+        var scrollDuration: number = DataCenter.cfg.scrollDuration;        
+        egret.Tween.get(this._plane).to({ y: this._plane.y -= scrollHeight }, scrollDuration);
         egret.Tween.get(this.scrollRect).to({ y: this.scrollRect.y - scrollHeight }, scrollDuration);
     }
 
@@ -100,29 +100,36 @@ class Game extends egret.Sprite
             return;
         }
 
-        this.moveBox();
+        this.movePlane();
         this.p2.step(dt);
         this.checkScore();
         this.checkGameOver();
         
     }
 
-    private moveBox(): void
+    private movePlane(): void
     {
+        this._box.visible = egret.getTimer() >= this.createTime ? true : false;
+
         var left: number = 100;
         var right: number = Global.stage.stageWidth - left;
-        this._box.visible = egret.getTimer() >= this.createTime ? true : false;
-        this._box.x += this._boxVX;
-        if (this._box.x > right)
+        
+        this._plane.x += this._planeVX;
+        if (this._plane.x > right)
         {
-            this._box.x = right;
-            this._boxVX *= -1;
+            this._plane.x = right;
+            this._planeVX *= -1;
+            this._plane.scaleX = 1;
         }
         else if (this._box.x < left)
         {
-            this._box.x = left;
-            this._boxVX *= -1;
+            this._plane.x = left;
+            this._planeVX *= -1;
+            this._plane.scaleX = -1;
         }
+
+        this._box.x = this._plane.x;
+        this._box.y = this._plane.y;
     }
 
     private createBox(x:number, y:number): void
@@ -153,28 +160,27 @@ class Game extends egret.Sprite
         //    {
         //        DataCenter.scoreGameing = DataCenter.cfg.eachBoxScore * (len + 1);
                 var strip: Strip;
-                if (DataCenter.scoreGameing >= 100 && this._gotHeight[0] == false)
-                {
-                    this._gotHeight[0] = true;
-                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                //if (DataCenter.scoreGameing >= 100 && this._gotHeight[0] == false)
+                //{
+                //    this._gotHeight[0] = true;
+                //    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
 
-                    strip = new Strip(Effect.getEffectSheet("got_100m_json", "C", 1, 27), 24);
-                }
-                else if (DataCenter.scoreGameing >= 200 && this._gotHeight[1] == false)
-                {
-                    this._gotHeight[1] = true;
-                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                //    strip = new Strip(Effect.getEffectSheet("got_100m_json", "C", 1, 27), 24);
+                //}
+                //else if (DataCenter.scoreGameing >= 200 && this._gotHeight[1] == false)
+                //{
+                //    this._gotHeight[1] = true;
+                //    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
 
-                    strip = new Strip(Effect.getEffectSheet("got_200m_json", "D", 1, 27), 24);
-                }
-                else if (DataCenter.scoreGameing >= 340 && this._gotHeight[2] == false)
-                {
-                    this._gotHeight[2] = true;
-                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                //    strip = new Strip(Effect.getEffectSheet("got_200m_json", "D", 1, 27), 24);
+                //}
+                //else if (DataCenter.scoreGameing >= 340 && this._gotHeight[2] == false)
+                //{
+                //    this._gotHeight[2] = true;
+                //    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
 
-                    strip = new Strip(Effect.getEffectSheet("got_340m_json", "E", 1, 27), 24);
-
-                }
+                //    strip = new Strip(Effect.getEffectSheet("got_340m_json", "E", 1, 27), 24);
+                //}
 
                 if (null != strip)
                 {

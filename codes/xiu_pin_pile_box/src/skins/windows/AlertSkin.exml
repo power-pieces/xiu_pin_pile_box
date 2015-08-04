@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="680" height="424" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+<e:Skin width="740" height="460" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
@@ -7,7 +7,7 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset source="alert_bg_png" x="0" y="0"/>
-	<e:UIAsset id="imgTip" source="alert_tip_0_png" y="99" horizontalCenter="0"/>
-	<e:Label id="txtContent" text="我觉得这里可以显示多少个字合适呢" y="175" textColor="0x000000" fontFamily="新宋体" bold="true" horizontalCenter="0" textAlign="center"/>
+	<e:UIAsset id="imgTip" source="alert_tip_0_png" y="182" horizontalCenter="0"/>
+	<e:Label id="txtContent" text="我觉得这里可以显示多少个字合适呢" textColor="0x000000" fontFamily="新宋体" bold="true" textAlign="center" y="258" horizontalCenter="0"/>
 	
 </e:Skin>

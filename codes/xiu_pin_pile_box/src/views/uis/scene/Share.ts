@@ -12,6 +12,7 @@ class Share extends egret.gui.SkinnableComponent
     public imgPic: egret.gui.UIAsset;
     public txtName: egret.gui.Label;
     public txtScore: egret.gui.BitmapLabel;
+    public btnKeys: egret.gui.Button;
     //public listRewards: egret.gui.Group;
     public listFriends: egret.gui.Group;
 
@@ -62,6 +63,7 @@ class Share extends egret.gui.SkinnableComponent
         this.btnGame.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnGame_touchBegionHandler, this);
         this.btnRank.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnRank_touchBegionHandler, this);
         this.btnShare.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnShare_touchBegionHandler, this);
+        this.btnKeys.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnKeys_touchBegionHandler, this);
     }
 
     public removeListeners(): void
@@ -69,6 +71,12 @@ class Share extends egret.gui.SkinnableComponent
         this.btnGame.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnGame_touchBegionHandler, this);
         this.btnRank.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnRank_touchBegionHandler, this);
         this.btnShare.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnShare_touchBegionHandler, this);
+        this.btnKeys.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnKeys_touchBegionHandler, this);
+    }
+
+    private btnKeys_touchBegionHandler(e: egret.TouchEvent): void
+    {
+        Global.UI_LAYER.addElement(new Keys());
     }
 
     private btnGame_touchBegionHandler(e: egret.TouchEvent): void

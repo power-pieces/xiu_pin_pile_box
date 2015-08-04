@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin width="675" height="1123" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+<e:Skin width="750" height="1206" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
 	<w:HostComponent name="egret.gui.SkinnableComponent"/>
 	<w:Declarations/>
 	<e:states>
@@ -8,10 +8,11 @@
 	</e:states>
 	<e:UIAsset source="lottery_result_bg_png" x="0" y="0"/>
 	<e:UIAsset id="imgReward" height="149" width="178" x="128" y="138" source="bg_jpg"/>
-	<e:Button id="btnSumbit" skinName="@ButtonSkin('btn_ok_png','btn_ok_png','btn_ok_png')" horizontalCenter="0.5" y="999"/>
-	<e:Button id="btnKeys" skinName="@ButtonSkin('btn_keys_png','btn_keys_png','btn_keys_png')" y="796" horizontalCenter="0.5"/>
-	<e:Button id="btnEx" skinName="@ButtonSkin('btn_exchange_png','btn_exchange_png','btn_exchange_png')" horizontalCenter="0.5" y="881"/>
-	<e:TextInput id="txtKey" width="533" text="kadsjflkajdskfie" verticalAlign="middle" textAlign="center" bold="true" textColor="0x8E7F7F" y="738" selectable="true" editable="true" horizontalCenter="0"/>
-	<e:UIAsset id="imgIcon" source="r_icon_1_png" y="119" horizontalCenter="0"/>
-	<e:UIAsset id="imgTitle" source="r_title_1_png" horizontalCenter="0" y="265"/>
+	<e:Button id="btnSumbit" skinName="@ButtonSkin('btn_ok_png','btn_ok_png','btn_ok_png')" horizontalCenter="0.5" y="1045"/>
+	<e:Button id="btnKeys" skinName="@ButtonSkin('btn_keys_png','btn_keys_png','btn_keys_png')" horizontalCenter="0" y="851"/>
+	<e:Button id="btnEx" skinName="@ButtonSkin('btn_exchange_png','btn_exchange_png','btn_exchange_png')" horizontalCenter="0.5" y="932"/>
+	<e:TextInput id="txtKey" width="529" text="kadsjflkajdskfie" verticalAlign="middle" textAlign="center" bold="true" textColor="0x8E7F7F" selectable="true" editable="true" horizontalCenter="0.5" y="777" height="50"/>
+	<e:UIAsset id="imgIcon" source="r_icon_1_png" horizontalCenter="0" y="174"/>
+	<e:UIAsset id="imgTitle" source="r_title_1_png" horizontalCenter="0.5" y="306"/>
+	<e:UIAsset id="imgTicket" source="r_ticket_1_png" x="315" y="603"/>
 </e:Skin>
