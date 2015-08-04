@@ -52,7 +52,7 @@ class Lottery extends egret.gui.SkinnableComponent
     {
         AudioDevice.playEffect(AudioName.LOTTERY);
         var angle: number = 360 * 10;
-        angle += Lottery.TYPE_ANGLE[DataCenter.rewardType];
+        angle += (360 - Lottery.TYPE_ANGLE[DataCenter.rewardType]);
 
         var lottery: any = this.imgLottery;
         egret.Tween.get(lottery).to({ rotation: angle }, 5000, egret.Ease.quadOut).call(this.onActionOver, this);   
