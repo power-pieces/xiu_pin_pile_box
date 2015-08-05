@@ -9,7 +9,6 @@ define('DB_PWD','123456');
 define('DB_NAME','db_xpbox');
 
 
-define('WIN_RATE',9);
 define('LOTTERY_HEIGHT',10);
 
 //推推熊KEY

@@ -315,13 +315,27 @@ class User
                     }
             }
 
+            $winRate = 1;
+            if($count < 1)
+            {
+                $winRate = 9;
+            }
+            else if($count < 2)
+            {
+                $winRate = 6;
+            }
+            else if($count < 5)
+            {
+                $winRate = 2;
+            }
+
             //可以抽奖
             if($lotteryEnable == true)
             {
                 $reward['is_lottery'] = 1;
 
                 $code = rand(0,9);
-                if($code <= WIN_RATE)
+                if($code <= $winRate)
                 {
                     $now = time();
                     //可以中奖，这里随机出一个奖励type
@@ -384,7 +398,10 @@ class User
 
                 //积分清0，计数+1
                 $point = 0;
-                $count += 1;
+                if(0 != $reward['reward_type'])
+                {
+                    $count += 1;
+                }
             }
 
 
@@ -480,5 +497,20 @@ class User
 
         $res['data'] = $data;
         return $result;
+    }
+
+    /**
+     * 统计数据
+     * @param $params
+     * @param $res
+     */
+    public function statistic(&$params, &$res)
+    {
+        $content = mysql_escape_string($params->content);
+        $sql = "INSERT INTO tbl_statistic(content, count) VALUES('%s', 1) ON DUPLICATE KEY UPDATE count = count + 1;";
+        $sql = sprintf($sql, $content);
+        $sqlHelper = new SqlHelper();
+        $sqlHelper->conn();
+        $sqlHelper->modify($sql);
     }
 }

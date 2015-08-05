@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="260fcee1-62e1-49ff-b1f8-84c329e23796" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/user.php" afterPath="$PROJECT_DIR$/apis/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs/define.php" afterPath="$PROJECT_DIR$/configs/define.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface.php" afterPath="$PROJECT_DIR$/interface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/user.php" afterPath="$PROJECT_DIR$/apis/user.php" />
     </list>
     <ignored path="xp_box.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,39 +28,41 @@
     <favorites_list name="xp_box" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36214286">
+    <splitter split-orientation="horizontal" split-proportion="0.5850467">
       <split-first>
         <leaf>
           <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apis/user.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.628328" vertical-offset="6725" max-vertical-offset="9291">
-                  <caret line="385" column="27" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.57076025" vertical-offset="5896" max-vertical-offset="9899">
+                  <caret line="336" column="34" selection-start-line="336" selection-start-column="34" selection-end-line="336" selection-end-column="34" />
                   <folding>
-                    <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-                    <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-                    <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-                    <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-                    <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-                    <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-                    <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-                    <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-                    <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-                    <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-                    <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-                    <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-                    <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-                    <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-                    <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-                    <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-                    <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+                    <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+                    <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+                    <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+                    <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+                    <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+                    <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+                    <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+                    <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+                    <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+                    <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+                    <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+                    <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+                    <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+                    <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+                    <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+                    <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+                    <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+                    <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+                    <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
                   </folding>
                 </state>
               </provider>
@@ -69,9 +71,21 @@
           <file leaf-file-name="interface.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/interface.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="589">
-                  <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+                <state vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="589">
+                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="statistic.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/statistic.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="342">
+                  <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+                  <folding>
+                    <marker date="1438778631313" expanded="true" signature="232:259" placeholder="SELECT * FRO..tbl_statistic..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -83,8 +97,8 @@
           <file leaf-file-name="define.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/configs/define.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.26310584" vertical-offset="0" max-vertical-offset="1011">
-                  <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="22" selection-end-column="36" />
+                <state vertical-scroll-proportion="0.45967743" vertical-offset="0" max-vertical-offset="868">
+                  <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -97,8 +111,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/configs/define.php" />
         <option value="$PROJECT_DIR$/interface.php" />
+        <option value="$PROJECT_DIR$/statistic.php" />
+        <option value="$PROJECT_DIR$/configs/define.php" />
         <option value="$PROJECT_DIR$/apis/user.php" />
       </list>
     </option>
@@ -111,7 +126,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -139,6 +154,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,7 +231,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,32 +260,20 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\Jing\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\inetpub\wwwroot\xp_box" />
-          <option name="myCopyRoot" value="C:\inetpub\wwwroot\xp_box" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\inetpub\wwwroot\xp_box" />
-          <option name="myCopyRoot" value="C:\inetpub\wwwroot\xp_box" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -282,7 +285,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -291,7 +294,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -329,33 +332,147 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apis/user.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5782" max-vertical-offset="9899">
+          <caret line="332" column="38" selection-start-line="332" selection-start-column="38" selection-end-line="332" selection-end-column="38" />
+          <folding>
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="589">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statistic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="342">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1438778631313" expanded="true" signature="232:259" placeholder="SELECT * FRO..tbl_statistic..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/define.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7315" max-vertical-offset="9576">
+          <caret line="385" column="27" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="27" />
+          <folding>
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="532">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/define.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8379">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -373,30 +490,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -414,30 +533,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -455,30 +576,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -496,30 +619,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -537,30 +662,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -578,30 +705,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6118">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -619,30 +748,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4598">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -652,30 +783,32 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4598">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
@@ -685,80 +818,101 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4218">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface.php">
+    <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="589">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1045">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apis/user.php">
+    <entry file="file://$PROJECT_DIR$/statistic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.628328" vertical-offset="6725" max-vertical-offset="9291">
-          <caret line="385" column="27" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="342">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
-            <marker date="1438760297074" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
-            <marker date="1438760297074" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
-            <marker date="1438760297074" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
-            <marker date="1438760297074" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
-            <marker date="1438760297074" expanded="true" signature="8852:9123" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="9548:9613" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="10338:10396" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="10757:10808" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11175:11228" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="11511:11589" placeholder="UPDATE tbl_u..." />
-            <marker date="1438760297074" expanded="true" signature="12322:12423" placeholder="UPDATE tbl_k..." />
-            <marker date="1438760297074" expanded="true" signature="12750:12815" placeholder="SELECT `key`..." />
-            <marker date="1438760297074" expanded="true" signature="13522:13634" placeholder="SELECT COUNT..." />
-            <marker date="1438760297074" expanded="true" signature="13814:13895" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438778631313" expanded="true" signature="232:259" placeholder="SELECT * FRO..tbl_statistic..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/define.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26310584" vertical-offset="0" max-vertical-offset="1011">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="22" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.45967743" vertical-offset="0" max-vertical-offset="868">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="589">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57076025" vertical-offset="5896" max-vertical-offset="9899">
+          <caret line="336" column="34" selection-start-line="336" selection-start-column="34" selection-end-line="336" selection-end-column="34" />
+          <folding>
+            <marker date="1438788212279" expanded="true" signature="371:462" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="463:506" placeholder="UPDATE name=..." />
+            <marker date="1438788212279" expanded="true" signature="1133:1171" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="1535:1605" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="2272:2378" placeholder="SELECT COUNT..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2331:2377" placeholder="SELECT total..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="2701:2737" placeholder="SELECT * FRO..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="3102:3222" placeholder="SELECT id,na..tbl_share_record..." />
+            <marker date="1438788212279" expanded="true" signature="3548:3606" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="4017:4109" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="4493:4540" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5623:5753" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="5873:5949" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="6632:6743" placeholder="SELECT lotte..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="9144:9415" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="9840:9905" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="10630:10688" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11049:11100" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11467:11520" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="11891:11969" placeholder="UPDATE tbl_u..." />
+            <marker date="1438788212279" expanded="true" signature="12702:12803" placeholder="UPDATE tbl_k..." />
+            <marker date="1438788212279" expanded="true" signature="13130:13195" placeholder="SELECT `key`..." />
+            <marker date="1438788212279" expanded="true" signature="13902:14014" placeholder="SELECT COUNT..." />
+            <marker date="1438788212279" expanded="true" signature="14194:14275" placeholder="SELECT id,na..tbl_user..." />
+            <marker date="1438788212279" expanded="true" signature="14648:14722" placeholder="INSERT INTO ..." />
+            <marker date="1438788212279" expanded="true" signature="14723:14747" placeholder="UPDATE count..." />
+          </folding>
         </state>
       </provider>
     </entry>

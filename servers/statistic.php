@@ -6,8 +6,8 @@
  * Time: 23:21
  */
 
-include 'configs/define.php';
-include 'utils/sqltool.php';
+include './configs/define.php';
+include "./utils/sql_helper.php";
 
 $sqlHelper = new SqlHelper();
 $sqlHelper->conn();
