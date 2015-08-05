@@ -42,8 +42,8 @@ class GameInfo extends egret.gui.SkinnableComponent
     public setInfo(score:number, best:number, total:number, power:number): void
     {
         this._score = "SCORE:" + score;
-        this._best = "历史最高:" + total;
-        this._total = "总高度:" + power;
+        this._best = "单局最高:" + best;
+        this._total = "总高度:" + total;
 
         this.refresh();
     }

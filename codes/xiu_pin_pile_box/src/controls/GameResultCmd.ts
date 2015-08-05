@@ -14,6 +14,10 @@
         DataCenter.rewardScore = +data.reward_score;
         DataCenter.rewardKey = data.reward_key;
         DataCenter.rewardType = +data.reward_type;
+        if (DataCenter.rewardType > 0)
+        {
+            DataCenter.rewards.push({ key: DataCenter.rewardKey, type: DataCenter.rewardType });
+        }
         NoticeManager.sendNotice(new GameNotice(GameNotice.GIVE_POWER_SUCCESS));
     }
 }

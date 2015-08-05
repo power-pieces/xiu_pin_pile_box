@@ -10,6 +10,7 @@ class BeShare extends egret.gui.SkinnableComponent
     public txtRank: egret.gui.BitmapLabel;
     public btnGivePower: egret.gui.Button;
     public btnGame: egret.gui.Button;
+    public rectAPK: egret.gui.Rect;
 
     public constructor()
     {
@@ -30,7 +31,11 @@ class BeShare extends egret.gui.SkinnableComponent
 
         this.btnGivePower.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnGivePower_touchBeginHandler, this);
         this.btnGame.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnGame_touchBeginHandler, this);
+        
+
     }
+
+
 
     public gotInviterInfoHandler(n: GameNotice): void
     {
@@ -45,7 +50,7 @@ class BeShare extends egret.gui.SkinnableComponent
         //    var rewardItem: RewardItem = new RewardItem(DataCenter.rewards[k]);
         //    this.listRewards.addElement(rewardItem);
         //}
-        this.txtRank.text = DataCenter.userAmount.toString();
+        this.txtRank.text = DataCenter.inviterRank.toString();
         this.txtRank.letterSpacing = 2;
     }
 

@@ -24,6 +24,7 @@
 	<e:BitmapLabel id="txtPower" x="427" font="black_num_fnt" text="777" width="185" letterSpacing="2" y="530"/>
 	<e:BitmapLabel id="txtScore" font="red_num_fnt" text="1234" letterSpacing="2" x="582" y="44"/>
 	<e:Button id="btnKeys" y="879" skinName="@ButtonSkin('btn_keys_png','btn_keys_png','btn_keys_png')" horizontalCenter="0"/>
+	<e:Rect id="rectAPK" height="152" width="100%" x="0" y="1054" fillAlpha="0"/>
 	
 
 </e:Skin>

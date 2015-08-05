@@ -160,13 +160,13 @@ class Game extends egret.Sprite
         //    {
         //        DataCenter.scoreGameing = DataCenter.cfg.eachBoxScore * (len + 1);
                 var strip: Strip;
-                //if (DataCenter.scoreGameing >= 100 && this._gotHeight[0] == false)
-                //{
-                //    this._gotHeight[0] = true;
-                //    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
+                if (DataCenter.lotteryPoint + DataCenter.scoreGameing >= 500 && this._gotHeight[0] == false)
+                {
+                    this._gotHeight[0] = true;
+                    AudioDevice.playEffect(AudioName.BOX_HEIGHT_ENOUGH);
 
-                //    strip = new Strip(Effect.getEffectSheet("got_100m_json", "C", 1, 27), 24);
-                //}
+                    strip = new Strip(Effect.getEffectSheet("got_500m_json", "", 1, 27), 24);
+                }
                 //else if (DataCenter.scoreGameing >= 200 && this._gotHeight[1] == false)
                 //{
                 //    this._gotHeight[1] = true;
@@ -225,6 +225,7 @@ class Game extends egret.Sprite
 
     private onSureOver(): void
     {
+        DataCenter.lotteryPoint += DataCenter.scoreGameing;
         AudioDevice.playBGM(AudioName.BGM);
         new GameResultCmd().run(DataCenter.id, DataCenter.scoreGameing);
 

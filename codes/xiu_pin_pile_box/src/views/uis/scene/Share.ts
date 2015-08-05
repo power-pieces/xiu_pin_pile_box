@@ -15,6 +15,7 @@ class Share extends egret.gui.SkinnableComponent
     public btnKeys: egret.gui.Button;
     //public listRewards: egret.gui.Group;
     public listFriends: egret.gui.Group;
+    public rectAPK: egret.gui.Rect;
 
     public constructor()
     {
@@ -64,6 +65,7 @@ class Share extends egret.gui.SkinnableComponent
         this.btnRank.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnRank_touchBegionHandler, this);
         this.btnShare.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnShare_touchBegionHandler, this);
         this.btnKeys.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnKeys_touchBegionHandler, this);
+        this.rectAPK.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.rectAPK_touchBeginHandler, this);
     }
 
     public removeListeners(): void
@@ -72,6 +74,12 @@ class Share extends egret.gui.SkinnableComponent
         this.btnRank.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnRank_touchBegionHandler, this);
         this.btnShare.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnShare_touchBegionHandler, this);
         this.btnKeys.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.btnKeys_touchBegionHandler, this);
+        this.rectAPK.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.rectAPK_touchBeginHandler, this);
+    }
+
+    private rectAPK_touchBeginHandler(e: egret.TouchEvent): void
+    {
+        window.open(DataCenter.cfg.apk);
     }
 
     private btnKeys_touchBegionHandler(e: egret.TouchEvent): void

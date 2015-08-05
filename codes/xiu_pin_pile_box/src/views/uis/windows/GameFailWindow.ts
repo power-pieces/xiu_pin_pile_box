@@ -51,6 +51,8 @@
         if (DataCenter.isLottery != 0)
         {
             DataCenter.isLottery = 0;
+            DataCenter.lotteryPoint = 0;
+            DataCenter.lotteryCount++;
             Global.UI_LAYER.addElement(new Lottery(-1));
         }
         else

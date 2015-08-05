@@ -7,6 +7,6 @@
 		<e:State name="disabled"/>
 	</e:states>
 	<e:UIAsset width="100%" height="100%" x="0" y="0" source="rule_bg_png"/>
-	<e:Button id="btnGame" skinName="@ButtonSkin('btn_game_png','btn_game_png','btn_game_png')" y="987" horizontalCenter="0.5"/>
-	<e:Button id="btnLottery" skinName="@ButtonSkin('btn_check_png','btn_check_png','btn_check_png')" horizontalCenter="0" y="1073"/>
+	<e:Button id="btnGame" skinName="@ButtonSkin('btn_game_png','btn_game_png','btn_game_png')" horizontalCenter="0.5" y="943"/>
+	<e:Button id="btnLottery" skinName="@ButtonSkin('btn_check_png','btn_check_png','btn_check_png')" horizontalCenter="0" y="1048"/>
 </e:Skin>

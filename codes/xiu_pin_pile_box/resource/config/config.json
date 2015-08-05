@@ -15,5 +15,6 @@
   "coolDistance": 10,
   "stopCheckInterval":300,
   "tolerance":10,
-  "lotteryScore":[100,200,340]
+  "lotteryScore":[100,200,340],
+  "apk":"http://m.xiupin.com/download"
 }

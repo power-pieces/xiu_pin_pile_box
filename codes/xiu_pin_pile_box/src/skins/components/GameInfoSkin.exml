@@ -12,7 +12,7 @@
 			<e:HorizontalLayout/>
 		</e:layout>
 	</e:Group>
-	<e:Label id="txtScore" text="SCORE:300" textAlign="left" width="163" bold="true" x="7" y="7"/>
-	<e:Label id="txtBest" bold="true" fontFamily="新宋体" textAlign="left" size="20" x="354" y="12" text="历史最高:00000"/>
-	<e:Label id="txtTotal" text="总高度:00000" x="545" y="10" size="25" bold="true" textAlign="left"/>
+	<e:Label id="txtScore" text="SCORE:300" textAlign="left" width="163" bold="true" x="7" y="9"/>
+	<e:Label id="txtBest" bold="true" fontFamily="新宋体" textAlign="left" size="25" text="历史最高:000" x="349" y="12"/>
+	<e:Label id="txtTotal" text="总高度:00000" size="25" bold="true" textAlign="left" x="545" y="12"/>
 </e:Skin>

@@ -13,6 +13,7 @@
         DataCenter.inviterPic = data.pic;
         DataCenter.inviterTotalScore = +data.total_score;
         DataCenter.inviterRewards = data.rewards;
+        DataCenter.inviterRank = +data.rank;
         NoticeManager.sendNotice(new GameNotice(GameNotice.GOT_INVITER_INFO))
     }
 }

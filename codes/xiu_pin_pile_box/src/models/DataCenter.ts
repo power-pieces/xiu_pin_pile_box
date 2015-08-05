@@ -21,15 +21,15 @@ class DataCenter
     //给我助力的好友
     public static receives: any[] = null;
     //领取的奖励
-    public static rewards: any[] = null;
+    public static rewards: any[] = [];
     //自己的排名
     public static selfRank: number = 0;
     //排行榜
     public static rankList: any[] = null;
     //抽奖积分
-    //public static lotteryPoint: number = 0;
+    public static lotteryPoint: number = 0;
     //抽奖次数
-    //public static lotteryCount: number = 0;
+    public static lotteryCount: number = 0;
 
 
 
@@ -43,6 +43,8 @@ class DataCenter
     public static inviterTotalScore: number = 0;
     //邀请人的奖品列表
     public static inviterRewards: any[] = null;
+    //邀请人的排名
+    public static inviterRank: number = 0;
     
     //游戏玩家总数
     public static userAmount: number = 5472;
