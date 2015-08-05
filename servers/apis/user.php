@@ -81,7 +81,24 @@ class User
         $data = $this->getUserInfo($id);
         $data['receives'] = $this->getReceives($id);
         $data['rewards'] = $this->getRewards($id);
+        $data['rank'] = $this->getUserRank($id);
         $res['data'] = $data;
+    }
+
+    /**
+     * 获取用户的排名
+     * @param $id
+     */
+    private function getUserRank($id)
+    {
+        $sql = "SELECT COUNT(*) as rank FROM tbl_user WHERE total_score > (SELECT total_score FROM tbl_user WHERE id='%s');";
+        $sql = sprintf($sql, $id);
+        $st = new SqlHelper();
+        $st->conn();
+        $result = $st->query($sql);
+        $rank = +$result[0]['rank'];
+        $st->close();
+        return $rank;
     }
 
     /**
@@ -249,6 +266,8 @@ class User
         $result = $st->query($sql);
         $st->close();
 
+
+
         if(count($result) > 0)
         {
             $point = +$result[0]['lottery_point'];
@@ -259,36 +278,36 @@ class User
             $lotteryEnable = false;
             switch($count)
             {
-                case 0:
-                    //第一次抽奖
-                    if($point >= 100)
-                    {
-                        $lotteryEnable = true;
-                        $reward['reward_score'] = 100;
-                    }
-                    break;
-                case 1:
-                    //第二次抽奖
-                    if($point >= 200)
-                    {
-                        $lotteryEnable = true;
-                        $reward['reward_score'] = 200;
-                    }
-                    break;
-                case 2:
-                    //第三次抽奖
-                    if($point >= 340)
-                    {
-                        $lotteryEnable = true;
-                        $reward['reward_score'] = 340;
-                    }
-                    break;
+//                case 0:
+//                    //第一次抽奖
+//                    if($point >= 100)
+//                    {
+//                        $lotteryEnable = true;
+//                        $reward['reward_score'] = 100;
+//                    }
+//                    break;
+//                case 1:
+//                    //第二次抽奖
+//                    if($point >= 200)
+//                    {
+//                        $lotteryEnable = true;
+//                        $reward['reward_score'] = 200;
+//                    }
+//                    break;
+//                case 2:
+//                    //第三次抽奖
+//                    if($point >= 340)
+//                    {
+//                        $lotteryEnable = true;
+//                        $reward['reward_score'] = 340;
+//                    }
+//                    break;
                 default:
                     //之后的抽奖
-                    if($point >= 500)
+                    if($point >= LOTTERY_HEIGHT)
                     {
                         $lotteryEnable = true;
-                        $reward['reward_score'] = 500;
+                        $reward['reward_score'] = LOTTERY_HEIGHT;
                     }
             }
 
@@ -298,7 +317,7 @@ class User
                 $reward['is_lottery'] = 1;
 
                 $code = rand(0,9);
-                if($code <= 9)
+                if($code <= WIN_RATE)
                 {
                     $now = time();
                     //可以中奖，这里随机出一个奖励type
