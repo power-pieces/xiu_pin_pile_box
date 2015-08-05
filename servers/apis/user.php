@@ -260,7 +260,7 @@ class User
         $reward['reward_key'] = 0;
         $reward['reward_type'] = 0;
 
-        $sql = "SELECT lottery_point,lottery_count FROM tbl_user WHERE id='$id'";
+        $sql = "SELECT lottery_point,lottery_count,got_tuituixiong_key,got_uber_key,got_xiupin_key FROM tbl_user WHERE id='$id'";
         $st = new SqlHelper();
         $st->conn();
         $result = $st->query($sql);
@@ -272,6 +272,10 @@ class User
         {
             $point = +$result[0]['lottery_point'];
             $count = +$result[0]['lottery_count'];
+
+            $gotTuituixiongKey = +$result[0]['got_tuituixiong_key'];
+            $gotUberKey = +$result[0]['got_uber_key'];
+            $gotXiupinKey = +$result[0]['got_xiupin_key'];
 
             $point += $score;
 
@@ -348,6 +352,33 @@ class User
                             $reward['reward_key'] = $result[0]['key'];
                             $reward['reward_type'] = $result[0]['type'];
                         }
+                    }
+                    else if(0 == $gotTuituixiongKey)
+                    {
+                        $reward['reward_key'] = TUITUIXIONG_KEY;
+                        $reward['reward_type'] = TUITUIXIONG_TYPE;
+                        $sql = "UPDATE tbl_user SET got_tuituixiong_key = 1 WHERE id='$id'";
+                        $st->conn();
+                        $st->modify($sql);
+                        $st->close();
+                    }
+                    else if(0 == $gotUberKey)
+                    {
+                        $reward['reward_key'] = UBER_KEY;
+                        $reward['reward_type'] = UBER_TYPE;
+                        $sql = "UPDATE tbl_user SET got_uber_key = 1 WHERE id='$id'";
+                        $st->conn();
+                        $st->modify($sql);
+                        $st->close();
+                    }
+                    else if(0 == $gotXiupinKey)
+                    {
+                        $reward['reward_key'] = XIUPIN_KEY;
+                        $reward['reward_type'] = XIUPIN_TYPE;
+                        $sql = "UPDATE tbl_user SET got_xiupin_key = 1 WHERE id='$id'";
+                        $st->conn();
+                        $st->modify($sql);
+                        $st->close();
                     }
                 }
 

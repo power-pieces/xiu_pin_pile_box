@@ -1,6 +1,9 @@
 <?php
 //设置访问权限为所有域
 header("Access-Control-Allow-Origin:*");
+//设置页面不缓存
+header("Cache-Control: no-cache");
+header("Pragma: no-cache");
 //设置默认时区
 date_default_timezone_set("PRC");
 
