@@ -80,11 +80,13 @@ class Share extends egret.gui.SkinnableComponent
     private rectAPK_touchBeginHandler(e: egret.TouchEvent): void
     {
         window.open(DataCenter.cfg.apk);
+        new StatisticCmd().run("下载APP按钮");
     }
 
     private btnKeys_touchBegionHandler(e: egret.TouchEvent): void
     {
         Global.UI_LAYER.addElement(new Keys());
+        new StatisticCmd().run("兑换码查询");
     }
 
     private btnGame_touchBegionHandler(e: egret.TouchEvent): void
@@ -98,6 +100,7 @@ class Share extends egret.gui.SkinnableComponent
 
         Global.UI_LAYER.removeAllElements();
         Global.GAME_LAYER.addChild(new Game());
+        new StatisticCmd().run("再来一局");
 
     }
     private btnRank_touchBegionHandler(e: egret.TouchEvent): void
@@ -105,11 +108,13 @@ class Share extends egret.gui.SkinnableComponent
         AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Rank());
+        new StatisticCmd().run("查看排行");
     }
     private btnShare_touchBegionHandler(e: egret.TouchEvent): void
     {
         AudioDevice.playEffect(AudioName.CLICK);
         ShareTip.show();
+        new StatisticCmd().run("分享邀请好友助力");
     }
 
 }

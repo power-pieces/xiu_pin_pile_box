@@ -46,7 +46,7 @@ class Rule extends egret.gui.SkinnableComponent
 
         Global.UI_LAYER.removeAllElements();
         Global.GAME_LAYER.addChild(new Game());
-       
+        new StatisticCmd().run("进入游戏");
     }
 
     private btnLottery_touchTapHandler(e: egret.TouchEvent): void
@@ -54,5 +54,6 @@ class Rule extends egret.gui.SkinnableComponent
         AudioDevice.playEffect(AudioName.CLICK);
         //Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new ExHelp());
+        new StatisticCmd().run("查看秀品好礼");
     }
 }

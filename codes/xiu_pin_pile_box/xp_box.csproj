@@ -697,6 +697,7 @@
     <TypeScriptCompile Include="src\controls\GivePowerCmd.ts" />
     <TypeScriptCompile Include="src\controls\LoginCmd.ts" />
     <TypeScriptCompile Include="src\controls\LotteryCmd.ts" />
+    <TypeScriptCompile Include="src\controls\StatisticCmd.ts" />
     <TypeScriptCompile Include="src\jing\cores\AView.ts" />
     <TypeScriptCompile Include="src\jing\net\NetProxy.ts" />
     <TypeScriptCompile Include="src\jing\notice\Notice.ts" />

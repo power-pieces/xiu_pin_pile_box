@@ -56,12 +56,14 @@ class BeShare extends egret.gui.SkinnableComponent
 
     public btnGivePower_touchBeginHandler(e: egret.TouchEvent): void
     {
+        new StatisticCmd().run("为好友助力");
         AudioDevice.playEffect(AudioName.CLICK);
         new GivePowerCmd().run(DataCenter.id, DataCenter.inviter);
     }
 
     public btnGame_touchBeginHandler(e: egret.TouchEvent): void
     {
+        new StatisticCmd().run("我也要玩");
         AudioDevice.playEffect(AudioName.CLICK);
         Global.UI_LAYER.removeAllElements();
         Global.UI_LAYER.addElement(new Intro());

@@ -162,6 +162,7 @@ class Main extends egret.DisplayObjectContainer
 
         //this.setConfig();
         DataCenter.cfg = RES.getRes("config_json");
+        new StatisticCmd().run("游戏的总浏览量 ");
         //Global.stage = this.stage;
         //游戏场景层，游戏场景相关内容可以放在这里面。        
         this.addChild(Global.GAME_LAYER);
